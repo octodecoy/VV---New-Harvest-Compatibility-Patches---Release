@@ -168,6 +168,7 @@
                 var name when name.EndsWith("Grains") => Settings.MergeGrainsCategory,
                 var name when name.EndsWith("Nuts") => Settings.MergeNutsCategory,
                 var name when name.EndsWith("Vegetables") => Settings.MergeVegetablesCategory,
+                var name when name.EndsWith("Fungus") => Settings.MergeFungusCategory,
                 _ => false
             };
         }

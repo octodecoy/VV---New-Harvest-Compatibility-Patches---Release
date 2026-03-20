@@ -3,14 +3,15 @@
     <v1.6>
         <li>/</li>
         <!-- Common -->
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers">Common</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers">Common/Biomes</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Biomes</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops">Common/Categories/AnimalFoods</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees">Common/Categories/Fruit</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops">Common/Categories/Grains</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvesttrees">Common/Categories/Nuts</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestmedicinalplants">Common/Categories/Vegetables</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops">Common/Forage</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestmushrooms">Common/Categories/Fungus</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestindustrialcrops">Common/Industrial</li>
         <!-- DLC -->
         <li IfModActiveAll="ludeon.rimworld.ideology,vvenchov.vvnewharvest">Mods/Ideology</li>
@@ -33,9 +34,6 @@
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestindustrialcrops">Mods/MedievalOverhaul/Trees/Industrial</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Flowers</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestflowers">Mods/MedievalOverhaul/Flowers</li>
-        <!-- Until new version of Expanded Woodworking is figured out; may not even be needed -->
-        <!-- <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvest">Mods/ExpandedWoodworking</li>
-        <li IfModActiveAll="zal.expandwoodwork,vvenchov.vvnewharvestindustrialcrops">Mods/ExpandedWoodworking</li> -->
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvest">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvestindustrialcrops">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="mlie.simplechainslumber,vvenchov.vvnewharvest">Mods/SimpleChainsLumber</li>
@@ -149,5 +147,9 @@
         <!-- Added 1/6/26 -->
         <li IfModActive="ferny.progressionagriculture">Mods/ProgressionAgriculture</li>
         <li IfModActive="chaoticenrico.bettertrees">Mods/BetterTrees</li>
+
+        <!-- Added 3/12/26 -->
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Mushrooms</li>
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestmushrooms">Mods/AlphaCrafts/Mushrooms</li>
     </v1.6>
 </loadFolders>

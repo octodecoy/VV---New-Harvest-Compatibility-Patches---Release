@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>I cereali producono farina di Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Le piante di cereali di Nuovo Raccolto produrranno farina di Vanilla Cooking Expanded come output secondario alla metà della quantità di cereali.\n(Esempio: le piante di Amaranto produrranno 10 unità di amaranto e 5 di farina)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Fiori</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Funghi</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Fungo</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Comportamenti</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Aggiungi comportamento di scavo dei tartufi</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Consente a maiali e cani addomesticati di scavare tartufi sui terreni naturali scavabili.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Tick tra i tentativi di scavo</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Numero di tick che devono passare prima che un animale tenti di scavare per i tartufi.\n2500 tick = 1 ora di gioco; 60000 tick = 1 giorno di gioco.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Intervallo di probabilità di successo</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Probabilità di generare un tartufo a ogni tentativo di scavo.\nViene usato prima il valore massimo, poi ridotto da "Riduzione probabilità per animale".\nLa probabilità finale non scenderà sotto il minimo.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Riduzione probabilità per animale</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>Quantità di cui la probabilità di successo viene ridotta per ogni animale capace di scavare tartufi.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Intervallo quantità di tartufi</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Intervallo del numero di tartufi generati quando un tentativo di scavo ha successo.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>I tartufi generati sono proibiti</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Se abilitato, i tartufi trovati dagli animali appariranno come proibiti.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Il comando richiede addestramento</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Se abilitato, gli animali devono essere addestrati in Obbedienza, Scavo o Foraggiamento per ricevere il comando di scavo dei tartufi. Altrimenti, tutti gli animali addomesticati avranno sempre il comando.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

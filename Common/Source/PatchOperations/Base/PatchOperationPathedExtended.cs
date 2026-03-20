@@ -75,30 +75,6 @@ namespace NewHarvestPatches
             return false;
         }
 
-        //protected static bool NodesMatch(XmlNode childNode, XmlNode node, Compare compare)
-        //{
-        //    switch (compare)
-        //    {
-        //        case Compare.Name:
-        //            // Match by name; if node has children, also require childNode to have children
-        //            if (childNode.Name != node.Name)
-        //                return false;
-        //            if (node.HasChildNodes && node.FirstChild.HasChildNodes &&
-        //                (!childNode.HasChildNodes || !childNode.FirstChild.HasChildNodes))
-        //                return false;
-        //            return true;
-
-        //        case Compare.InnerText:
-        //            return childNode.InnerText == node.InnerText;
-
-        //        case Compare.Both:
-        //            return childNode.Name == node.Name && childNode.InnerText == node.InnerText;
-
-        //        default:
-        //            return false;
-        //    }
-        //}
-
         protected static bool NodesMatch(XmlNode childNode, XmlNode node, Compare compare)
         {
             return compare switch
@@ -181,6 +157,8 @@ namespace NewHarvestPatches
                 nameof(Category.Type.Nuts) => defName.ContainsIgnoreCase(Category.Type.Nuts),
                 nameof(Category.Type.Vegetables) => defName == "RC2_VegetablesRaw" ||
                                                     defName.ContainsIgnoreCase("Vegetable"),
+                nameof (Category.Type.Fungus) => defName.ContainsIgnoreCase("Fungus") ||
+                                                 defName.ContainsIgnoreCase("Mushroom"),
                 _ => false,
             };
         }
@@ -205,12 +183,47 @@ namespace NewHarvestPatches
                 case nameof(Category.Type.Grains):
                 case nameof(Category.Type.Nuts):
                 case nameof(Category.Type.Vegetables):
+                case nameof(Category.Type.Fungus):
                     if (categoryParentDefName == "Foods" || categoryParentDefName == "FoodRaw" || categoryParentDefName == "PlantFoodRaw")
                         return true;
                     return false;
                 default:
                     return false;
             }
+        }
+
+        protected static bool HasCategoryInSelfOrParent(XmlDocument xml, XmlNode thingDef, string categoryDefName)
+        {
+            XmlNode current = thingDef;
+
+            while (current != null)
+            {
+                // Check if this node has the category in its own thingCategories
+                XmlNode tcNode = FindNodeByName(current, "thingCategories");
+                if (tcNode != null)
+                {
+                    foreach (XmlNode li in tcNode.ChildNodes)
+                    {
+                        if (li.InnerText.Trim() == categoryDefName)
+                            return true;
+                    }
+
+                    // If thingCategories exists with Inherit="False", stop walking up
+                    var inheritAttr = tcNode.Attributes?["Inherit"];
+                    if (inheritAttr != null && inheritAttr.Value.Equals("False", StringComparison.OrdinalIgnoreCase))
+                        return false;
+                }
+
+                // Walk up to the parent def via ParentName
+                var parentNameAttr = current.Attributes?["ParentName"];
+                if (parentNameAttr == null || string.IsNullOrWhiteSpace(parentNameAttr.Value))
+                    break;
+
+                string parentName = parentNameAttr.Value;
+                current = xml.SelectSingleNode($"/Defs/ThingDef[@Name='{parentName}']");
+            }
+
+            return false;
         }
 
         protected static string GetFullXmlPath(XmlNode node)

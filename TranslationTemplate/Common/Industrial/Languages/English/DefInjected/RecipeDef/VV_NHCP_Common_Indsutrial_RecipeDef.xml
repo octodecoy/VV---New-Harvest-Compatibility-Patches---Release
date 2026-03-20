@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LanguageData>
-    <VV_NHCP_ConvertNewHarvestWoodToWood.label>convert specialty logs to generic logs</VV_NHCP_ConvertNewHarvestWoodToWood.label>
-    <VV_NHCP_ConvertNewHarvestWoodToWood.description>Convert specialty logs to generic logs.\n\n50 specialty logs into 50 generic logs.</VV_NHCP_ConvertNewHarvestWoodToWood.description>
-    <VV_NHCP_ConvertNewHarvestWoodToWood.jobString>Chopping wood.</VV_NHCP_ConvertNewHarvestWoodToWood.jobString>
-</LanguageData>

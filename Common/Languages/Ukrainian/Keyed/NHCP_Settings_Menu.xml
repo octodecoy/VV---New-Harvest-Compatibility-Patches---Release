@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зернові продукують борошно Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свіжозібрані зернові рослини вироблятимуть борошно Vanilla Cooking Expanded як побічний продукт у кількості половини від врожаю зерна.\n(Приклад: рослини амаранту дадуть 10 зерен амаранту та 5 борошна)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Квіти</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Гриби</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Мікориза</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Поведінка</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Додати поведінку копання трюфелів</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Дозволяє прирученим свиням і собакам копати трюфелі на придатній для копання природній території.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Тіки між спробами копання</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Кількість тіків, які повинні пройти перед тим, як тварина знову спробує викопати трюфель.\n2500 тіків = 1 година гри; 60000 тіків = 1 день гри.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Діапазон шансів успіху</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Шанс появи трюфеля під час кожної спроби копання.\nСпершу використовується максимальне значення, потім зменшується на «Зменшення шансу на тварину».\nКінцевий шанс не опускається нижче мінімуму.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Зменшення шансу на тварину</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>На скільки зменшується шанс успіху для кожної тварини, здатної копати трюфелі.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Діапазон кількості трюфелів</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Діапазон кількості трюфелів, що з’являються при успішній спробі копання.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Згенеровані трюфелі заборонені</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Якщо увімкнено, трюфелі, знайдені тваринами, з’являтимуться як заборонені.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Команда вимагає тренування</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Якщо увімкнено, тварини повинні бути натреновані на Послух, Копання або Збір, щоб отримати перемикач команди копання трюфелів. Інакше всі приручені тварини завжди матимуть цей перемикач.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

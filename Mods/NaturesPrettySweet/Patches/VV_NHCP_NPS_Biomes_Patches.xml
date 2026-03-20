@@ -212,7 +212,7 @@
         <mods>
             <li>VV - New Harvest</li>
             <li>VV - New Harvest: Flowers</li>
-        </mods>   
+        </mods>
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd">
@@ -256,6 +256,46 @@
                     </value>
                 </li>
             </operations>
-        </match> 
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackTruffle>0.0010</VV_BlackTruffle>
+                        <VV_BirchTreeWithOysterMushrooms>0.004</VV_BirchTreeWithOysterMushrooms>
+                        <VV_PoplarTreeWithOysterMushrooms>0.004</VV_PoplarTreeWithOysterMushrooms>
+                        <VV_KingBolete>0.004</VV_KingBolete>
+                        <VV_Chanterelle>0.004</VV_Chanterelle>
+                        <VV_Morel>0.004</VV_Morel>
+                        <VV_ParasolMushroom>0.004</VV_ParasolMushroom>
+                        <VV_FlyAgaric>0.004</VV_FlyAgaric>
+                        <VV_FoolsFunnel>0.004</VV_FoolsFunnel>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/wildPlants</xpath>
+                    <value>
+                        <VV_Chanterelle>0.002</VV_Chanterelle>
+                        <VV_ParasolMushroom>0.002</VV_ParasolMushroom>
+                        <VV_FoolsFunnel>0.002</VV_FoolsFunnel>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/wildPlants</xpath>
+                    <value>
+                        <VV_Chanterelle>0.002</VV_Chanterelle>
+                        <VV_ParasolMushroom>0.002</VV_ParasolMushroom>
+                        <VV_FoolsFunnel>0.002</VV_FoolsFunnel>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 </Patch>

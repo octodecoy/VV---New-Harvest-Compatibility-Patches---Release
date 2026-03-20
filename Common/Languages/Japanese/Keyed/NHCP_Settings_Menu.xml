@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物が Vanilla Cooking Expanded の小麦粉を生産</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>収穫した穀物植物は、副産物として Vanilla Cooking Expanded の小麦粉を穀物量の半分生産します。\n（例：アマランサスはアマランサスの穀物を10個、小麦粉を5個生産します）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>花</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>キノコ</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>菌類</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>行動</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>トリュフ掘り行動を追加</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>飼いならした豚や犬が、掘れる自然地形でトリュフを掘ることを可能にします。</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>掘削試行の間隔（ティック）</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>動物がトリュフを掘ろうとする前に経過する必要のあるティック数。\n2500ティック = 1ゲーム時間；60000ティック = 1ゲーム日。</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>成功確率の範囲</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>各掘削試行でトリュフが出現する確率。\n最大値を最初に使用し、その後「動物ごとの確率減少」によって減少されます。\n最終的な確率は最小値を下回りません。</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>動物ごとの確率減少</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>トリュフを掘ることができる動物1頭ごとに成功確率がどれだけ減少するか。</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>トリュフの数量範囲</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>掘削が成功したときに生成されるトリュフの数量範囲。</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>生成されたトリュフを禁止にする</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>有効にすると、動物が見つけたトリュフは「禁止」として生成されます。</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>コマンド切替は訓練が必要</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>有効にすると、動物は服従、掘削、または採集の訓練を受けている必要があり、トリュフ掘りコマンド切替を利用できます。そうでない場合、すべての飼いならした動物が常に切替を持ちます。</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

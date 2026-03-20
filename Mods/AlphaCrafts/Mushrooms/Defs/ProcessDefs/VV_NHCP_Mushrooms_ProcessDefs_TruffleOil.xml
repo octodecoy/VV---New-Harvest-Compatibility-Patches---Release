@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_OilAndTrufflesToTruffleOil</defName>
+        <label>Infuse oil and truffles into truffle oil</label>
+        <description>Turns 10 oil and 10 black truffle into 15 truffle oil.</description>
+        <useIngredients>true</useIngredients>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <labelOverride>Infuse 10 oil and 10 black truffles into 15 truffle oil</labelOverride>
+        <priorityInBillList>2</priorityInBillList>
+        <ingredients>
+            <li>
+                <thing>AC_Oil</thing>
+                <countNeeded>10</countNeeded>
+            </li>
+            <li>
+                <thing>VV_BlackTruffles</thing>
+                <countNeeded>10</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>1200000</ticks>
+        <results>
+            <li>
+                <thing>AC_TruffleOil</thing>
+                <count>15</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+</Defs>

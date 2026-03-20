@@ -35,4 +35,11 @@
         <resourceReadoutRoot>false</resourceReadoutRoot>
         <iconPath>Things/Item/Resource/PlantFoodRaw/Potatoes</iconPath>
     </ThingCategoryDef>
+
+    <ThingCategoryDef>
+        <defName>VV_NHCP_DummyCategory_Fungus</defName>
+        <label>Fungus</label>
+        <resourceReadoutRoot>false</resourceReadoutRoot>
+        <iconPath>Things/Item/Resource/PlantFoodRaw/RawFungus</iconPath>
+    </ThingCategoryDef>
 </Defs>

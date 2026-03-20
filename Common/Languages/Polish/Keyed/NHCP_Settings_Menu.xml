@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Zboża produkują mąkę Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Nowo zebrane rośliny zbożowe wytworzą dodatkowo mąkę Vanilla Cooking Expanded jako produkt poboczny, w ilości równej połowie ilości zboża.\n(Przykład: roślina amarantusa wyprodukuje 10 ziaren amarantusa i 5 mąki)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Kwiaty</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Grzyby</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Grzybnia</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Zachowania</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Dodaj zachowanie kopania trufli</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Pozwala oswojonym świniom i psom kopać trufle na naturalnym terenie nadającym się do kopania.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks między próbami kopania</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Liczba ticków, które muszą upłynąć, zanim zwierzę spróbuje wykopać trufle.\n2500 ticków = 1 godzina gry; 60000 ticków = 1 dzień gry.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Zakres szans powodzenia</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Szansa na wytworzenie trufli przy każdej próbie kopania.\nNajpierw używana jest wartość maksymalna, następnie zmniejszana o „Zmniejszenie szansy na zwierzę”.\nKońcowa szansa nie spadnie poniżej minimum.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Zmniejszenie szansy na zwierzę</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>O ile zmniejsza się szansa powodzenia dla każdego zwierzęcia zdolnego do kopania trufli.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Zakres ilości trufli</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Zakres liczby trufli wytwarzanych przy udanej próbie kopania.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Wytworzone trufle są zabronione</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Jeśli włączone, trufle znalezione przez zwierzęta pojawią się jako zabronione.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Przełącznik komendy wymaga treningu</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Jeśli włączone, zwierzęta muszą być wytrenowane w Posłuszeństwie, Kopaniu lub Zbieraniu, aby otrzymać przełącznik komendy kopania trufli. W przeciwnym razie wszystkie oswojone zwierzęta zawsze będą mieć ten przełącznik.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

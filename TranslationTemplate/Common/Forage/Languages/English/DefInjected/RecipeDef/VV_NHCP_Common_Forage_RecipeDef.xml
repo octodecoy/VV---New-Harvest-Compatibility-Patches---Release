@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<LanguageData>
-    <VV_NHCP_MixHay.label>convert specialty hay to generic hay</VV_NHCP_MixHay.label>
-    <VV_NHCP_MixHay.description>Convert specialty hay to generic hay.\n\n50 specialty hay into 50 generic hay.</VV_NHCP_MixHay.description>
-    <VV_NHCP_MixHay.jobString>Mixing hay.</VV_NHCP_MixHay.jobString>
-</LanguageData>

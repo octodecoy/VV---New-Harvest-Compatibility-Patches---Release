@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Зерновые производят муку Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Свежесобранные зерновые растения будут производить муку Vanilla Cooking Expanded как побочный продукт в количестве половины от урожая зерна.\n(Пример: растения амаранта дадут 10 зерен амаранта и 5 муки)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Цветы</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Грибы</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Грибница</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Поведение</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Добавить поведение рытья трюфелей</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Позволяет приручённым свиньям и собакам копать трюфели на добываемой естественной территории.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Тики между попытками рытья</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Количество тиков, которые должны пройти перед новой попыткой животного выкопать трюфель.\n2500 тиков = 1 игровой час; 60000 тиков = 1 игровой день.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Диапазон вероятности успеха</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Шанс успешного появления трюфеля при каждой попытке рытья.\nСначала используется максимальное значение, затем оно уменьшается на «Снижение шанса на животное».\nКонечный шанс не опустится ниже минимума.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Снижение шанса на животное</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>На сколько уменьшается шанс успеха для каждого животного, способного копать трюфели.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Диапазон количества трюфелей</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Диапазон количества трюфелей, создаваемых при успешной попытке рытья.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Созданные трюфели запрещены</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Если включено, трюфели, найденные животными, появляются как запрещённые.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Команда требует тренировки</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Если включено, животные должны быть обучены Послушанию, Рытью или Поиску, чтобы получить переключатель команды рытья трюфелей. В противном случае все приручённые животные всегда будут иметь этот переключатель.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

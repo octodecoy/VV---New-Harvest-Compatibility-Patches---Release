@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>ธัญพืชผลิตแป้ง Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>พืชธัญพืชของเก็บเกี่ยวใหม่จะผลิตแป้ง Vanilla Cooking Expanded เป็นผลลัพธ์รองครึ่งหนึ่งของจำนวนธัญพืช\n(ตัวอย่าง: พืชอัมรานท์จะผลิต 10 หน่วยเมล็ดอัมรานท์ และ 5 หน่วยแป้ง)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>ดอกไม้</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>เห็ด</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>เชื้อรา</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>พฤติกรรม</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>เพิ่มพฤติกรรมขุดเห็ดทรัฟเฟิล</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>อนุญาตให้หมูและสุนัขที่ถูกฝึกสามารถขุดเห็ดทรัฟเฟิลบนพื้นที่ธรรมชาติที่ขุดได้</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>จำนวนติ๊กระหว่างการพยายามขุด</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>จำนวนติ๊กที่ต้องผ่านไปก่อนที่สัตว์จะพยายามขุดเห็ดทรัฟเฟิลอีกครั้ง\n2500 ติ๊ก = 1 ชั่วโมงในเกม; 60000 ติ๊ก = 1 วันในเกม</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>ช่วงความน่าจะเป็นสำเร็จ</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>โอกาสในการเกิดเห็ดทรัฟเฟิลในแต่ละครั้งที่พยายามขุด\nใช้ค่ามากที่สุดก่อน แล้วลดลงตาม “การลดโอกาสต่อสัตว์” \nโอกาสสุดท้ายจะไม่ต่ำกว่าค่าต่ำสุด</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>การลดโอกาสต่อสัตว์</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>จำนวนที่ความน่าจะเป็นสำเร็จลดลงสำหรับสัตว์แต่ละตัวที่สามารถขุดเห็ดทรัฟเฟิลได้</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>ช่วงจำนวนเห็ดทรัฟเฟิล</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>ช่วงจำนวนเห็ดทรัฟเฟิลที่เกิดขึ้นเมื่อการขุดสำเร็จ</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>กำหนดให้เห็ดทรัฟเฟิลที่เกิดขึ้นถูกห้าม</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>หากเปิดใช้งาน เห็ดทรัฟเฟิลที่สัตว์ค้นพบจะเกิดขึ้นในสถานะถูกห้าม</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>ต้องมีการฝึกฝนเพื่อใช้คำสั่ง</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>หากเปิดใช้งาน สัตว์ต้องได้รับการฝึกในเชื่อฟัง ขุด หรือค้นหาอาหารเพื่อให้สามารถใช้คำสั่งขุดเห็ดทรัฟเฟิลได้ มิฉะนั้น สัตว์ที่ถูกฝึกแล้วทั้งหมดจะมีคำสั่งนี้เสมอ</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

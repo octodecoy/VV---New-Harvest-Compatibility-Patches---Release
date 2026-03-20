@@ -21,6 +21,9 @@ namespace NewHarvestPatches
         public bool AddToVegetablesCategory = false;
         public bool MergeVegetablesCategory = false;
         public bool VegetablesCategoryResourceReadout = false;
+        public bool AddToFungusCategory = false;
+        public bool MergeFungusCategory = false;
+        public bool FungusCategoryResourceReadout = false;
         public bool MoveDrinksToVBECategory = false;
         public bool AddAquaticReedsToBiomes = false;
         public bool AddMoreWoodFloors = false;
@@ -32,9 +35,12 @@ namespace NewHarvestPatches
         public bool AddWoodConversionRecipe = false;
         public bool UseVanillaLogGraphic = false;
         public bool AddWoodDryads = false;
+
+        [IgnoreEnabled]
         public bool HayNeedsCooling = true;
         public bool GrainsProduceVCEFlourSecondary = false;
-        public bool WeedSpreadingBehavior = false;
+        public bool AddTruffleDiggingBehavior = false;
+        public TruffleDiggingSettings TruffleSettings = new();
         public Dictionary<string, bool> FuelTypes = [];
         public Dictionary<string, CommonalityInfo> StuffCommonality = [];
         public Dictionary<string, bool> FallColorTrees = [];
@@ -53,7 +59,8 @@ namespace NewHarvestPatches
             MergeFruitCategory ||
             MergeGrainsCategory ||
             MergeNutsCategory ||
-            MergeVegetablesCategory;
+            MergeVegetablesCategory ||
+            MergeFungusCategory;
 
         public NewHarvestPatchesModSettings()
         {
@@ -147,6 +154,9 @@ namespace NewHarvestPatches
                 Scribe_Values.Look(ref AddToVegetablesCategory, nameof(AddToVegetablesCategory), false, false);
                 Scribe_Values.Look(ref MergeVegetablesCategory, nameof(MergeVegetablesCategory), false, false);
                 Scribe_Values.Look(ref VegetablesCategoryResourceReadout, nameof(VegetablesCategoryResourceReadout), false, false);
+                Scribe_Values.Look(ref AddToFungusCategory, nameof(AddToFungusCategory), false, false);
+                Scribe_Values.Look(ref MergeFungusCategory, nameof(MergeFungusCategory), false, false);
+                Scribe_Values.Look(ref FungusCategoryResourceReadout, nameof(FungusCategoryResourceReadout), false, false);
                 Scribe_Values.Look(ref MoveDrinksToVBECategory, nameof(MoveDrinksToVBECategory), false, false);
                 Scribe_Values.Look(ref AddAquaticReedsToBiomes, nameof(AddAquaticReedsToBiomes), false, false);
                 Scribe_Values.Look(ref AddMoreWoodFloors, nameof(AddMoreWoodFloors), false, false);
@@ -160,7 +170,15 @@ namespace NewHarvestPatches
                 Scribe_Values.Look(ref AddWoodDryads, nameof(AddWoodDryads), false, false);
                 Scribe_Values.Look(ref HayNeedsCooling, nameof(HayNeedsCooling), true, false);
                 Scribe_Values.Look(ref GrainsProduceVCEFlourSecondary, nameof(GrainsProduceVCEFlourSecondary), false, false);
-                Scribe_Values.Look(ref WeedSpreadingBehavior, nameof(WeedSpreadingBehavior), false, false);
+                Scribe_Values.Look(ref AddTruffleDiggingBehavior, nameof(AddTruffleDiggingBehavior), false, false);
+                Scribe_Deep.Look(ref TruffleSettings, nameof(TruffleSettings));
+                TruffleSettings ??= new TruffleDiggingSettings();
+                // Scribe_Values.Look(ref TicksBetweenTruffleDigAttempts, nameof(TicksBetweenTruffleDigAttempts), GenDate.TicksPerDay, false);
+                // Scribe_Values.Look(ref TruffleDiggingChanceRange, nameof(TruffleDiggingChanceRange), new FloatRange(0.05f, 0.5f), false);
+                // Scribe_Values.Look(ref TruffleDiggingChanceReduction, nameof(TruffleDiggingChanceReduction), 0.05f, false);
+                // Scribe_Values.Look(ref TruffleAmountRange, nameof(TruffleAmountRange), IntRange.One, false);
+                // Scribe_Values.Look(ref TruffleSpawnsForbidden, nameof(TruffleSpawnsForbidden), false, false);
+                // Scribe_Values.Look(ref TruffleGizmoRequiresTraining, nameof(TruffleGizmoRequiresTraining), true, false);
 
                 if (HasIndustrialModule)
                 {
@@ -204,7 +222,13 @@ namespace NewHarvestPatches
                 foreach (var @field in _boolFields)
                 {
                     if ((bool)@field.GetValue(this))
-                        yield return @field.Name;
+                    {
+                        var attr = @field.GetCustomAttribute<IgnoreEnabledAttribute>();
+                        if (attr == null)
+                        {
+                            yield return @field.Name;
+                        }
+                    }
                 }
 
                 if (HasIndustrialModule)
@@ -447,6 +471,31 @@ namespace NewHarvestPatches
                     foreach (var info in checkboxesToReset)
                     {
                         info.Setter?.Invoke(info.DefaultValue);
+
+                        if (info.ExtraControls != null)
+                        {
+                            foreach (var control in info.ExtraControls)
+                            {
+                                switch (control)
+                                {
+                                    case FloatRangeControl frc:
+                                        frc.Setter(frc.DefaultValue);
+                                        break;
+                                    case FloatSliderControl fsc:
+                                        fsc.Setter(fsc.DefaultValue);
+                                        break;
+                                    case ExtraCheckboxControl ecc:
+                                        ecc.Setter(ecc.DefaultValue);
+                                        break;
+                                    case IntRangeControl irc:
+                                        irc.Setter(irc.DefaultValue);
+                                        break;
+                                    case IntAdjusterControl iac:
+                                        iac.Setter(iac.DefaultValue);
+                                        break;
+                                }
+                            }
+                        }
                     }
 
                     if (resetAll || tab == SettingsTab.Commonality)

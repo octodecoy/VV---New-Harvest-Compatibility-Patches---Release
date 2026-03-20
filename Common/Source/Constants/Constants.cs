@@ -23,6 +23,7 @@ namespace NewHarvestPatches
                 public const string Fruit = nameof(Fruit);
                 public const string Nuts = nameof(Nuts);
                 public const string Vegetables = nameof(Vegetables);
+                public const string Fungus = nameof(Fungus);
                 public const string None_Base = nameof(None_Base); // None of our categories are assigned via xml
             }
         }
@@ -67,6 +68,10 @@ namespace NewHarvestPatches
                 public const string SectionLabel = nameof(SectionLabel);
                 public const string RadioLabel = nameof(RadioLabel);
                 public const string Tooltip = nameof(Tooltip);
+                public const string AdjusterLabel = nameof(AdjusterLabel);
+                public const string AdjusterSubLabel = nameof(AdjusterSubLabel);
+                public const string RangeLabel = nameof(RangeLabel);
+                public const string RangeSubLabel = nameof(RangeSubLabel);
             }
         }
 

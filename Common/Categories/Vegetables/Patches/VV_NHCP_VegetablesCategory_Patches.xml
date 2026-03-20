@@ -150,7 +150,7 @@
                                 </match>   
                             </li>
                             <li Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                <xpath>/Defs/ThingDef[defName="RawFungus" or defName="RawPotatoes" or defName="RawToxipotato"]</xpath>  
+                                <xpath>/Defs/ThingDef[defName="RawPotatoes" or defName="RawToxipotato"]</xpath>  
                                 <categoryType>Vegetables</categoryType>                        
                             </li> 
                             <li Class="NewHarvestPatches.HasModAddedCategoryOfType">

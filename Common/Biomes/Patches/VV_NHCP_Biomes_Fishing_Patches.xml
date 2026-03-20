@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.FindMod">
+        <modGroupOne>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </modGroupOne>
+        <modGroupTwo>
+            <li>Odyssey</li>
+        </modGroupTwo>
+        <logicBetweenGroups>And</logicBetweenGroups>
+        <caseTrue Class="PatchOperationAdd">
+            <xpath>/Defs/ThingSetMakerDef[defName="RareFishingCatches_Glowforest"]/root[@Class="ThingSetMaker_RandomOption"]/options</xpath>
+            <value>
+                <li>
+                    <weight>5</weight>
+                    <thingSetMaker Class="ThingSetMaker_StackCount">
+                        <fixedParams>
+                            <filter>
+                                <thingDefs>
+                                    <li>VV_BlackTruffles</li>
+                                </thingDefs>
+                            </filter>
+                            <countRange>2~10</countRange>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+                <li>
+                    <weight>5</weight>
+                    <thingSetMaker Class="ThingSetMaker_StackCount">
+                        <fixedParams>
+                            <filter>
+                                <thingDefs>
+                                    <li>VV_JackOLanternMushrooms</li>
+                                </thingDefs>
+                            </filter>
+                            <countRange>20~40</countRange>
+                        </fixedParams>
+                    </thingSetMaker>
+                </li>
+            </value>
+        </caseTrue>
+    </Operation>
+</Patch>

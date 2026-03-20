@@ -20,7 +20,9 @@ namespace NewHarvestPatches
         ThingCategoryDef categoryDefForButton = null,
         CheckboxInfo parent = null,
         List<CheckboxInfo> children = null,
-        bool drawSeparatorLine = false)
+        bool drawSeparatorLine = false,
+        List<ExtraControlInfo> extraControls = null,
+        float gapBeforeExtraControls = 0f)
     {
         public string SettingName { get; private set; } = settingName;
         public Func<bool> Getter { get; private set; } = getter;
@@ -42,6 +44,8 @@ namespace NewHarvestPatches
         public CheckboxInfo Parent { get; private set; } = parent;
         public List<CheckboxInfo> Children { get; private set; } = children;
         public bool DrawSeparatorLine { get; private set; } = drawSeparatorLine;
+        public List<ExtraControlInfo> ExtraControls { get; private set; } = extraControls;
+        public float GapBeforeExtraControls { get; private set; } = gapBeforeExtraControls;
 
         public static CheckboxInfo GetUltimateParent(CheckboxInfo child)
         {
@@ -342,7 +346,8 @@ namespace NewHarvestPatches
                                     indentSpaces: 1,
                                     gapAfterCheckbox: 36f,
                                     labelOverride: ($"{TKey.Type.CheckboxLabel}_{Category.Suffix.ResourceReadout}", [categoryKey]),
-                                    subLabelOverride: ($"{TKey.Type.CheckboxSubLabel}_{Category.Suffix.ResourceReadout}", [categoryKey])
+                                    subLabelOverride: ($"{TKey.Type.CheckboxSubLabel}_{Category.Suffix.ResourceReadout}", [categoryKey]),
+                                    drawSeparatorLine: true
                                 )
                             ]
                         )
@@ -355,6 +360,135 @@ namespace NewHarvestPatches
                 settings.AddToNutsCategory = false;
                 settings.MergeNutsCategory = false;
                 settings.NutsCategoryResourceReadout = false;
+            }
+
+            if (HasMushroomsModule)
+            {
+                string categoryKey = $"{TKey.Type.General}_{Category.Type.Fungus}";
+                var addToCategory = new CheckboxInfo(
+                    settingName: nameof(settings.AddToFungusCategory),
+                    getter: () => settings.AddToFungusCategory,
+                    setter: v => settings.AddToFungusCategory = v,
+                    tab: SettingsTab.Categories,
+                    defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("RawFungus"),
+                    gapAfterCheckbox: 0f,
+                    labelOverride: ($"{TKey.Type.CheckboxLabel}_{Category.Suffix.AddToCategory}", [categoryKey]),
+                    subLabelOverride: ($"{TKey.Type.CheckboxSubLabel}_{Category.Suffix.AddToCategory}", [categoryKey, categoryKey]),
+                    children:
+                    [
+                        new(
+                            settingName: nameof(settings.MergeFungusCategory),
+                            getter: () => settings.MergeFungusCategory,
+                            setter: v => settings.MergeFungusCategory = v,
+                            indentSpaces: 1,
+                            gapAfterCheckbox: 0f,
+                            labelOverride: ($"{TKey.Type.CheckboxLabel}_{Category.Suffix.MergeCategory}", [categoryKey]),
+                            subLabelOverride: ($"{TKey.Type.CheckboxSubLabel}_{Category.Suffix.MergeCategory}", [categoryKey, categoryKey]),
+                            categoryDefForButton: NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fungus,
+                            children:
+                            [
+                                new(
+                                    settingName: nameof(settings.FungusCategoryResourceReadout),
+                                    getter: () => settings.FungusCategoryResourceReadout,
+                                    setter: v => settings.FungusCategoryResourceReadout = v,
+                                    indentSpaces: 1,
+                                    gapAfterCheckbox: 36f,
+                                    labelOverride: ($"{TKey.Type.CheckboxLabel}_{Category.Suffix.ResourceReadout}", [categoryKey]),
+                                    subLabelOverride: ($"{TKey.Type.CheckboxSubLabel}_{Category.Suffix.ResourceReadout}", [categoryKey])
+                                )
+                            ]
+                        )
+                    ]
+                );
+                list.Add(addToCategory);
+
+                list.Add(new CheckboxInfo(
+                    tab: SettingsTab.Behaviors,
+                    settingName: nameof(settings.AddTruffleDiggingBehavior),
+                    getter: () => settings.AddTruffleDiggingBehavior,
+                    setter: v => settings.AddTruffleDiggingBehavior = v,
+                    defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("Pig"),
+                    gapBeforeExtraControls: 8f,
+                    extraControls:
+                    [
+                        new IntAdjusterControl(
+                            controlName: nameof(settings.TruffleSettings.TicksBetweenDigAttempts),
+                            labelKey: "TicksBetweenTruffleDigAttempts",
+                            getter: () => settings.TruffleSettings.TicksBetweenDigAttempts,
+                            setter: v => settings.TruffleSettings.TicksBetweenDigAttempts = v,
+                            defaultValue: GenDate.TicksPerDay,
+                            countChange: GenDate.TicksPerHour,
+                            min: GenDate.TicksPerHour,
+                            max: GenDate.TicksPerHour * 1000,
+                            indentSpaces: 1,
+                            sublabelKey: "TicksBetweenTruffleDigAttempts"
+                        ),
+                        new FloatRangeControl(
+                            controlName: nameof(settings.TruffleSettings.DiggingChanceRange),
+                            labelKey: "TruffleDiggingChanceRange",
+                            getter: () => settings.TruffleSettings.DiggingChanceRange,
+                            setter: v => settings.TruffleSettings.DiggingChanceRange = v,
+                            min: 0f,
+                            max: 1f,
+                            defaultValue: new FloatRange(0.05f, 0.5f),
+                            indentSpaces: 1,
+                            sublabelKey: "TruffleDiggingChanceRange",
+                            roundTo: 0.01f,
+                            displayAsPercent: true
+                        ),
+                        new FloatSliderControl(
+                            controlName: nameof(settings.TruffleSettings.DiggingChanceReduction),
+                            labelKey: "TruffleDiggingChanceReduction",
+                            getter: () => settings.TruffleSettings.DiggingChanceReduction,
+                            setter: v => settings.TruffleSettings.DiggingChanceReduction = v,
+                            min: 0f,
+                            max: 1f,
+                            defaultValue: 0.05f,
+                            indentSpaces: 1,
+                            sublabelKey: "TruffleDiggingChanceReduction",
+                            roundTo: 0.005f,
+                            displayAsPercent: true
+                        ),
+                        new IntRangeControl(
+                            controlName: nameof(settings.TruffleSettings.AmountRange),
+                            labelKey: "TruffleAmountRange",
+                            getter: () => settings.TruffleSettings.AmountRange,
+                            setter: v => settings.TruffleSettings.AmountRange = v,
+                            min: 1,
+                            max: 10,
+                            defaultValue: IntRange.One,
+                            indentSpaces: 1,
+                            sublabelKey: "TruffleAmountRange"
+                        ),
+                        new ExtraCheckboxControl(
+                            controlName: nameof(settings.TruffleSettings.SpawnsForbidden),
+                            labelKey: "TruffleSpawnsForbidden",
+                            getter: () => settings.TruffleSettings.SpawnsForbidden,
+                            setter: v => settings.TruffleSettings.SpawnsForbidden = v,
+                            defaultValue: false,
+                            indentSpaces: 1,
+                            sublabelKey: "TruffleSpawnsForbidden"
+                        ),
+                        new ExtraCheckboxControl(
+                            controlName: nameof(settings.TruffleSettings.GizmoRequiresTraining),
+                            labelKey: "TruffleGizmoRequiresTraining",
+                            getter: () => settings.TruffleSettings.GizmoRequiresTraining,
+                            setter: v => settings.TruffleSettings.GizmoRequiresTraining = v,
+                            defaultValue: true,
+                            indentSpaces: 1,
+                            sublabelKey: "TruffleGizmoRequiresTraining",
+                            gapAfterControl: 36f,
+                            drawSeparatorLine: true
+                        )
+                    ]
+                ));
+            }
+            else
+            {
+                settings.AddToFungusCategory = false;
+                settings.MergeFungusCategory = false;
+                settings.FungusCategoryResourceReadout = false;
+                settings.AddTruffleDiggingBehavior = false;
             }
 
             List<string> defForIconList = [];

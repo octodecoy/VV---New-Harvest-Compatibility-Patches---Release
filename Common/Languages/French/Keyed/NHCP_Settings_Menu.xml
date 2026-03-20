@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Les céréales produisent de la farine Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Les plantes céréalières nouvellement récoltées produiront de la farine Vanilla Cooking Expanded en tant que rendement secondaire, à hauteur de la moitié de la quantité de céréales.\n(Exemple : les plants d’amarante produiront 10 grains d’amarante et 5 farines)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Fleurs</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Champignons</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Fongus</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Comportements</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Ajouter le comportement de recherche de truffes</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Permet aux cochons et aux chiens apprivoisés de déterrer des truffes sur les terrains naturels pouvant être creusés.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks entre les tentatives de creusage</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Nombre de ticks devant s’écouler avant qu’un animal tente de déterrer des truffes.\n2500 ticks = 1 heure de jeu ; 60000 ticks = 1 jour de jeu.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Plage de chances de réussite</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Probabilité de faire apparaître une truffe lors de chaque tentative de creusage.\nLa valeur maximale est utilisée en premier, puis réduite par « Réduction de chance par animal ».\nLa chance finale ne descendra pas en dessous du minimum.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Réduction de chance par animal</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>Quantité dont la probabilité de réussite est réduite pour chaque animal capable de déterrer des truffes.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Plage de quantité de truffes</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Nombre de truffes générées lorsqu’une tentative de creusage réussit.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Les truffes générées sont interdites</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Si activé, les truffes trouvées par les animaux apparaîtront comme interdites.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Le bouton de commande nécessite un entraînement</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Si activé, les animaux doivent être entraînés en Obéissance, Creuser ou Fouiller pour recevoir le bouton de commande de recherche de truffes. Sinon, tous les animaux apprivoisés auront toujours ce bouton.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

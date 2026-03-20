@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>穀物產出 Vanilla Cooking Expanded 麵粉</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>新收穫的穀物植物將額外產出 Vanilla Cooking Expanded 麵粉，數量為穀物的一半。\n（示例：莧菜植物將產出 10 份莧菜穀物和 5 份麵粉）</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>花朵</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>蘑菇</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>真菌</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>行為</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>新增松露挖掘行為</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>允許被馴服的豬和狗在可挖掘的自然地形上挖掘松露。</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>挖掘嘗試之間的刻數</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>動物再次嘗試挖掘松露之前必須經過的刻數。\n2500 刻 = 1 遊戲小時；60000 刻 = 1 遊戲天。</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>成功機率範圍</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>每次挖掘嘗試成功生成松露的機率。\n首先使用最大值，然後依「每隻動物機率減少量」降低。\n最終機率不會低於最小值。</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>每隻動物機率減少量</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>每增加一隻能夠挖掘松露的動物，成功機率減少的數值。</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>松露數量範圍</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>挖掘成功時生成的松露數量範圍。</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>生成的松露設為禁止</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>若啟用，動物找到的松露將以「禁止」狀態生成。</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>命令開關需要訓練</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>若啟用，動物必須接受服從、挖掘或覓食訓練才能獲得松露挖掘命令開關。否則，所有被馴服的動物都會始終擁有該開關。</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

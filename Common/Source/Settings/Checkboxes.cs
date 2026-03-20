@@ -76,6 +76,9 @@ namespace NewHarvestPatches
             DrawSubLabel(ls, info, checkboxEnabled, false, GetCheckboxLabel(info));
             DrawCategoryButtonIfNeeded(ls, info, value, checkboxEnabled);
 
+            // Draw extra controls (sliders, ranges, etc.) tied to this checkbox
+            DrawExtraControls(ls, info, checkboxEnabled && value);
+
             // Force children to false if parent is unchecked
             if (!value && info.Children != null)
             {
@@ -111,6 +114,20 @@ namespace NewHarvestPatches
                 GUI.color = MenuSectionBGBorderColor;
                 GUI.DrawTexture(lineRect, BaseContent.WhiteTex);
                 GUI.color = white;
+            }
+        }
+
+        private static void DrawExtraControls(Listing_Standard ls, CheckboxInfo info, bool enabled)
+        {
+            if (info.ExtraControls.NullOrEmpty())
+                return;
+
+            if (info.GapBeforeExtraControls > 0f)
+                ls.Gap(info.GapBeforeExtraControls);
+
+            foreach (var control in info.ExtraControls)
+            {
+                control.Draw(ls, enabled);
             }
         }
 

@@ -10,5 +10,6 @@ namespace NewHarvestPatches
         Floors,
         Fuel,
         Visuals,
+        Behaviors,
     }
 }

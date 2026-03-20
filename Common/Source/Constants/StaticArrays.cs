@@ -10,7 +10,8 @@ namespace NewHarvestPatches
             "Industrial",
             "Medicinal",
             "Trees",
-            "Flowers"
+            "Flowers",
+            "Mushrooms"
         ];
     }
 }

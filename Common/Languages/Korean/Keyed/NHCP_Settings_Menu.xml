@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>곡물이 Vanilla Cooking Expanded 밀가루를 생산</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>수확한 곡물 작물은 부가적으로 Vanilla Cooking Expanded 밀가루를 곡물 양의 절반만큼 생산합니다.\n(예: 아마란스 작물은 아마란스 곡물 10개와 밀가루 5개를 생산합니다)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>꽃</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>버섯</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>균류</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>행동</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>트러플 발굴 행동 추가</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>길들인 돼지와 개가 발굴 가능한 자연 지형에서 트러플을 찾을 수 있도록 합니다.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>발굴 시도 간 틱</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>동물이 트러플을 발굴하기 전까지 경과해야 하는 틱 수입니다.\n2500 틱 = 1 게임 시간; 60000 틱 = 1 게임 일.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>성공 확률 범위</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>각 발굴 시도에서 트러플이 생성될 확률입니다.\n최대 값이 먼저 사용되고, 이후 '동물별 확률 감소'에 따라 감소됩니다.\n최종 확률은 최소값 이하로 떨어지지 않습니다.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>동물별 확률 감소</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>트러플을 발굴할 수 있는 각 동물마다 성공 확률이 얼마나 감소하는지입니다.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>트러플 수량 범위</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>발굴이 성공했을 때 생성되는 트러플 수량의 범위입니다.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>생성된 트러플 금지</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>활성화하면, 동물이 찾은 트러플은 '금지' 상태로 생성됩니다.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>명령 토글은 훈련 필요</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>활성화하면, 동물은 복종, 발굴, 또는 채집 훈련을 받아야 트러플 발굴 명령 토글을 사용할 수 있습니다. 그렇지 않으면, 모든 길들인 동물이 항상 이 토글을 갖습니다.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

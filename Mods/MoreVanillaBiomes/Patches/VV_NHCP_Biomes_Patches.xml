@@ -171,7 +171,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Flowers</li>                
+            <li>VV - New Harvest: Flowers</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
@@ -180,19 +180,19 @@
                     <value>
                         <VV_Tulip>0.04</VV_Tulip>
                     </value>
-                </li>     
+                </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="ZBiome_CloudForest"]/wildPlants</xpath>
                     <value>
                         <VV_VenusFlytrap>0.04</VV_VenusFlytrap>
                     </value>
-                </li>    
+                </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="ZBiome_Grasslands"]/wildPlants</xpath>
                     <value>
                         <VV_Tulip>0.04</VV_Tulip>
                     </value>
-                </li>      
+                </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="ZBiome_AlpineMeadow"]/wildPlants</xpath>
                     <value>
@@ -205,13 +205,63 @@
                     <value>
                         <VV_GoldenBarrelCactus>0.03</VV_GoldenBarrelCactus>
                     </value>
-                </li>    
+                </li>
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="ZBiome_CoastalDunes"]/wildPlants</xpath>
                     <value>
                         <VV_GoldenBarrelCactus>0.01</VV_GoldenBarrelCactus>
                     </value>
-                </li>    
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ZBiome_AlpineMeadow"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackTruffle>0.0010</VV_BlackTruffle>
+                        <VV_BirchTreeWithOysterMushrooms>0.004</VV_BirchTreeWithOysterMushrooms>
+                        <VV_PoplarTreeWithOysterMushrooms>0.004</VV_PoplarTreeWithOysterMushrooms>
+                        <VV_KingBolete>0.004</VV_KingBolete>
+                        <VV_Chanterelle>0.004</VV_Chanterelle>
+                        <VV_Morel>0.004</VV_Morel>
+                        <VV_ParasolMushroom>0.004</VV_ParasolMushroom>
+                        <VV_FlyAgaric>0.004</VV_FlyAgaric>
+                        <VV_FoolsFunnel>0.004</VV_FoolsFunnel>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ZBiome_Badlands"]/wildPlants</xpath>
+                    <value>
+                        <VV_Tulip>0.04</VV_Tulip>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ZBiome_Grasslands"]/wildPlants</xpath>
+                    <value>
+                        <VV_Chanterelle>0.002</VV_Chanterelle>
+                        <VV_ParasolMushroom>0.002</VV_ParasolMushroom>
+                        <VV_FoolsFunnel>0.002</VV_FoolsFunnel>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/BiomeDef[defName="ZBiome_Marsh"]/wildPlants</xpath>
+                    <value>
+                        <VV_BlackTruffle>0.0010</VV_BlackTruffle>
+                        <VV_MapleTreeWithShiitakeMushrooms>0.003</VV_MapleTreeWithShiitakeMushrooms>
+                        <VV_Chanterelle>0.003</VV_Chanterelle>
+                        <VV_Morel>0.003</VV_Morel>
+                        <VV_ParasolMushroom>0.003</VV_ParasolMushroom>
+                        <VV_JackOLanternMushroom>0.003</VV_JackOLanternMushroom>
+                        <VV_FoolsFunnel>0.003</VV_FoolsFunnel>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>

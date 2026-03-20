@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Getreide erzeugt Vanilla Cooking Expanded Mehl</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Neu geerntete Getreidepflanzen erzeugen zusätzlich Vanilla Cooking Expanded Mehl als sekundären Ertrag, in der Hälfte der Menge des Getreides.\n(Beispiel: Amaranthpflanzen erzeugen 10 Amarantkörner und 5 Mehl)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Blumen</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Pilze</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Pilz</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Verhalten</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Verhalten zum Trüffelgraben hinzufügen</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Erlaubt gezähmten Schweinen und Hunden, auf grabbarem natürlichem Terrain nach Trüffeln zu graben.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks zwischen Grabversuchen</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Anzahl der Ticks, die vergehen müssen, bevor ein Tier erneut versucht, nach Trüffeln zu graben.\n2500 Ticks = 1 Spielstunde; 60000 Ticks = 1 Spieltag.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Erfolgswahrscheinlichkeitsbereich</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Chance, bei jedem Grabversuch einen Trüffel zu erzeugen.\nZuerst wird der Maximalwert verwendet und anschließend durch „Wahrscheinlichkeitsreduktion pro Tier“ verringert.\nDie endgültige Chance fällt nicht unter den Minimalwert.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Wahrscheinlichkeitsreduktion pro Tier</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>Der Betrag, um den die Erfolgswahrscheinlichkeit für jedes Tier reduziert wird, das Trüffel graben kann.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Trüffelanzahlbereich</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Bereich der Anzahl an Trüffeln, die bei einem erfolgreichen Grabversuch erzeugt werden.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Erzeugte Trüffel sind verboten</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Wenn aktiviert, werden von Tieren gefundene Trüffel als verboten erzeugt.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Befehlsschalter erfordert Training</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Wenn aktiviert, müssen Tiere in Gehorsam, Graben oder Nahrungssuche trainiert sein, um den Trüffelgrab-Befehlsschalter zu erhalten. Andernfalls haben alle gezähmten Tiere diesen Schalter immer.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

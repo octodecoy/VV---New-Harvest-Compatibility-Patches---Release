@@ -10,7 +10,8 @@ namespace NewHarvestPatches
                 NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fruit,
                 NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Grains,
                 NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Nuts,
-                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Vegetables
+                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Vegetables,
+                NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fungus
             ];
         }
     }

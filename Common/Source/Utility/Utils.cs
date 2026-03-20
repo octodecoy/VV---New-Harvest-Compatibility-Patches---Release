@@ -8,7 +8,7 @@ namespace NewHarvestPatches
         public static class Logger
         {
             private static bool LoggingEnabled => Settings.Logging;
-            private const string Prefix = "[NewHarvestPatches] - ";
+            public const string Prefix = "[NewHarvestPatches] - ";
 
             public static void ToLog(string message, int severity = 0, [CallerFilePath] string filePath = null, [CallerMemberName] string caller = null)
             {
@@ -112,6 +112,7 @@ namespace NewHarvestPatches
                     if (HasMedicinalModule) ids.Add("vvenchov.vvnewharvestmedicinalplants");
                     if (HasTreesModule) ids.Add("vvenchov.vvnewharvesttrees");
                     if (HasFlowersModule) ids.Add("vvenchov.vvnewharvestflowers");
+                    if (HasMushroomsModule) ids.Add("vvenchov.vvnewharvestmushrooms");
                     return [.. ids];
                 }
             }
@@ -271,7 +272,8 @@ namespace NewHarvestPatches
             public static bool HasMedicinalModule = HasMainModule || IsModActive("vvenchov.vvnewharvestmedicinalplants");
             public static bool HasTreesModule = HasMainModule || IsModActive("vvenchov.vvnewharvesttrees");
             public static bool HasFlowersModule = HasMainModule || IsModActive("vvenchov.vvnewharvestflowers");
-            public static bool HasAnyModule = HasForageModule || HasGardenModule || HasIndustrialModule || HasMedicinalModule || HasTreesModule || HasFlowersModule;
+            public static bool HasMushroomsModule = HasMainModule || IsModActive("vvenchov.vvnewharvestmushrooms");
+            public static bool HasAnyModule = HasForageModule || HasGardenModule || HasIndustrialModule || HasMedicinalModule || HasTreesModule || HasFlowersModule || HasMushroomsModule;
             public static bool HasMedievalOverhaul = ModsConfig.IsActive("dankpyon.medieval.overhaul");
             public static bool HasVanillaCookingExpanded = ModsConfig.IsActive("vanillaexpanded.vcooke");
             public static bool HasVanillaPlantsExpandedMorePlants = ModsConfig.IsActive("vanillaexpanded.vplantsemore");

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- VINEGAR -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="AC_Infuser"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
+        <value>
+            <li>VV_AC_OilAndTrufflesToTruffleOil</li>
+        </value>
+    </Operation>
+</Patch>

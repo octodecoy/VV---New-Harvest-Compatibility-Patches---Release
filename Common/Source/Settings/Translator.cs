@@ -2,7 +2,7 @@ namespace NewHarvestPatches
 {
     internal static class Translator
     {
-        private const string KeyPrefix = "NHCP.";
+        public const string KeyPrefix = "NHCP.";
 
         public static string TranslateKey(string keyType, string key)
         {

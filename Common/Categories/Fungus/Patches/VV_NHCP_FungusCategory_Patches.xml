@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch> 
+    <!-- Add the original category plus the dummy category to begin with so when/if we add the dummy category to 
+         recipes and etc. where mod categories reside, our things will be included too.
+         If merge setting is on, we replace the original category so that only the dummy category is left, 
+         and add a parent to the dummy category so that its children will now be visible, and the
+         dummy category will now be a real category.  -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>   
+        <match Class="NewHarvestPatches.AddOrReplace">
+            <xpath>            
+                /Defs/ThingDef
+                [defName="VV_BlackTruffles" or
+                defName="VV_KingBoletes" or
+                defName="VV_Chanterelles" or
+                defName="VV_Morels" or
+                defName="VV_ParasolMushrooms" or
+                defName="VV_OysterMushrooms" or
+                defName="VV_ShiitakeMushrooms" or
+                defName="VV_FlyAgarics" or
+                defName="VV_FoolsFunnels" or
+                defName="VV_JackOLanternMushrooms"]
+            </xpath>      
+            <value>
+                <thingCategories Inherit="False">
+                    <li>PlantFoodRaw</li>
+                    <li>VV_NHCP_DummyCategory_Fungus</li>
+                </thingCategories>
+            </value>
+        </match>     
+    </Operation>
+    <!-- Check if there are supposed mod added categories, and if so, add our dummy category to recipes/storages/traders containing them. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>  
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="NewHarvestPatches.TestCategory">
+                    <xpath>/Defs/ThingCategoryDef[parent="Foods" or parent="FoodRaw" or parent="PlantFoodRaw"]</xpath>
+                    <categoryType>Fungus</categoryType>  
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="NewHarvestPatches.AddCategoryToFilter">
+                                <success>Always</success>
+                                <xpath>/Defs/RecipeDef/ingredients/li/filter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                <categoryType>Fungus</categoryType>                    
+                            </li>
+                            <li Class="NewHarvestPatches.AddCategoryToFilter">
+                                <success>Always</success>
+                                <xpath>/Defs/RecipeDef/fixedIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                <categoryType>Fungus</categoryType>
+                            </li>
+                            <li Class="NewHarvestPatches.AddCategoryToFilter">
+                                <success>Always</success>
+                                <xpath>/Defs/RecipeDef/defaultIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                <categoryType>Fungus</categoryType>
+                            </li>
+                            <li Class="NewHarvestPatches.AddCategoryToFilter">
+                                <success>Always</success>
+                                <xpath>/Defs/ThingDef/building/fixedStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                <categoryType>Fungus</categoryType>
+                            </li>
+                            <li Class="NewHarvestPatches.AddCategoryToFilter">
+                                <success>Always</success>
+                                <xpath>/Defs/ThingDef/building/defaultStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                <categoryType>Fungus</categoryType>
+                            </li>
+                            <li Class="PatchOperationFindMod">
+                                <mods>
+                                    <li>[SYR] Processor Framework</li>
+                                </mods>
+                                <match Class="NewHarvestPatches.AddCategoryToFilter">
+                                    <success>Always</success>
+                                    <xpath>/Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories[not(li="VV_NHCP_DummyCategory_Fungus")]</xpath>
+                                    <categoryType>Fungus</categoryType>
+                                </match>
+                            </li>
+                            <li Class="NewHarvestPatches.ConditionalSetting">
+                                <setting>MergeFungusCategory</setting>
+                                <caseTrue Class="NewHarvestPatches.CloneStockWithNewCategory">
+                                    <success>Always</success>
+                                    <xpath>/Defs/TraderKindDef/stockGenerators[not(li[@Class="StockGenerator_Category"]/categoryDef="VV_NHCP_DummyCategory_Fungus")]/li[@Class="StockGenerator_Category"]</xpath>
+                                    <categoryType>Fungus</categoryType>
+                                    <zeroOutOriginal>true</zeroOutOriginal>                      
+                                </caseTrue>
+                            </li>                        
+                        </operations>
+                    </caseTrue>
+                </li>
+                <li Class="NewHarvestPatches.ConditionalSetting">
+                    <setting>MergeFungusCategory</setting>
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <!-- Make category visible to UI -->
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_Fungus"]</xpath>
+                                <value>
+                                    <parent>PlantFoodRaw</parent>
+                                </value>
+                            </li>   
+                            <li Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
+                                <success>Always</success>
+                                <xpath>
+                                    /Defs/ThingDef
+                                    [ingestible/foodType="Fungus"]
+                                    [not(thingCategories/li="MeatRaw")]
+                                    [not(thingCategories/li="Textiles")]
+                                </xpath>
+                                <categoryType>Fungus</categoryType>  
+                                <requiredCategoryDefName>PlantFoodRaw</requiredCategoryDefName>
+                            </li>
+                            <li Class="NewHarvestPatches.HasModAddedCategoryOfType">
+                                <success>Always</success>
+                                <categoryType>Fungus</categoryType>
+                                <caseTrue Class="NewHarvestPatches.TryReplaceCategoryChildrenWithCategoryOfType">
+                                    <categoryType>Fungus</categoryType>
+                                </caseTrue>
+                            </li> 
+                            <!-- This can only be true if Merge setting is true -->
+                            <li Class="NewHarvestPatches.ConditionalSetting">
+                                <setting>FungusCategoryResourceReadout</setting>
+                                <caseTrue Class="NewHarvestPatches.AddOrReplace">
+                                    <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_Fungus"]</xpath>
+                                    <value>
+                                        <resourceReadoutRoot>true</resourceReadoutRoot>
+                                    </value>
+                                </caseTrue>
+                            </li>  
+                        </operations>
+                    </caseTrue>
+                </li>
+            </operations>
+        </match>        
+    </Operation>  
+</Patch>

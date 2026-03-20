@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Los Granos Producen Harina de Vanilla Cooking Expanded</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>Las plantas de grano de Nueva Cosecha producirán harina de Vanilla Cooking Expanded como salida secundaria a la mitad de la cantidad de grano.\n(Ejemplo: plantas de amaranto producirán 10 granos de amaranto y 5 de harina)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.General_Flowers>Flores</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Hongos</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Fungí</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Comportamientos</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Agregar comportamiento de excavación de trufas</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Permite que cerdos y perros domesticados excaven trufas en terrenos naturales excavables.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks entre intentos de excavación</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Número de ticks que deben pasar antes de que un animal intente excavar trufas.\n2500 ticks = 1 hora de juego; 60000 ticks = 1 día de juego.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Rango de probabilidad de éxito</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Probabilidad de generar una trufa en cada intento de excavación.\nSe usa primero el valor máximo, luego se reduce según “Reducción de probabilidad por animal”.\nLa probabilidad final no caerá por debajo del mínimo.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Reducción de probabilidad por animal</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>La cantidad en que se reduce la probabilidad de éxito por cada animal capaz de excavar trufas.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Rango de cantidad de trufas</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Rango de trufas generadas cuando un intento de excavación tiene éxito.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Las trufas generadas están prohibidas</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Si está activado, las trufas encontradas por los animales aparecerán como prohibidas.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>El comando requiere entrenamiento</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Si está activado, los animales deben estar entrenados en Obediencia, Excavación o Recolección para recibir el comando de excavación de trufas. De lo contrario, todos los animales domesticados siempre tendrán este comando.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>

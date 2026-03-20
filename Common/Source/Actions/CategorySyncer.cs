@@ -108,6 +108,13 @@ namespace NewHarvestPatches
                         thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
                         TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Vegetables, "RawPotatoes");
                     }
+
+                    if (HasMushroomsModule && Settings.AddToFungusCategory && !Settings.MergeFungusCategory)
+                    {
+                        sourceCategory = NHCP_ThingCategoryDefOf.VV_NHCP_DummyCategory_Fungus;
+                        thingDefList = ThingDefUtility.GetChildDefsOfCategory(sourceCategory, newHarvestOnly: true);
+                        TrySyncDefsToCategory(thingDefList, sourceCategory?.defName, Category.Type.Fungus, "RawMushroom");
+                    }
                 }
 
                 ResolveAllReferences();

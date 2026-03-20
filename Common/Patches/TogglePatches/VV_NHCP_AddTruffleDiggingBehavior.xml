@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddTruffleDiggingBehavior</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Mushrooms</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <!-- Pig -->
+                    <li Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Pig"]/comps</xpath>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Pig"]</xpath>
+                            <value>
+                                <comps />
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Pig"]/comps</xpath>
+                        <value>
+                            <li Class="NewHarvestPatches.CompProperties_DigTruffles" />
+                        </value>
+                    </li>
+                    <!-- Dogs -->
+                    <li Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>                            
+                            /Defs/ThingDef
+                            [@ParentName="AnimalThingBase"]
+                            [not(comps)]
+                            [not(translate(@Abstract, 'TRUE', 'true')="true")]
+                            [not(translate(race/predator, 'TRUE', 'true')="true")]
+                            [race/animalType="Canine" or race/leatherDef="Leather_Dog"]
+                            [tradeTags/li="AnimalPet"]
+                        </xpath>
+                        <value>
+                            <comps />
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>                            
+                            /Defs/ThingDef
+                            [@ParentName="AnimalThingBase"]
+                            [comps]
+                            [not(translate(@Abstract, 'TRUE', 'true')="true")]
+                            [not(translate(race/predator, 'TRUE', 'true')="true")]
+                            [race/animalType="Canine" or race/leatherDef="Leather_Dog"]
+                            [tradeTags/li="AnimalPet"]
+                            /comps
+                        </xpath>
+                        <value>
+                            <li Class="NewHarvestPatches.CompProperties_DigTruffles" />
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

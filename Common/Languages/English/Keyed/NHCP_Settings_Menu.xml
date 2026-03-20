@@ -85,4 +85,21 @@
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Grains Produce Vanilla Cooking Expanded Flour</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
     <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>New Harvest grain plants will produce Vanilla Cooking Expanded flour as a secondary output at half the amount of the grain.\n(Example: Amaranth plants will produce 10 amaranth grain and 5 flour)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
 	<NHCP.General_Flowers>Flowers</NHCP.General_Flowers>
+    <NHCP.General_Mushrooms>Mushrooms</NHCP.General_Mushrooms>
+    <NHCP.General_Fungus>Fungus</NHCP.General_Fungus>
+    <NHCP.Tab_Behaviors>Behaviors</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Add Truffle Digging Behavior</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Allows tamed pigs and dogs to dig up truffles when on diggable natural terrain.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks Between Dig Attempts</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Ticks that must pass before an animal attempts to dig for truffles.\n2500 ticks = 1 game hour; 60000 ticks = 1 game day.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.RangeLabel_TruffleDiggingChanceRange>Success Chance Range</NHCP.RangeLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Chance to successfully spawn a truffle on each dig attempt.\nThe maximum value is used first, then reduced by 'Chance Reduction Per Animal'.\nThe final chance will not fall below the minimum.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.SliderLabel_TruffleDiggingChanceReduction>Chance Reduction Per Animal</NHCP.SliderLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>Amount the success chance is reduced for each animal capable of digging truffles.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.RangeLabel_TruffleAmountRange>Truffle Amount Range</NHCP.RangeLabel_TruffleAmountRange>
+    <NHCP.RangeSubLabel_TruffleAmountRange>Range of truffles spawned when a dig attempt succeeds.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Spawned Truffles Are Forbidden</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>If enabled, truffles found by animals will spawn forbidden.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Command Toggle Requires Training</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>If enabled, animals must be trained in Obedience, Dig, or Forage to receive the truffle digging command toggle. Otherwise, all tamed animals will always have the toggle.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
 </LanguageData>
