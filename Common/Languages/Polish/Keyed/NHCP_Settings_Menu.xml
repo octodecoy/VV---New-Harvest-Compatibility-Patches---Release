@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Jeśli włączone, trufle znalezione przez zwierzęta pojawią się jako zabronione.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Przełącznik komendy wymaga treningu</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Jeśli włączone, zwierzęta muszą być wytrenowane w Posłuszeństwie, Kopaniu lub Zbieraniu, aby otrzymać przełącznik komendy kopania trufli. W przeciwnym razie wszystkie oswojone zwierzęta zawsze będą mieć ten przełącznik.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>강한 위 유전자가 버섯 중독을 방지함</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>활성화하면, '강한 위' 유전자를 가진 주민은 뉴 하베스트 버섯으로 인한 중독에 면역됩니다.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

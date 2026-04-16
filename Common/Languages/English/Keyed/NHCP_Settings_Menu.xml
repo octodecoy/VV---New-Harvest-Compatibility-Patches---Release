@@ -102,4 +102,7 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>If enabled, truffles found by animals will spawn forbidden.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Command Toggle Requires Training</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>If enabled, animals must be trained in Obedience, Dig, or Forage to receive the truffle digging command toggle. Otherwise, all tamed animals will always have the toggle.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Strong Stomach Gene Prevents Fungal Poisoning</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>If enabled, pawns with the 'Strong Stomach' gene are immune to poisoning from New Harvest fungi.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

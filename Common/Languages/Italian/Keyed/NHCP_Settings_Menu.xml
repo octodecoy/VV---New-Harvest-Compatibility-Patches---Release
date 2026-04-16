@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Se abilitato, i tartufi trovati dagli animali appariranno come proibiti.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Il comando richiede addestramento</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Se abilitato, gli animali devono essere addestrati in Obbedienza, Scavo o Foraggiamento per ricevere il comando di scavo dei tartufi. Altrimenti, tutti gli animali addomesticati avranno sempre il comando.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Gene dello Stomaco Forte Previene l’Avvelenamento da Funghi</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Se abilitato, i coloni con il gene “Stomaco Forte” sono immuni all’avvelenamento causato dai funghi del Nuovo Raccolto.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

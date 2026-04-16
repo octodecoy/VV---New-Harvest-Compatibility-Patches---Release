@@ -237,12 +237,6 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="ZBiome_Badlands"]/wildPlants</xpath>
-                    <value>
-                        <VV_Tulip>0.04</VV_Tulip>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
                     <xpath>/Defs/BiomeDef[defName="ZBiome_Grasslands"]/wildPlants</xpath>
                     <value>
                         <VV_Chanterelle>0.002</VV_Chanterelle>

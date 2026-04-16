@@ -364,6 +364,20 @@ namespace NewHarvestPatches
 
             if (HasMushroomsModule)
             {
+                if (ModsConfig.BiotechActive)
+                {
+                    list.Add(new CheckboxInfo(
+                        settingName: nameof(settings.GenesPreventFungusPoisoning),
+                        getter: () => settings.GenesPreventFungusPoisoning,
+                        setter: v => settings.GenesPreventFungusPoisoning = v,
+                        defForIcon: DefDatabase<ThingDef>.GetNamedSilentFail("VV_JackOLanternMushroom")
+                    ));
+                }
+                else
+                {
+                    settings.GenesPreventFungusPoisoning = false;
+                }
+                
                 string categoryKey = $"{TKey.Type.General}_{Category.Type.Fungus}";
                 var addToCategory = new CheckboxInfo(
                     settingName: nameof(settings.AddToFungusCategory),
@@ -489,6 +503,7 @@ namespace NewHarvestPatches
                 settings.MergeFungusCategory = false;
                 settings.FungusCategoryResourceReadout = false;
                 settings.AddTruffleDiggingBehavior = false;
+                settings.GenesPreventFungusPoisoning = false;
             }
 
             List<string> defForIconList = [];

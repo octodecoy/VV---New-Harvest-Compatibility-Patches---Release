@@ -2,11 +2,11 @@
 <Patch>
     <Operation Class="NewHarvestPatches.FindMod">
         <modGroupOne>
-            <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Mushrooms</li>
+            <li>Odyssey</li>
         </modGroupOne>
         <modGroupTwo>
-            <li>Odyssey</li>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
         </modGroupTwo>
         <logicBetweenGroups>And</logicBetweenGroups>
         <caseTrue Class="PatchOperationAdd">

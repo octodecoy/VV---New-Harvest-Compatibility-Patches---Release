@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Se ativado, as trufas encontradas pelos animais surgirão como proibidas.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>O comando requer treino</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Se ativado, os animais devem ser treinados em Obediência, Escavação ou Procura para receber o comando de escavação de trufas. Caso contrário, todos os animais domesticados terão sempre o comando.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Gene do Estômago Forte Previne Intoxicação por Fungos</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Se ativado, colonos com o gene “Estômago Forte” são imunes à intoxicação causada pelos fungos da Nova Colheita.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

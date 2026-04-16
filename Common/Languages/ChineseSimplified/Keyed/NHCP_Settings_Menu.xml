@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>如果启用，动物找到的松露将以“禁止”状态生成。</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>命令开关需要训练</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>如果启用，动物必须接受服从、挖掘或觅食训练才能获得松露挖掘命令开关。否则，所有被驯服的动物始终都会拥有该开关。</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>强壮胃基因防止真菌中毒</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>如果启用，拥有“强壮胃”基因的角色将免疫新收获真菌造成的中毒。</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

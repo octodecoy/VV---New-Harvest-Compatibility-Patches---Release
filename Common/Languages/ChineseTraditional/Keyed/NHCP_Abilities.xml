@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <NHCP.FoundTruffle>{PAWN_nameFull} 找到了 {TRUFFLE_label}！</NHCP.FoundTruffle>
+    <NHCP.DisableDigging>停用挖掘松露</NHCP.DisableDigging>
+    <NHCP.DisableDiggingDesc>停用該動物挖掘松露的能力。</NHCP.DisableDiggingDesc>
+    <NHCP.EnableDigging>啟用挖掘松露</NHCP.EnableDigging>
+    <NHCP.EnableDiggingDesc>啟用該動物挖掘松露的能力。</NHCP.EnableDiggingDesc>
+</LanguageData>

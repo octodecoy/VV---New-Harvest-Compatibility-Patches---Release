@@ -41,13 +41,14 @@ namespace NewHarvestPatches
         public bool GrainsProduceVCEFlourSecondary = false;
         public bool AddTruffleDiggingBehavior = false;
         public TruffleDiggingSettings TruffleSettings = new();
+        public bool GenesPreventFungusPoisoning = false;
+
         public Dictionary<string, bool> FuelTypes = [];
         public Dictionary<string, CommonalityInfo> StuffCommonality = [];
         public Dictionary<string, bool> FallColorTrees = [];
         public Dictionary<string, ColorInfo> MaterialColors = [];
         public List<DefToCategoryInfo> CategoryData = [];
         public Dictionary<string, CategoryLabelInfo> CategoryLabelCache = [];
-
         public static Dictionary<string, HashSet<string>> ModAddedCategoryDictionary = [];
         public static HashSet<string> ModAddedCategoryTypeCache = [];
 
@@ -173,12 +174,7 @@ namespace NewHarvestPatches
                 Scribe_Values.Look(ref AddTruffleDiggingBehavior, nameof(AddTruffleDiggingBehavior), false, false);
                 Scribe_Deep.Look(ref TruffleSettings, nameof(TruffleSettings));
                 TruffleSettings ??= new TruffleDiggingSettings();
-                // Scribe_Values.Look(ref TicksBetweenTruffleDigAttempts, nameof(TicksBetweenTruffleDigAttempts), GenDate.TicksPerDay, false);
-                // Scribe_Values.Look(ref TruffleDiggingChanceRange, nameof(TruffleDiggingChanceRange), new FloatRange(0.05f, 0.5f), false);
-                // Scribe_Values.Look(ref TruffleDiggingChanceReduction, nameof(TruffleDiggingChanceReduction), 0.05f, false);
-                // Scribe_Values.Look(ref TruffleAmountRange, nameof(TruffleAmountRange), IntRange.One, false);
-                // Scribe_Values.Look(ref TruffleSpawnsForbidden, nameof(TruffleSpawnsForbidden), false, false);
-                // Scribe_Values.Look(ref TruffleGizmoRequiresTraining, nameof(TruffleGizmoRequiresTraining), true, false);
+                Scribe_Values.Look(ref GenesPreventFungusPoisoning, nameof(GenesPreventFungusPoisoning), false, false);
 
                 if (HasIndustrialModule)
                 {

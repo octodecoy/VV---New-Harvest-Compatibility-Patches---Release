@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <NHCP.FoundTruffle>{PAWN_nameFull} нашёл(нашла) {TRUFFLE_label}!</NHCP.FoundTruffle>
+    <NHCP.DisableDigging>Отключить поиск трюфелей</NHCP.DisableDigging>
+    <NHCP.DisableDiggingDesc>Отключает способность этого животного искать трюфели.</NHCP.DisableDiggingDesc>
+    <NHCP.EnableDigging>Включить поиск трюфелей</NHCP.EnableDigging>
+    <NHCP.EnableDiggingDesc>Включает способность этого животного искать трюфели.</NHCP.EnableDiggingDesc>
+</LanguageData>

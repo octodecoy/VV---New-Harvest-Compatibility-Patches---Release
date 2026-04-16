@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <NHCP.FoundTruffle>{PAWN_nameFull}이(가) {TRUFFLE_label}을(를) 발견했습니다!</NHCP.FoundTruffle>
+    <NHCP.DisableDigging>트러플 찾기 비활성화</NHCP.DisableDigging>
+    <NHCP.DisableDiggingDesc>이 동물이 트러플을 찾는 능력을 비활성화합니다.</NHCP.DisableDiggingDesc>
+    <NHCP.EnableDigging>트러플 찾기 활성화</NHCP.EnableDigging>
+    <NHCP.EnableDiggingDesc>이 동물이 트러플을 찾는 능력을 활성화합니다.</NHCP.EnableDiggingDesc>
+</LanguageData>

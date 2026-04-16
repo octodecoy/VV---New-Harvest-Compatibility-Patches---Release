@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Якщо увімкнено, трюфелі, знайдені тваринами, з’являтимуться як заборонені.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Команда вимагає тренування</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Якщо увімкнено, тварини повинні бути натреновані на Послух, Копання або Збір, щоб отримати перемикач команди копання трюфелів. Інакше всі приручені тварини завжди матимуть цей перемикач.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Ген «Сильний шлунок» запобігає грибковому отруєнню</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Якщо ввімкнено, колоністи з геном «Сильний шлунок» мають імунітет до отруєння грибами Нового Урожаю.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>有効にすると、動物が見つけたトリュフは「禁止」として生成されます。</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>コマンド切替は訓練が必要</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>有効にすると、動物は服従、掘削、または採集の訓練を受けている必要があり、トリュフ掘りコマンド切替を利用できます。そうでない場合、すべての飼いならした動物が常に切替を持ちます。</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>強い胃の遺伝子はキノコ中毒を防ぐ</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>有効にすると、「強い胃」遺伝子を持つ入植者はニュー・ハーベストのキノコによる中毒を免疫します。</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

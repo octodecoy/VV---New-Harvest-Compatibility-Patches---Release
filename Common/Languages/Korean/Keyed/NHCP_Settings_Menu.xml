@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>활성화하면, 동물이 찾은 트러플은 '금지' 상태로 생성됩니다.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>명령 토글은 훈련 필요</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>활성화하면, 동물은 복종, 발굴, 또는 채집 훈련을 받아야 트러플 발굴 명령 토글을 사용할 수 있습니다. 그렇지 않으면, 모든 길들인 동물이 항상 이 토글을 갖습니다.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>강한 위 유전자가 버섯 중독을 방지함</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>활성화하면, '강한 위' 유전자를 가진 주민은 뉴 하베스트 버섯으로 인한 중독에 면역됩니다.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

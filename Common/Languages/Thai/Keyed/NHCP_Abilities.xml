@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <NHCP.FoundTruffle>{PAWN_nameFull} พบ {TRUFFLE_label}!</NHCP.FoundTruffle>
+    <NHCP.DisableDigging>ปิดการขุดเห็ดทรัฟเฟิล</NHCP.DisableDigging>
+    <NHCP.DisableDiggingDesc>ปิดความสามารถของสัตว์นี้ในการขุดเห็ดทรัฟเฟิล</NHCP.DisableDiggingDesc>
+    <NHCP.EnableDigging>เปิดการขุดเห็ดทรัฟเฟิล</NHCP.EnableDigging>
+    <NHCP.EnableDiggingDesc>เปิดความสามารถของสัตว์นี้ในการขุดเห็ดทรัฟเฟิล</NHCP.EnableDiggingDesc>
+</LanguageData>

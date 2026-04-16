@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Если включено, трюфели, найденные животными, появляются как запрещённые.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Команда требует тренировки</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Если включено, животные должны быть обучены Послушанию, Рытью или Поиску, чтобы получить переключатель команды рытья трюфелей. В противном случае все приручённые животные всегда будут иметь этот переключатель.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Ген «Крепкий желудок» предотвращает грибное отравление</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Если включено, колонисты с геном «Крепкий желудок» иммунны к отравлению грибами Нового Урожая.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

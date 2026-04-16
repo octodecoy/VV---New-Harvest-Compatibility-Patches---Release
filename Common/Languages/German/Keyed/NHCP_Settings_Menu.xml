@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Wenn aktiviert, werden von Tieren gefundene Trüffel als verboten erzeugt.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Befehlsschalter erfordert Training</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Wenn aktiviert, müssen Tiere in Gehorsam, Graben oder Nahrungssuche trainiert sein, um den Trüffelgrab-Befehlsschalter zu erhalten. Andernfalls haben alle gezähmten Tiere diesen Schalter immer.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Gen „Starker Magen“ verhindert Pilzvergiftung</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Wenn aktiviert, sind Kolonisten mit dem „Starker Magen“-Gen gegen Vergiftungen durch New-Harvest-Pilze immun.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

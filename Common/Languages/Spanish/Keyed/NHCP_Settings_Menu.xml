@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Si está activado, las trufas encontradas por los animales aparecerán como prohibidas.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>El comando requiere entrenamiento</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Si está activado, los animales deben estar entrenados en Obediencia, Excavación o Recolección para recibir el comando de excavación de trufas. De lo contrario, todos los animales domesticados siempre tendrán este comando.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>El gen Estómago Fuerte previene el envenenamiento por hongos</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Si se activa, los colonos con el gen “Estómago Fuerte” son inmunes al envenenamiento causado por los hongos de la Nueva Cosecha.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

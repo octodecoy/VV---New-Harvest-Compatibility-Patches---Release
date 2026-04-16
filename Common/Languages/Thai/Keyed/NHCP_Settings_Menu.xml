@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>หากเปิดใช้งาน เห็ดทรัฟเฟิลที่สัตว์ค้นพบจะเกิดขึ้นในสถานะถูกห้าม</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>ต้องมีการฝึกฝนเพื่อใช้คำสั่ง</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>หากเปิดใช้งาน สัตว์ต้องได้รับการฝึกในเชื่อฟัง ขุด หรือค้นหาอาหารเพื่อให้สามารถใช้คำสั่งขุดเห็ดทรัฟเฟิลได้ มิฉะนั้น สัตว์ที่ถูกฝึกแล้วทั้งหมดจะมีคำสั่งนี้เสมอ</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>ยีนกระเพาะแข็งแรงป้องกันพิษจากเห็ด</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>หากเปิดใช้งาน ตัวอาณานิคมที่มียีน “กระเพาะแข็งแรง” จะมีภูมิคุ้มกันต่อพิษจากเห็ดของการเก็บเกี่ยวใหม่</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>

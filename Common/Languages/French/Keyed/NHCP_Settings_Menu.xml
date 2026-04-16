@@ -102,4 +102,6 @@
     <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>Si activé, les truffes trouvées par les animaux apparaîtront comme interdites.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Le bouton de commande nécessite un entraînement</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
     <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>Si activé, les animaux doivent être entraînés en Obéissance, Creuser ou Fouiller pour recevoir le bouton de commande de recherche de truffes. Sinon, tous les animaux apprivoisés auront toujours ce bouton.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Le gène d’estomac fort prévient l’empoisonnement fongique</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>Si activé, les colons possédant le gène « Estomac fort » sont immunisés contre l’empoisonnement causé par les champignons de Nouvelle Récolte.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
 </LanguageData>
