@@ -34,6 +34,8 @@
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestindustrialcrops">Mods/MedievalOverhaul/Trees/Industrial</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Flowers</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestflowers">Mods/MedievalOverhaul/Flowers</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Mushrooms</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestmushrooms">Mods/MedievalOverhaul/Mushrooms</li>
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvest">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="teflonjim.extendedwoodworking,vvenchov.vvnewharvestindustrialcrops">Mods/ExtendedWoodworking</li>
         <li IfModActiveAll="mlie.simplechainslumber,vvenchov.vvnewharvest">Mods/SimpleChainsLumber</li>
@@ -44,6 +46,8 @@
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestmedicinalplants">Mods/AlphaCrafts/Medicinal</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Trees</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvesttrees">Mods/AlphaCrafts/Trees</li>
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Mushrooms</li>
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestmushrooms">Mods/AlphaCrafts/Mushrooms</li>
         <li IfModActive="biomesteam.biomesislands">Mods/BiomesIslands</li>
         <li IfModActive="biomesteam.oasis">Mods/BiomesOasis</li>
         <li IfModActive="zylle.morevanillabiomes">Mods/MoreVanillaBiomes</li>
@@ -72,6 +76,10 @@
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees</li>
+        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvest">Mods/SeedsPlease/Mushrooms</li>
+        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvestmushrooms">Mods/SeedsPlease/Mushrooms</li>
+        <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Mushrooms</li>
+        <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvestmushrooms">Mods/SeedsPlease/Mushrooms</li>
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
@@ -148,8 +156,8 @@
         <li IfModActive="ferny.progressionagriculture">Mods/ProgressionAgriculture</li>
         <li IfModActive="chaoticenrico.bettertrees">Mods/BetterTrees</li>
 
-        <!-- Added 3/12/26 -->
-        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Mushrooms</li>
-        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestmushrooms">Mods/AlphaCrafts/Mushrooms</li>
+        <!-- Added 4/19/26 -->
+        <li IfModActiveAll="kasa.mushroombeer,vvenchov.vvnewharvest">Mods/MushroomBeer</li>
+        <li IfModActiveAll="kasa.mushroombeer,vvenchov.vvnewharvestmushrooms">Mods/MushroomBeer</li>
     </v1.6>
 </loadFolders>

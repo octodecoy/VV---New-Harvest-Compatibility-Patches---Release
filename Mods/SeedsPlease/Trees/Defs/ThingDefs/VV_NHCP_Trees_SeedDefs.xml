@@ -14,9 +14,6 @@
         <graphicData>
             <texPath>Seeds/Apricot</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_ApricotTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Cashew</defName>
@@ -31,9 +28,6 @@
         <graphicData>
             <texPath>Seeds/Cashew</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_CashewTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Chestnut</defName>
@@ -48,9 +42,6 @@
         <graphicData>
             <texPath>Seeds/Chestnut</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_ChestnutTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Durian</defName>
@@ -65,9 +56,6 @@
         <graphicData>
             <texPath>Seeds/Durian</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_DurianTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Grapefruit</defName>
@@ -82,9 +70,6 @@
         <graphicData>
             <texPath>Seeds/Grapefruit</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_GrapefruitTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Hazelnut</defName>
@@ -99,9 +84,6 @@
         <graphicData>
             <texPath>Seeds/Hazelnut</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_HazelnutTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_JabuticabaBerry</defName>
@@ -116,9 +98,6 @@
         <graphicData>
             <texPath>Seeds/Jabuticaba</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_JabuticabaTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Lime</defName>
@@ -133,9 +112,6 @@
         <graphicData>
             <texPath>Seeds/Lime</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_LimeTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <!-- Can't extract seeds from sap, so extractable=False -->
     <ThingDef ParentName="SeedBase">
@@ -152,9 +128,6 @@
         <graphicData>
             <texPath>Seeds/SugarMaple</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_SugarMapleTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Medlar</defName>
@@ -169,9 +142,6 @@
         <graphicData>
             <texPath>Seeds/Medlar</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_MedlarTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Mulberry</defName>
@@ -186,9 +156,6 @@
         <graphicData>
             <texPath>Seeds/Mulberry</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_MulberryTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Papaya</defName>
@@ -203,9 +170,6 @@
         <graphicData>
             <texPath>Seeds/Papaya</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_PapayaTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Pecan</defName>
@@ -220,9 +184,6 @@
         <graphicData>
             <texPath>Seeds/Pecan</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_PecanTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Persimmon</defName>
@@ -237,9 +198,6 @@
         <graphicData>
             <texPath>Seeds/Persimmon</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_PersimmonTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_PineNut</defName>
@@ -254,9 +212,6 @@
         <graphicData>
             <texPath>Seeds/StonePine</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_StonePineTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Pomegranate</defName>
@@ -271,9 +226,6 @@
         <graphicData>
             <texPath>Seeds/Pomegranate</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_PomegranateTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Quince</defName>
@@ -288,9 +240,6 @@
         <graphicData>
             <texPath>Seeds/Quince</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_QuinceTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_SourCherry</defName>
@@ -305,9 +254,6 @@
         <graphicData>
             <texPath>Seeds/SourCherry</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_SourCherryTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Walnut</defName>
@@ -322,8 +268,5 @@
         <graphicData>
             <texPath>Seeds/Walnut</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_WalnutTree</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
 </Defs>

@@ -125,4 +125,36 @@
             </operations>
         </match>
     </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Cultivation"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Cultivation"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_KingBolete" or 
+                                defName="VV_Chanterelle" or 
+                                defName="VV_Morel" or 
+                                defName="VV_ParasolMushroom"]
+                                /plant
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Cultivation</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 </Patch>

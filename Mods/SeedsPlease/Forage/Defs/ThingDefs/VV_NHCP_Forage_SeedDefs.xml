@@ -14,9 +14,6 @@
         <graphicData>
             <texPath>Seeds/Alfalfa</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_Alfalfa</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Clover</defName>
@@ -31,9 +28,6 @@
         <graphicData>
             <texPath>Seeds/Clover</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_Clover</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_TimothyGrass</defName>
@@ -48,8 +42,5 @@
         <graphicData>
             <texPath>Seeds/TimothyGrass</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_TimothyGrass</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
 </Defs>

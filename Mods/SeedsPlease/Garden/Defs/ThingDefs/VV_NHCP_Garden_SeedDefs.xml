@@ -14,9 +14,6 @@
         <graphicData>
             <texPath>Seeds/Amaranth</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_AmaranthPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Artichoke</defName>
@@ -31,9 +28,6 @@
         <graphicData>
             <texPath>Seeds/Artichoke</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_ArtichokePlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Asparagus</defName>
@@ -48,9 +42,6 @@
         <graphicData>
             <texPath>Seeds/Asparagus</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_AsparagusPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_BlackBeans</defName>
@@ -65,9 +56,6 @@
         <graphicData>
             <texPath>Seeds/BlackBean</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_BlackBeanPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Blackberry</defName>
@@ -82,9 +70,6 @@
         <graphicData>
             <texPath>Seeds/Blackberry</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_BlackberryBush</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Blackcurrant</defName>
@@ -99,9 +84,6 @@
         <graphicData>
             <texPath>Seeds/Blackcurrant</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_BlackcurrantBush</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Broccoli</defName>
@@ -116,9 +98,6 @@
         <graphicData>
             <texPath>Seeds/Broccoli</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_BroccoliPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_DragonFruit</defName>
@@ -133,9 +112,6 @@
         <graphicData>
             <texPath>Seeds/Dragonfruit</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_DragonFruitPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Leeks</defName>
@@ -150,9 +126,6 @@
         <graphicData>
             <texPath>Seeds/Leek</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_LeekPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Millet</defName>
@@ -167,9 +140,6 @@
         <graphicData>
             <texPath>Seeds/Millet</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_MilletPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Parsnip</defName>
@@ -184,9 +154,6 @@
         <graphicData>
             <texPath>Seeds/Parsnip</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_ParsnipPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Quinoa</defName>
@@ -201,9 +168,6 @@
         <graphicData>
             <texPath>Seeds/Quinoa</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_QuinoaPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_RedCabbage</defName>
@@ -218,9 +182,6 @@
         <graphicData>
             <texPath>Seeds/RedCabbage</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_RedCabbagePlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Rosehip</defName>
@@ -235,9 +196,6 @@
         <graphicData>
             <texPath>Seeds/Rosehip</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_RosehipBush</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Spinach</defName>
@@ -252,9 +210,6 @@
         <graphicData>
             <texPath>Seeds/Spinach</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_SpinachPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_Teff</defName>
@@ -269,9 +224,6 @@
         <graphicData>
             <texPath>Seeds/Teff</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_TeffPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
         <defName>VV_Seed_WhiteTurnips</defName>
@@ -286,8 +238,5 @@
         <graphicData>
             <texPath>Seeds/WhiteTurnip</texPath>
         </graphicData>
-        <descriptionHyperlinks>
-            <ThingDef>VV_WhiteTurnipPlant</ThingDef>
-        </descriptionHyperlinks>
     </ThingDef>
 </Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Make_Fungalwort"]/ingredients/li/filter/thingDefs</xpath>
+        <value>
+            <li>VV_BlackTruffles</li>
+            <li>VV_KingBoletes</li>
+            <li>VV_Chanterelles</li>
+            <li>VV_Morels</li>
+            <li>VV_ParasolMushrooms</li>
+            <li>VV_OysterMushrooms</li>
+            <li>VV_ShiitakeMushrooms</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Make_Fungalwort"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>VV_BlackTruffles</li>
+            <li>VV_KingBoletes</li>
+            <li>VV_Chanterelles</li>
+            <li>VV_Morels</li>
+            <li>VV_ParasolMushrooms</li>
+            <li>VV_OysterMushrooms</li>
+            <li>VV_ShiitakeMushrooms</li>
+        </value>
+    </Operation>
+</Patch>

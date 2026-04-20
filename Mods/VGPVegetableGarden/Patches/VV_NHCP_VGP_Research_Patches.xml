@@ -239,4 +239,61 @@
             </operations>
         </match>
     </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureII"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="agricultureII"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef
+                                [defName="VV_KingBolete" or 
+                                defName="VV_Chanterelle" or 
+                                defName="VV_Morel" or 
+                                defName="VV_ParasolMushroom"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureII</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ResearchProjectDef[defName="agricultureIII"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="agricultureIII"]</xpath>
+                        <match Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/ThingDef[
+                                defName="VV_BirchTreeWithOysterMushrooms" or
+                                defName="VV_PoplarTreeWithOysterMushrooms" or
+                                defName="VV_OakTreeWithShiitakeMushrooms" or
+                                defName="VV_MapleTreeWithShiitakeMushrooms"]
+                                /plant
+                                [not(sowResearchPrerequisites)]
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>agricultureIII</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 </Patch>

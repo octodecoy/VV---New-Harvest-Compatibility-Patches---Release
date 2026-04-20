@@ -1,158 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!-- Industrial -->
+    <!-- Forage -->
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Cedar</defName>
-        <label>Cedar tree seeds</label>
+        <defName>VV_Seed_BlackTruffle</defName>
+        <label>Black truffle seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_CedarTree</li>
+                    <li>VV_BlackTruffle</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Cedar</texPath>
+            <texPath>Seeds/BlackTruffle</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Cork</defName>
-        <label>Cork tree seeds</label>
+        <defName>VV_Seed_Chanterelle</defName>
+        <label>Chanterelle mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_CorkTree</li>
+                    <li>VV_Chanterelle</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Cork</texPath>
+            <texPath>Seeds/Chanterelle</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Ebony</defName>
-        <label>Ebony tree seeds</label>
+        <defName>VV_Seed_FlyAgaric</defName>
+        <label>Fly agaric mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_EbonyTree</li>
+                    <li>VV_FlyAgaric</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Ebony</texPath>
+            <texPath>Seeds/FlyAgaric</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Jute</defName>
-        <label>Jute seeds</label>
+        <defName>VV_Seed_FoolsFunnel</defName>
+        <label>Fool's funnel mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_JutePlant</li>
+                    <li>VV_FoolsFunnel</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Jute</texPath>
+            <texPath>Seeds/FoolsFunnel</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Mahogany</defName>
-        <label>Mahogany tree seeds</label>
+        <defName>VV_Seed_JackOLantern</defName>
+        <label>Jack-o'-lantern mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_MahoganyTree</li>
+                    <li>VV_JackOLanternMushroom</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Mahogany</texPath>
+            <texPath>Seeds/JackOLantern</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Ramie</defName>
-        <label>Ramie seeds</label>
+        <defName>VV_Seed_KingBolete</defName>
+        <label>King bolete mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_RamiePlant</li>
+                    <li>VV_KingBolete</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Ramie</texPath>
+            <texPath>Seeds/KingBolete</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Rattan</defName>
-        <label>Rattan seeds</label>
+        <defName>VV_Seed_Morel</defName>
+        <label>Morel mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_RattanPlant</li>
+                    <li>VV_Morel</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Rattan</texPath>
+            <texPath>Seeds/Morel</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Reed</defName>
-        <label>Reed seeds</label>
+        <defName>VV_Seed_Parasol</defName>
+        <label>Parasol mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_ReedPlant</li>
+                    <li>VV_ParasolMushroom</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Reed</texPath>
+            <texPath>Seeds/Parasol</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Rosewood</defName>
-        <label>Rosewood tree seeds</label>
+        <defName>VV_Seed_Shiitake</defName>
+        <label>Shiitake mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_RosewoodTree</li>
+                    <li>VV_MapleTreeWithShiitakeMushrooms</li>
+                    <li>VV_OakTreeWithShiitakeMushrooms</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Rosewood</texPath>
+            <texPath>Seeds/Shiitake</texPath>
         </graphicData>
     </ThingDef>
     <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_Rubber</defName>
-        <label>Rubber tree seeds</label>
+        <defName>VV_Seed_Oyster</defName>
+        <label>Oyster mushroom seeds</label>
         <modExtensions>
             <li Class="SeedsPleaseLite.Seed">
                 <sources>
-                    <li>VV_RubberTree</li>
+                    <li>VV_BirchTreeWithOysterMushrooms</li>
+                    <li>VV_PoplarTreeWithOysterMushrooms</li>
                 </sources>
             </li>
         </modExtensions>
         <graphicData>
-            <texPath>Seeds/Rubber</texPath>
-        </graphicData>
-    </ThingDef>
-    <ThingDef ParentName="SeedBase">
-        <defName>VV_Seed_WhiteMulberry</defName>
-        <label>White mulberry tree seeds</label>
-        <modExtensions>
-            <li Class="SeedsPleaseLite.Seed">
-                <sources>
-                    <li>VV_WhiteMulberryTree</li>
-                </sources>
-            </li>
-        </modExtensions>
-        <graphicData>
-            <texPath>Seeds/WhiteMulberry</texPath>
+            <texPath>Seeds/Oyster</texPath>
         </graphicData>
     </ThingDef>
 </Defs>

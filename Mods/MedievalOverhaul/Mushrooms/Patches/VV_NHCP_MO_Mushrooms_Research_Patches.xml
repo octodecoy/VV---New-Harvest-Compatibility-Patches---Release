@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Adapt VV plants to MO research, removing other research if it's been added so MO takes over. 
+         Checking that A) The research def hasn't been removed and B) MO plants are actually using MO's research. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>                    
+                    /Defs/ThingDef
+                    [defName="VV_KingBolete" or
+                    defName="VV_Chanterelle" or
+                    defName="VV_Morel" or
+                    defName="VV_ParasolMushroom"]
+                    /plant
+                </xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_IntermediateAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="DankPyon_Tree_Apple"]/plant/sowResearchPrerequisites[li="Cocoa"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>                    
+                    /Defs/ThingDef
+                    [defName="VV_BirchTreeWithOysterMushrooms" or
+                    defName="VV_PoplarTreeWithOysterMushrooms" or
+                    defName="VV_OakTreeWithShiitakeMushrooms" or
+                    defName="VV_MapleTreeWithShiitakeMushrooms"]
+                    /plant
+                </xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>Cocoa</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

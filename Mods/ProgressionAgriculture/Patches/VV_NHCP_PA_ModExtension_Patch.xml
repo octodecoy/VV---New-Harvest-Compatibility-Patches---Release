@@ -47,4 +47,23 @@
             </value>
         </match>
     </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Mushrooms</li>
+        </mods>
+        <match Class="PatchOperationAddModExtension">
+            <xpath>
+                /Defs/ThingDef
+                [defName="VV_BirchTreeWithOysterMushrooms" or 
+                defName="VV_PoplarTreeWithOysterMushrooms" or 
+                defName="VV_OakTreeWithShiitakeMushrooms" or
+                defName="VV_MapleTreeWithShiitakeMushrooms"]
+            </xpath>
+            <value>
+                <li Class="ProgressionAgriculture.IncludeToAgriculture" />
+            </value>
+        </match>
+    </Operation>
 </Patch>
