@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>TreatFungusPoisoningLikeFoodPoisoning</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Mushrooms</li>  
+            </mods>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/NewHarvestPatches_Harmony.IngestionAffectedHediffsDef[defName="NHCP_IngestionAffectedHediffsDefList"]/hediffDefs</xpath>
+                <value>
+                    <li>VV_FlyAgaricPoisoning</li>
+                    <li>VV_FoolsFunnelPoisoning</li>
+                    <li>VV_JackOLanternPoisoning</li>
+                </value>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

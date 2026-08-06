@@ -27,6 +27,10 @@
     <TerrainDef Name="VV_NHCP_FloorBase_Rosewood" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <color>(119,13,60)</color>
     </TerrainDef>
+
+    <TerrainDef Name="VV_NHCP_FloorBase_Lacquer" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <color>(106,59,43)</color>
+    </TerrainDef>
     
     <TerrainDef Name="VV_NHCP_FloorBase_Core" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Wood plank flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
@@ -68,5 +72,13 @@
             <VV_RosewoodWood>3</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Core">
+        <defName>VV_NHCP_LacquerPlankFloor</defName>
+        <label>lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>3</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
 </Defs>

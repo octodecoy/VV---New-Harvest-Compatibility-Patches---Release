@@ -7,12 +7,17 @@
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationConditional">
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>AC_Trees_Kombucha</key>
                     <xpath>/Defs/RecipeDef[defName="AC_BrewFlavouredKombucha"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
-                    <match Class="PatchOperationSequence">
+                    <caseTrue Class="PatchOperationSequence">
                         <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_BrewFlavouredKombucha"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_Kombucha</cacheKey>
+                                <xpath>ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -26,11 +31,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_BrewFlavouredKombucha"]/fixedIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_Kombucha</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -44,11 +54,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_BrewFlavouredKombucha"]/defaultIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_Kombucha</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -62,18 +77,24 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
                         </operations>
-                    </match>
+                    </caseTrue>
                 </li>
-                <li Class="PatchOperationConditional">
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>AC_Trees_TeaSachets</key>
                     <xpath>/Defs/RecipeDef[defName="AC_PrepareSpecialtyTeaSachets"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
-                    <match Class="PatchOperationSequence">
+                    <caseTrue Class="PatchOperationSequence">
                         <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_PrepareSpecialtyTeaSachets"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_TeaSachets</cacheKey>
+                                <xpath>ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -87,11 +108,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_PrepareSpecialtyTeaSachets"]/fixedIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_TeaSachets</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -105,11 +131,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="AC_PrepareSpecialtyTeaSachets"]/defaultIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Trees_TeaSachets</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -123,11 +154,12 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
                         </operations>
-                    </match>
+                    </caseTrue>
                 </li>
             </operations>
         </match>

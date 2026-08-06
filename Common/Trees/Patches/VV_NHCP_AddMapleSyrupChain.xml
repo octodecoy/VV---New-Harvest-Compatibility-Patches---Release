@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddMapleSyrupChain</setting>  
+        <caseTrue Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_SugarMapleTree"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>NHCP/Things/Plants/Trees/VV_SugarMapleTree</texPath>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_SugarMapleTree"]/plant/harvestedThingDef</xpath>
+                    <value>
+                        <harvestedThingDef>VV_NHCP_MapleSap</harvestedThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_SugarMapleTree"]/plant/harvestYield</xpath>
+                    <value>
+                        <harvestYield>40</harvestYield>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_NHCP_MapleSap"]/thingCategories</xpath>
+                    <value>
+                        <li>PlantMatter</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Medieval Overhaul</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_NHCP_MakeMapleSyrup" or defName="VV_NHCP_MakeMapleSyrupBulk"]/researchPrerequisites</xpath>
+                        <value>
+                            <li>DankPyon_BasicCooking</li>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Cooking Expanded</li>
+                    </mods>
+                    <nomatch Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ThingDef[defName="VV_MapleSyrup"]/ingestible</xpath>
+                                <value>
+                                    <joy>0.08</joy>
+                                    <joyKind>Gluttonous</joyKind>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_MapleSyrup"]/ingestible</xpath>
+                                <value>
+                                    <specialThoughtDirect>VV_NHCP_ConsumedMapleSyrup</specialThoughtDirect>
+                                </value>
+                            </li>  
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_MapleSyrup"]/ingestible</xpath>
+                                <value>
+                                    <specialThoughtAsIngredient>VV_NHCP_ConsumedMapleSyrupFromMeal</specialThoughtAsIngredient>
+                                </value>
+                            </li>  
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ThingDef[defName="VV_MapleSyrup"]/statBases</xpath>
+                                <value>
+                                    <FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+                                </value>
+                            </li>
+                        </operations>
+                    </nomatch>
+                </li>
+            </operations>
+        </caseTrue>
+    </Operation>
+</Patch>

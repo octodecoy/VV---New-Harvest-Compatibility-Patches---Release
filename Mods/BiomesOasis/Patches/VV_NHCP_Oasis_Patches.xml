@@ -3,12 +3,13 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Garden Crops</li>
+            <li>VV - New Harvest: Fruit Plants</li>
         </mods>
         <match Class="PatchOperationAdd">
             <xpath>/Defs/BiomeDef[defName="BMT_ChromaticOasis"]/wildPlants</xpath>
             <value>
-                <VV_DragonFruitPlant>0.05</VV_DragonFruitPlant>
+                <VV_DragonFruitPlant>0.1</VV_DragonFruitPlant>
+                <VV_AppleCactus>0.1</VV_AppleCactus>
             </value>
         </match>
     </Operation>
@@ -36,7 +37,7 @@
         <match Class="PatchOperationAdd">
             <xpath>/Defs/BiomeDef[defName="BMT_ChromaticOasis"]/wildPlants</xpath>
             <value>
-                <VV_GoldenBarrelCactus>0.04</VV_GoldenBarrelCactus>
+                <VV_GoldenBarrelCactus>0.1</VV_GoldenBarrelCactus>
             </value>
         </match>   
     </Operation>

@@ -12,8 +12,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_GrapefruitTree"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Grapefruit trees will grow 30% faster if temperature is between 37 and 60 ºC.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Grapefruit trees will grow 30% faster if temperature is between 37 and 60 ºC.</value>
                 </li>
             </operations>
         </match>
@@ -30,8 +30,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_LimeTree"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lime trees will grow 30% faster if temperature is between 37 and 60 ºC.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lime trees will grow 30% faster if temperature is between 37 and 60 ºC.</value>
                 </li>
             </operations>
         </match>

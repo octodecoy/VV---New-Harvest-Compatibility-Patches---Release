@@ -168,6 +168,29 @@
                         </value>
                     </nomatch>
                 </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/HediffDef[defName="VV_WormwoodDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_WormwoodDecoctionEffect"]/stages//makeImmuneTo</xpath>
+                        <value>
+                            <li>CA_CommonCold</li>
+                            <li>CA_Headache</li>
+                            <li>CA_Indigestion</li>
+                            <li>CA_SoreThroat</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/HediffDef[defName="VV_WormwoodDecoctionEffect"]/stages/li</xpath>
+                        <value>
+                            <makeImmuneTo>
+                                <li>CA_CommonCold</li>
+                                <li>CA_Headache</li>
+                                <li>CA_Indigestion</li>
+                                <li>CA_SoreThroat</li>
+                            </makeImmuneTo>
+                        </value>
+                    </nomatch>
+                </li>
             </operations>
         </match>
     </Operation>

@@ -88,4 +88,26 @@
             <li>FineFloor</li>
         </tags>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer">
+        <defName>VV_NHCP_Boards_Totemic_Lacquer</defName>
+        <label>lacquered wood totemic boards</label>
+        <description>Fine wood boards decorated in a totemic style.</description>
+        <texturePath>Terrain/Surfaces/TotemicBoards</texturePath>
+        <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <dominantStyleCategory>Totemic</dominantStyleCategory>
+        <costList>
+            <VV_LacqueredWood>20</VV_LacqueredWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <StyleDominance>1</StyleDominance>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+    </TerrainDef>
 </Defs>

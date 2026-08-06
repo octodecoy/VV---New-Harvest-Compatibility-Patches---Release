@@ -1,0 +1,35 @@
+<Defs>
+    <ThoughtDef>
+        <defName>VV_NHCP_ConsumedMapleSyrup</defName>
+        <durationDays>0.5</durationDays>
+        <stages>
+            <li>
+                <label>consumed maple syrup</label>
+                <description>Sweet, sticky goodness.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+        </nullifyingTraits>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>VV_NHCP_ConsumedMapleSyrupFromMeal</defName>
+        <durationDays>0.5</durationDays>
+        <stages>
+            <li>
+                <label>consumed maple syrup (from meal)</label>
+                <description>Sweet, sticky goodness.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+        <nullifyingTraits>
+            <li>Ascetic</li>
+        </nullifyingTraits>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    </ThoughtDef>
+</Defs>

@@ -97,11 +97,21 @@
                                     </graphicData>
                                 </value>
                             </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VV_LacqueredWood"]/graphicData</xpath>
+                                <value>
+                                    <graphicData>
+                                        <texPath>Things/Item/Resource/WoodLogs</texPath>
+                                        <color>(106,59,43)</color>
+                                    </graphicData>
+                                </value>
+                            </li>
                         </operations>
                     </nomatch>
                 </match>
                 <nomatch Class="PatchOperationSequence">
                     <operations>
+                        <!-- We use NHCP_WoodLogs because it is greyscale, and WoodLog graphic is not. -->
                         <li Class="PatchOperationReplace">
                             <xpath>/Defs/ThingDef[defName="VV_CedarWood"]/graphicData</xpath>
                             <value>
@@ -139,6 +149,16 @@
                                     <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
                                     <graphicClass>Graphic_StackCount</graphicClass>
                                     <color>(119,13,60)</color>
+                                </graphicData>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_LacqueredWood"]/graphicData</xpath>
+                            <value>
+                                <graphicData>
+                                    <texPath>Things/Item/Resource/NHCP_WoodLogs</texPath>
+                                    <graphicClass>Graphic_StackCount</graphicClass>
+                                    <color>(106,59,43)</color>
                                 </graphicData>
                             </value>
                         </li>

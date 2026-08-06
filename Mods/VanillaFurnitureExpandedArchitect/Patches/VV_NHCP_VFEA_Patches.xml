@@ -26,6 +26,12 @@
                     <label>rosewood laminate floor</label>
                 </value>
             </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/TerrainDef[defName="VV_NHCP_LacquerPlankFloor"]/label</xpath>
+                <value>
+                    <label>lacquered wood laminate floor</label>
+                </value>
+            </li>
         </operations>
     </Operation>
 </Patch>

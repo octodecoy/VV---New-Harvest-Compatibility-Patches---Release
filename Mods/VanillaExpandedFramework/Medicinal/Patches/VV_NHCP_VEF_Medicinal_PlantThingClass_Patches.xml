@@ -13,8 +13,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_LavenderPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lavender shows a marked preference for rocky soils, flourishing in them.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lavender shows a marked preference for rocky soils, flourishing in them.</value>
                 </li>
             </operations>
         </match>
@@ -29,11 +29,10 @@
                         <thingClass>VEF.Plants.Plant_PrefersRocky</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_ThymePlant"]/description</xpath>
-                    <value>
-                        <description>A fragrant herb with small purple flowers and tiny green leaves. Thyme has been traditionally used for respiratory and digestive issues, and makes a flavorful tea.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Thyme shows a marked preference for rocky soils, flourishing in them.</description>
-                    </value>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Thyme shows a marked preference for rocky soils, flourishing in them.</value>
                 </li>
             </operations>
         </match>
@@ -49,11 +48,10 @@
                         <thingClass>VEF.Plants.Plant_Resistant</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_GinkgoTree"]/description</xpath>
-                    <value>
-                        <description>A unique deciduous tree with fan-shaped leaves and a long lifespan, known for its medicinal properties and resilience. Ginkgo leaves are commonly used in herbal teas to improve memory and circulation.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Ginkgo trees are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</description>
-                    </value>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Ginkgo trees are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</value>
                 </li>
                 <!-- Make it live 1000 days -->
                 <li Class="NewHarvestPatches.AddOrReplace">
@@ -75,11 +73,10 @@
                         <thingClass>VEF.Plants.Plant_Resistant</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_LemonBalmPlant"]/description</xpath>
-                    <value>
-                        <description>A fragrant medicinal herb from the mint family, lemon balm is prized for its soothing, mood-lifting effects and is often used in advanced herbal medicine.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lemon balm plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</description>
-                    </value>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Lemon balm plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</value>
                 </li>
             </operations>
         </match>
@@ -95,11 +92,10 @@
                         <thingClass>VEF.Plants.Plant_NeedsOutside</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_GinsengPlant"]/description</xpath>
-                    <value>
-                        <description>A hardy medicinal plant cultivated for its thick, forked root, ginseng is renowned for boosting vitality and resilience and is a prized ingredient in traditional decoctions.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Ginseng plants need to be grown in shade: outside, but under roof. They won't grow inside.</description>
-                    </value>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Ginseng plants need to be grown in shade: outside, but under roof. They won't grow inside.</value>
                 </li>
                 <!-- Try to remove it from wild spawning in biomes -->
                 <li Class="PatchOperationConditional">
@@ -130,11 +126,10 @@
                         <thingClass>VEF.Plants.Plant_WaterNearby</thingClass>
                     </value>
                 </li>
-                <li Class="PatchOperationReplace">
+                <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_MarshmallowPlant"]/description</xpath>
-                    <value>
-                        <description>A soft-stemmed medicinal herb with pale flowers and fleshy roots. Traditionally used in herbal remedies for wound healing.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Marshmallow plants grow 25% slower when not grown within 6 tiles of water.</description>
-                    </value>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Marshmallow plants grow 25% slower when not grown within 6 tiles of water.</value>
                 </li>
             </operations>
         </match>

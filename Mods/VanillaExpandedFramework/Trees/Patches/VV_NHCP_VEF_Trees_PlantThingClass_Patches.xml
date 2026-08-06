@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Grows better in tropics -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_CashewTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_CashewTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_FasterInTropics</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_CashewTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Cashew trees grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_DurianTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_DurianTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_FasterInTropics</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_DurianTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Durian trees grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_JabuticabaTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_JabuticabaTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_FasterInTropics</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_JabuticabaTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Jabuticaba trees grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_PapayaTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_PapayaTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_FasterInTropics</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_PapayaTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Papaya trees grow 30% faster in equatorial regions. The size of the equatorial region depends on the planet's overall temperature: below 15º for Normal, below 35º for Warm, below 65º for Hot and all the planet for Very Hot. Planets with below Normal temperature are considered to have no equator.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <!-- Grows best in rocky soil -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_PomegranateTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_PomegranateTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_PrefersRocky</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_PomegranateTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Pomegranate trees show a marked preference for rocky soils, flourishing in them.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_StonePineTree"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_StonePineTree"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_PrefersRocky</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_StonePineTree"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Stone pine trees show a marked preference for rocky soils, flourishing in them.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

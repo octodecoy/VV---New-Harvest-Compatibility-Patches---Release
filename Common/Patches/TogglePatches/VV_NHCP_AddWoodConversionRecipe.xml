@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <Operation Class="NewHarvestPatches.ConditionalSetting">
-        <setting>AddWoodConversionRecipe</setting>  
-        <caseTrue Class="NewHarvestPatches.FindMod">
-            <modGroupOne>
+        <setting>AddWoodConversionRecipe</setting>
+        <!-- No Extended/Expanded Woodworking or Medieval Overhaul check here: the setting carries
+             ModRequirement.NoWoodworkingMod + NoMedievalOverhaul, so it is never enabled alongside them. -->
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
                 <li>VV - New Harvest</li>
                 <li>VV - New Harvest: Industrial Crops</li>
-            </modGroupOne> 
-            <modGroupTwo>
-                <li>Extended Woodworking</li>
-                <li>Expanded Woodworking (Continued)</li>
-                <li>Medieval Overhaul</li>
-            </modGroupTwo>
-            <logicGroupTwo>Not</logicGroupTwo>
-            <logicBetweenGroups>And</logicBetweenGroups>
-            <caseTrue Class="PatchOperationAdd">
+            </mods>
+            <match Class="PatchOperationAdd">
                 <xpath>/Defs/RecipeDef[defName="VV_NHCP_ConvertNewHarvestWoodToWood"]/recipeUsers</xpath>
                 <value>
-                    <li>TableStonecutter</li>
-                </value>    
-            </caseTrue>
+                    <li>CraftingSpot</li>
+                </value>
+            </match>
         </caseTrue>
     </Operation>
 </Patch>

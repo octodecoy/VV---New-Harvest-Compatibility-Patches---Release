@@ -105,4 +105,13 @@
             <texPath>Things/Item/GooseberrySoda</texPath>
         </graphicData>
     </ThingDef>   
+
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_CherryPlumSoda</defName>
+        <label>cherry plum soda</label>
+        <description>A sweet-tart soda made from cherry plums.</description>
+        <graphicData>
+            <texPath>Things/Item/CherrySoda</texPath>
+        </graphicData>
+    </ThingDef>   
 </Defs>

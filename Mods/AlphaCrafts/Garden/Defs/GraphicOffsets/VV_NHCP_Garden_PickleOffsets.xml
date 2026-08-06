@@ -28,6 +28,10 @@
                 <key>VV_WhiteTurnips</key>
                 <value>9</value>
             </li>
+            <li>
+                <key>VV_Tomatillos</key>
+                <value>11</value>
+            </li>
         </ingredientsAndOffsetList>
     </VEF.Graphics.GraphicOffsets>
 </Defs>

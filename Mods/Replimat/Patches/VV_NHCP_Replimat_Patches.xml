@@ -14,19 +14,16 @@
                         <li>VV_Artichoke</li>
                         <li>VV_Asparagus</li>
                         <li>VV_BlackBeans</li>
-                        <li>VV_Blackberries</li>
-                        <li>VV_Blackcurrants</li>
                         <li>VV_BroccoliFlorets</li>
-                        <li>VV_DragonFruits</li>
                         <li>VV_Leeks</li>
                         <li>VV_MilletGrain</li>
                         <li>VV_Parsnips</li>
                         <li>VV_QuinoaSeeds</li>
                         <li>VV_RedCabbages</li>
-                        <li>VV_Rosehips</li>
                         <li>VV_SpinachLeaves</li>
                         <li>VV_TeffGrain</li>
                         <li>VV_WhiteTurnips</li>
+                        <li>VV_Tomatillos</li>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
@@ -36,19 +33,74 @@
                         <li>VV_Artichoke</li>
                         <li>VV_Asparagus</li>
                         <li>VV_BlackBeans</li>
-                        <li>VV_Blackberries</li>
-                        <li>VV_Blackcurrants</li>
                         <li>VV_BroccoliFlorets</li>
-                        <li>VV_DragonFruits</li>
                         <li>VV_Leeks</li>
                         <li>VV_MilletGrain</li>
                         <li>VV_Parsnips</li>
                         <li>VV_QuinoaSeeds</li>
                         <li>VV_RedCabbages</li>
-                        <li>VV_Rosehips</li>
                         <li>VV_SpinachLeaves</li>
                         <li>VV_TeffGrain</li>
                         <li>VV_WhiteTurnips</li>
+                        <li>VV_Tomatillos</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Fruit Plants</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_Cranberries</li>
+                        <li>VV_AppleCactusFruits</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_Cranberries</li>
+                        <li>VV_AppleCactusFruits</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Forage Crops</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_FeedCorn</li>
+                        <li>VV_FeedWheat</li>
+                        <li>VV_FeedBeet</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ReplimatHopper"]/building/defaultStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_FeedCorn</li>
+                        <li>VV_FeedWheat</li>
+                        <li>VV_FeedBeet</li>
                     </value>
                 </li>
             </operations>
@@ -107,6 +159,7 @@
                         <li>VV_Quinces</li>
                         <li>VV_SourCherrys</li>
                         <li>VV_Walnuts</li>
+                        <li>VV_CherryPlums</li>
                         <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                     </value>
                 </li>
@@ -132,6 +185,7 @@
                         <li>VV_Quinces</li>
                         <li>VV_SourCherrys</li>
                         <li>VV_Walnuts</li>
+                        <li>VV_CherryPlums</li>
                         <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                     </value>
                 </li>

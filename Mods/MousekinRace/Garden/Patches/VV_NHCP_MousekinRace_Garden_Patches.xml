@@ -42,11 +42,4 @@
             </operations>
         </match>
     </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
-        <value>
-            <li>VV_BlackberryBush</li>
-            <li>VV_BlackcurrantBush</li>
-        </value>
-    </Operation>
 </Patch>

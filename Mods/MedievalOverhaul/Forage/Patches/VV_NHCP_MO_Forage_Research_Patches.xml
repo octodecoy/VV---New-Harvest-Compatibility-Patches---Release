@@ -16,4 +16,18 @@
             </match>
         </match>
     </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_FeedCornPlant" or defName="VV_FeedWheatPlant" or defName="VV_FeedBeetPlant"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_IntermediateAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
 </Patch>

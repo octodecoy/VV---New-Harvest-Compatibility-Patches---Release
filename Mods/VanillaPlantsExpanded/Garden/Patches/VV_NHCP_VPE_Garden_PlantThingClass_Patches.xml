@@ -13,8 +13,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Broccoli plants will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Broccoli plants will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_BroccoliPlant"]/plant</xpath>
@@ -37,8 +37,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_LeekPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Leeks will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Leeks will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_LeekPlant"]/plant</xpath>
@@ -61,8 +61,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Parsnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Parsnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_ParsnipPlant"]/plant</xpath>
@@ -85,8 +85,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Red cabbages will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Red cabbages will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_RedCabbagePlant"]/plant</xpath>
@@ -109,8 +109,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Spinach will continue to grow at 10% speed through winter. It needs to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Spinach will continue to grow at 10% speed through winter. It needs to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_SpinachPlant"]/plant</xpath>
@@ -133,8 +133,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; White turnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; White turnips will continue to grow at 10% speed through winter. They need to be planted during growing season, though.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_WhiteTurnipPlant"]/plant</xpath>

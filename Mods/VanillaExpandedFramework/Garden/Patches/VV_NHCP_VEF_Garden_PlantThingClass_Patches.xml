@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Grows normally when no water nearby, otherwise 70% penalty (Grains) -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_AmaranthPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_AmaranthPlant"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_NoWaterNearby</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_AmaranthPlant"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Amaranth plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_MilletPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_MilletPlant"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_NoWaterNearby</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_MilletPlant"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Millet plants have adapted to drought conditions so well that they recieve a 70% growth penalty when grown within 10 tiles of water.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <!-- Resillient to damage -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_ArtichokePlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_ArtichokePlant"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_Resistant</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_ArtichokePlant"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="VV_AsparagusPlant"][not(thingClass)]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VV_AsparagusPlant"]</xpath>
+                    <value>
+                        <thingClass>VEF.Plants.Plant_Resistant</thingClass>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.EditString">
+                    <xpath>/Defs/ThingDef[defName="VV_AsparagusPlant"]/description</xpath>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Artichoke plants are very resistant to damage. They take less damage from prolonged lack of light, and will regenerate damage caused by any other means.</value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

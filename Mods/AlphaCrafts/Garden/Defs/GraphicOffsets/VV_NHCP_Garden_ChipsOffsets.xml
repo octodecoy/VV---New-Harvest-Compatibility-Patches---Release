@@ -12,10 +12,6 @@
                 <key>VV_Parsnips</key>
                 <value>3</value>
             </li>
-            <li>
-                <key>VV_DragonFruits</key>
-                <value>3</value>
-            </li>
         </ingredientsAndOffsetList>
     </VEF.Graphics.GraphicOffsets>
 </Defs>

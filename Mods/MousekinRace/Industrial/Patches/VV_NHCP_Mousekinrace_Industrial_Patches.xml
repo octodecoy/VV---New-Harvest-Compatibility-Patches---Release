@@ -7,6 +7,7 @@
             <li>VV_NHCP_Mousekin_EbonyLogToCharcoal</li>
             <li>VV_NHCP_Mousekin_MahoganyLogToCharcoal</li>
             <li>VV_NHCP_Mousekin_RosewoodLogToCharcoal</li>
+            <li>VV_NHCP_Mousekin_LacqueredWoodLogToCharcoal</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationFindMod">
@@ -44,5 +45,11 @@
                 </operations>
             </match>
         </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/recipeUsers</xpath>
+        <value>
+            <li>Mousekin_WorkbenchCrafting</li>
+        </value>
     </Operation>
 </Patch>

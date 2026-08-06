@@ -11,6 +11,7 @@
                     <value>
                         <li>VV_JabuticabaBerries</li>
                         <li>VV_Mulberries</li>
+                        <li>VV_CherryPlums</li>
                         <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                     </value>
                 </li>
@@ -19,6 +20,7 @@
                     <value>
                         <li>VV_JabuticabaBerries</li>
                         <li>VV_Mulberries</li>
+                        <li>VV_CherryPlums</li>
                         <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                     </value>
                 </li>

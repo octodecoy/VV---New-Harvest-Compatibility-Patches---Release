@@ -24,4 +24,10 @@
             <label>elegant cedar floor</label>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/TerrainDef[defName="VV_LacqueredWoodFloor"]/label</xpath>
+        <value>
+            <label>extravagant lacquered wood floor</label>
+        </value>
+    </Operation>
 </Patch>

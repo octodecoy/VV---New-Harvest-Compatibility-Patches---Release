@@ -6,7 +6,14 @@
             <li>VV - New Harvest: Industrial Crops</li>
         </mods>
         <match Class="NewHarvestPatches.AddOrReplace">
-            <xpath>/Defs/ThingDef[defName="VV_CorkTree" or defName="VV_WhiteMulberryTree" or defName="VV_RubberTree"]/plant</xpath>
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_CorkTree" or 
+                defName="VV_WhiteMulberryTree" or 
+                defName="VV_RubberTree" or 
+                defName="VV_LacquerTree"]
+                /plant
+            </xpath>
             <value>
                 <forceIsTree>true</forceIsTree>
             </value>
@@ -52,7 +59,8 @@
                 defName="VV_LimeTree" or
                 defName="VV_PersimmonTree" or
                 defName="VV_PecanTree" or
-                defName="VV_SugarMapleTree"]
+                defName="VV_SugarMapleTree" or
+                defName="VV_CherryPlumTree"]
                 /plant
             </xpath>
             <value>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Default category assignments for vanilla and known third-party food defs.
+         Names are plain strings: entries whose mod is absent resolve silently and are skipped.
+         Add your own def of this type to default more things into a category.
+         Persisted user choices made in the mod settings always win over these. -->
+
+    <!-- Fungus and Animal Foods need no list because heuristic covers them. -->
+
+    <NewHarvestPatches.CategoryDefaultsDef>
+        <defName>VV_NHCP_CategoryDefaults_Fruit</defName>
+        <targetDefaultCategory>VV_NHCP_DummyCategory_Fruit</targetDefaultCategory>
+        <defNames>
+            <li>RawBerries</li>
+            <li>RawAgave</li>
+            <li>RawCactusFruit</li>
+            <li>Rawapple</li>
+            <li>Rawpeach</li>
+            <li>RC2_PreparedFruit</li>
+            <li>VFEM2_RawGrapes</li>
+            <li>DankPyon_RawGrapes</li>
+            <li>DankPyon_RawApples</li>
+            <li>DankPyon_RawLemons</li>
+            <li>DankPyon_RawMulberry</li>
+            <li>DankPyon_GriffonBerry</li>
+            <li>RFE_RawApple</li>
+            <li>RFE_RawGrape</li>
+        </defNames>
+    </NewHarvestPatches.CategoryDefaultsDef>
+
+    <NewHarvestPatches.CategoryDefaultsDef>
+        <defName>VV_NHCP_CategoryDefaults_Grains</defName>
+        <targetDefaultCategory>VV_NHCP_DummyCategory_Grains</targetDefaultCategory>
+        <defNames>
+            <li>RawRice</li>
+            <li>RawCorn</li>
+            <li>VCE_RawBuckwheat</li>
+            <li>VCE_RawOats</li>
+            <li>RawBarley</li>
+            <li>RawBlueCorn</li>
+            <li>RFE_RawBarley</li>
+        </defNames>
+    </NewHarvestPatches.CategoryDefaultsDef>
+
+    <NewHarvestPatches.CategoryDefaultsDef>
+        <defName>VV_NHCP_CategoryDefaults_Nuts</defName>
+        <targetDefaultCategory>VV_NHCP_DummyCategory_Nuts</targetDefaultCategory>
+        <defNames>
+            <li>VCE_RawPeanut</li>
+            <li>VCE_RawSunflower</li>
+            <li>VCE_RawLotus</li>
+            <li>VCE_RawAlmonds</li>
+        </defNames>
+    </NewHarvestPatches.CategoryDefaultsDef>
+
+    <NewHarvestPatches.CategoryDefaultsDef>
+        <defName>VV_NHCP_CategoryDefaults_Vegetables</defName>
+        <targetDefaultCategory>VV_NHCP_DummyCategory_Vegetables</targetDefaultCategory>
+        <defNames>
+            <li>RawPotatoes</li>
+            <li>RawToxipotato</li>
+            <li>VCE_RawCelery</li>
+            <li>VCE_RawLettuce</li>
+            <li>VCE_RawRadish</li>
+            <li>VCE_RawOkra</li>
+            <li>VCE_RawGarlic</li>
+            <li>VCE_RawCarrot</li>
+            <li>VCE_RawBrusselsSprouts</li>
+            <li>VCE_RawOlives</li>
+            <li>VCE_RawSweetPotatoes</li>
+            <li>VCE_RawCassava</li>
+            <li>VCE_RawBeans</li>
+            <li>VCE_RawBellPeppers</li>
+            <li>VCE_RawYellowBellPeppers</li>
+            <li>VCE_RawChickpeas</li>
+            <li>VCE_RawTaro</li>
+            <li>VCE_RawWatercress</li>
+            <li>VCE_RawWaterChestnut</li>
+            <li>VCE_RawCucumber</li>
+            <li>VCE_RawButternutSquash</li>
+            <li>VCE_RawMoss</li>
+            <li>VCE_RawOnion</li>
+            <li>VCE_RawPumpkin</li>
+            <li>VCE_RawPepper</li>
+            <li>VCE_RawPeas</li>
+            <li>VCE_RawEggplant</li>
+            <li>VCE_RawCabbage</li>
+            <li>VCE_RawBeets</li>
+            <li>VCE_RawTomatoes</li>
+            <li>VCE_CannedProduce</li>
+            <li>Rawsnowbeet</li>
+            <li>Rawbean</li>
+            <li>RawOlive</li>
+            <li>Raweggplant</li>
+            <li>Rawpumpkin</li>
+            <li>Rawsquash</li>
+            <li>RawTomatoes</li>
+            <li>RawCarrots</li>
+            <li>RC2_PickleBrine</li>
+            <li>DankPyon_RawTomatoes</li>
+            <li>DankPyon_RawCabbages</li>
+            <li>DankPyon_RawCarrots</li>
+            <li>DankPyon_RawGarlic</li>
+            <li>DankPyon_RawOnions</li>
+            <li>DankPyon_RawPumpkins</li>
+            <li>DankPyon_RawLentils</li>
+            <li>RFE_RawBeet</li>
+            <li>RFE_RawTomato</li>
+        </defNames>
+    </NewHarvestPatches.CategoryDefaultsDef>
+</Defs>

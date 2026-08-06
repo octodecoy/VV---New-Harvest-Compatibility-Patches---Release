@@ -63,7 +63,8 @@
                                     defName="VV_AdvancedHerbalMedicine" or
                                     defName="VV_GinsengDecoction" or
                                     defName="VV_EchinaceaDecoction" or
-                                    defName="VV_ValerianDecoction"]
+                                    defName="VV_ValerianDecoction" or
+                                    defName="VV_WormwoodDecoction"]
                                     /recipeMaker/recipeUsers
                                 </xpath>
                                 <value>
@@ -91,9 +92,42 @@
                         <li>VV_StJohnsWortPlant</li>
                         <li>VV_ThymePlant</li>
                         <li>VV_YarrowPlant</li>
+                        <li>VV_WormwoodPlant</li>
                     </value>
                 </li>
             </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Fruit Plants</li>
+        </mods>  
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
+            <value>
+                <li>VV_BlackberryBush</li>
+                <li>VV_BlackcurrantBush</li>
+                <li>VV_CranberryBush</li>
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>  
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/MousekinRace.FlowerListDef[defName="Mousekin_ValidFlowers"]/flowerPlants</xpath>
+            <value>
+                <li>VV_SourCherryTree</li>
+                <li>VV_ApricotTree</li>
+                <li>VV_ChestnutTree</li>
+                <li>VV_SugarMapleTree</li>
+                <li>VV_GrapefruitTree</li>
+                <li>VV_LimeTree</li>
+                <li>VV_CherryPlumTree</li>
+            </value>
         </match>
     </Operation>
     <Operation Class="PatchOperationFindMod">

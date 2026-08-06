@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- YOGURT -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/RecipeDef[@Name="AC_YoghurtMealBase"]/fixedIngredientFilter[not(categories/li="VV_NHCP_DummyCategory_Fruit")]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[defName="AC_CookYoghurt" or defName="AC_CookYoghurt_Bulk"]/ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_Cranberries</li>
+                        <li>VV_AppleCactusFruits</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[@Name="AC_YoghurtMealBase"]/fixedIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_Cranberries</li>
+                        <li>VV_AppleCactusFruits</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[@Name="AC_YoghurtMealBase"]/defaultIngredientFilter/thingDefs</xpath>
+                    <value>
+                        <li>VV_Blackberries</li>
+                        <li>VV_Blackcurrants</li>
+                        <li>VV_DragonFruits</li>
+                        <li>VV_Rosehips</li>
+                        <li>VV_Cranberries</li>
+                        <li>VV_AppleCactusFruits</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

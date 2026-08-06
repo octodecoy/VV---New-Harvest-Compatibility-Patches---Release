@@ -155,4 +155,18 @@
             <texPath>Seeds/WhiteMulberry</texPath>
         </graphicData>
     </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_LacquerTree</defName>
+        <label>Lacquer tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_LacquerTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Lacquer</texPath>
+        </graphicData>
+    </ThingDef>
 </Defs>

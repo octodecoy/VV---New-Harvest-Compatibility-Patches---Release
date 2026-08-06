@@ -3,7 +3,7 @@
     <name>VV - New Harvest: Compatibility Patches</name>
     <author>octodecoy</author>
     <packageId>octodecoy.vvnewharvest.compatpatches</packageId>
-    <modVersion>1.8.2</modVersion> <!-- 4/20/26 -->
+    <modVersion>1.9</modVersion> <!-- 8/4/26 -->
     <supportedVersions>
         <li>1.6</li>
     </supportedVersions>
@@ -23,6 +23,7 @@
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3552455805]VV - New Harvest: Trees[/url]
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3623012591]VV - New Harvest: Flowers[/url]
         [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3688297283]VV - New Harvest: Mushrooms[/url]
+        [url= https://steamcommunity.com/sharedfiles/filedetails/?id=3778708533]VV - New Harvest: Fruit Plants[/url]
     </description>
     <modDependenciesByVersion>
 		<v1.6>
@@ -38,6 +39,7 @@
 					<li>vvenchov.vvnewharvesttrees</li>
                     <li>vvenchov.vvnewharvestflowers</li>
                     <li>vvenchov.vvnewharvestmushrooms</li>
+                    <li>vvenchov.vvnewharvestfruitplants</li>
 				</alternativePackageIds>
 			</li>
 		</v1.6>
@@ -51,26 +53,14 @@
         <li>vvenchov.vvnewharvesttrees</li>
         <li>vvenchov.vvnewharvestflowers</li>
         <li>vvenchov.vvnewharvestmushrooms</li>
-        <li>regrowth.botr.core</li>
-        <!-- Regrowth Core -->
-        <!-- So it doesn't overwrite biome wildPlants additions. -->
-        <li>dankpyon.medieval.overhaul</li>
-        <!-- Medieval Overhaul -->
-        <!--  VV defs dependent  -->
-        <li>owlchemist.seedspleaselite</li>
-        <!-- SeedsPlease -->
-        <!--  VV defs dependent  -->
-        <li>evyatar108.seedspleaseliteredux</li>
-        <!-- SeedsPlease Lite -->
-        <!--  VV defs dependent  -->
-        <li>zal.expandwoodwork</li>
-        <!-- Expanded Woodworking -->
-        <!--  VV defs dependent  -->
-        <li>dismarzero.vgp.vgpgardendrinks</li>
-        <!-- VGP Garden Drinks -->
-        <!--  VV defs dependent  -->
-        <li>oskarpotocki.vanillafactionsexpanded.core</li>
-        <!-- Can reference a class in assembly - probably don't need to do this -->
+        <li>vvenchov.vvnewharvestfruitplants</li>
+        <li>regrowth.botr.core</li> <!-- So it doesn't overwrite biome wildPlants additions. -->
+        <li>dankpyon.medieval.overhaul</li> <!--  VV defs dependent  -->
+        <li>owlchemist.seedspleaselite</li> <!--  VV defs dependent  -->
+        <li>evyatar108.seedspleaseliteredux</li> <!--  VV defs dependent  -->
+        <li>zal.expandwoodwork</li> <!--  VV defs dependent  -->
+        <li>dismarzero.vgp.vgpgardendrinks</li> <!--  VV defs dependent  -->
+        <li>oskarpotocki.vanillafactionsexpanded.core</li> <!-- Can reference a class in assembly - probably don't need to do this -->
         <li>vanillaexpanded.vplantse</li>
         <li>dismarzero.vgp.vgpvegetablegarden</li>
         <li>mlie.rc2.core</li>
@@ -80,10 +70,8 @@
         <li>dismarzero.vgp.vgpmoreveggies</li>
         <li>oskarpotocki.vfe.medieval2</li>
         <li>thevillain.animalfoodsextended</li>
-        <!-- In the hope that any category movements occur first -->
         <li>sarg.alphacrafts</li>
         <li>vanillaexpanded.vcooke</li>
-        <!-- May or may not be needed but why not -->
         <li>untamo.apothecary.expansion</li>
     </loadAfter>
 </ModMetaData>

@@ -1,124 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <Operation Class="PatchOperationConditional">
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_Yarrow</key>
         <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]</xpath>
-        <match Class="PatchOperationSequence">
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/ingredients/li/filter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Yarrow</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_YarrowBlossoms</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/fixedIngredientFilter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Yarrow</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_YarrowBlossoms</li>
                     </value>
                 </li>
             </operations>
-        </match>
+        </caseTrue>
     </Operation>
-    <Operation Class="PatchOperationConditional">
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_StJohnsWort</key>
         <xpath>/Defs/RecipeDef[defName="MakeAYStJohnsWortOil" or defName="MakeBulkAYStJohnsWortOil"]</xpath>
-        <match Class="PatchOperationSequence">
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYStJohnsWortOil" or defName="MakeBulkAYStJohnsWortOil"]/ingredients/li/filter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_StJohnsWort</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_StJohnsWortBlossoms</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYYarrowOil" or defName="MakeBulkAYYarrowOil"]/fixedIngredientFilter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_StJohnsWort</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_StJohnsWortBlossoms</li>
                     </value>
                 </li>
             </operations>
-        </match>
+        </caseTrue>
     </Operation>
-    <Operation Class="PatchOperationConditional">
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_Ginkgo</key>
         <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]</xpath>
-        <match Class="PatchOperationSequence">
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]/ingredients/li/filter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Ginkgo</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_GinkgoLeaves</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYGinkgoPowder" or defName="MakeBulkAYGinkgoPowder"]/fixedIngredientFilter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Ginkgo</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_GinkgoLeaves</li>
                     </value>
                 </li>
             </operations>
-        </match>
+        </caseTrue>
     </Operation>
-    <Operation Class="PatchOperationConditional">
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_Ginseng</key>
         <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]</xpath>
-        <match Class="PatchOperationSequence">
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]/ingredients/li/filter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Ginseng</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_GinsengRoots</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="MakeAYGinsengPowder" or defName="MakeBulkAYGinsengPowder"]/fixedIngredientFilter/thingDefs</xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Ginseng</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_GinsengRoots</li>
                     </value>
                 </li>
             </operations>
-        </match>
+        </caseTrue>
     </Operation>
-    <Operation Class="PatchOperationConditional">
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_Wormwood</key>
+        <xpath>/Defs/RecipeDef[defName="AYWormwoodOil" or defName="MakeBulkAYWormwoodOil"]</xpath>
+        <caseTrue Class="PatchOperationSequence">
+            <operations>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Wormwood</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
+                    <value>
+                        <li>VV_WormwoodLeaves</li>
+                    </value>
+                </li>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Wormwood</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
+                    <value>
+                        <li>VV_WormwoodLeaves</li>
+                    </value>
+                </li>
+            </operations>
+        </caseTrue>
+    </Operation>
+    <Operation Class="NewHarvestPatches.CacheNodes">
+        <key>Apothecary_Nettle</key>
         <xpath>
             /Defs/RecipeDef[
-            defName="MakeAYNettlePowder" or 
-            defName="MakeBulkAYNettlePowder" or 
-            defName="MakeAYCompost" or 
-            defName="MakeBulkAYCompost" or 
-            defName="MakeNettleHemp" or 
+            defName="MakeAYNettlePowder" or
+            defName="MakeBulkAYNettlePowder" or
+            defName="MakeAYCompost" or
+            defName="MakeBulkAYCompost" or
+            defName="MakeNettleHemp" or
             defName="MakeBulkAYNettleHemp"]
         </xpath>
-        <match Class="PatchOperationSequence">
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>
-                        /Defs/RecipeDef[
-                        defName="MakeAYNettlePowder" or 
-                        defName="MakeBulkAYNettlePowder" or 
-                        defName="MakeAYCompost" or 
-                        defName="MakeBulkAYCompost" or 
-                        defName="MakeNettleHemp" or 
-                        defName="MakeBulkAYNettleHemp"]
-                        /ingredients/li/filter/thingDefs
-                    </xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Nettle</cacheKey>
+                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_NettleLeaves</li>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>
-                        /Defs/RecipeDef[
-                        defName="MakeAYNettlePowder" or 
-                        defName="MakeBulkAYNettlePowder" or 
-                        defName="MakeAYCompost" or 
-                        defName="MakeBulkAYCompost" or 
-                        defName="MakeNettleHemp" or 
-                        defName="MakeBulkAYNettleHemp"]
-                        /fixedIngredientFilter/thingDefs
-                    </xpath>
+                <li Class="NewHarvestPatches.AddOrReplace">
+                    <success>Always</success>
+                    <cacheKey>Apothecary_Nettle</cacheKey>
+                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                    <compare>InnerText</compare>
+                    <addOnly>true</addOnly>
                     <value>
                         <li>VV_NettleLeaves</li>
                     </value>
                 </li>
             </operations>
-        </match>
+        </caseTrue>
     </Operation>
 </Patch>

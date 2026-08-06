@@ -269,4 +269,18 @@
             <texPath>Seeds/Walnut</texPath>
         </graphicData>
     </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_CherryPlum</defName>
+        <label>Cherry plum tree seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_CherryPlumTree</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/CherryPlum</texPath>
+        </graphicData>
+    </ThingDef>
 </Defs>

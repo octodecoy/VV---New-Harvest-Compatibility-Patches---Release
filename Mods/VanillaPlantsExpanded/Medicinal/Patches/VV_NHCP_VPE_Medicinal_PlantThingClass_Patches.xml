@@ -13,8 +13,8 @@
                 </li> 
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_NettlePlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Nettle plants are unaffected by toxic fallout and, contrary to other plants, won't die from it.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Nettle plants are unaffected by toxic fallout and, contrary to other plants, won't die from it.</value>
                 </li>
                 <li Class="NewHarvestPatches.AddOrReplace">
                     <xpath>/Defs/ThingDef[defName="VV_NettlePlant"]/plant</xpath>

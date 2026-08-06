@@ -72,4 +72,16 @@
             <label>hypericum blossoms</label>
         </value>
     </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_WormwoodPlant"]/label</xpath>
+        <value>
+            <label>grande absinthe plant</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_WormwoodLeaves"]/label</xpath>
+        <value>
+            <label>grande absinthe leaves</label>
+        </value>
+    </Operation>
 </Patch>

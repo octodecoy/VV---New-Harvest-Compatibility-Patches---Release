@@ -20,7 +20,8 @@
                     defName="VV_ThymeTea" or
                     defName="VV_EchinaceaDecoction" or
                     defName="VV_GinsengDecoction" or
-                    defName="VV_ValerianDecoction"]
+                    defName="VV_ValerianDecoction" or
+                    defName="VV_WormwoodDecoction"]
                 </xpath>
                 <value>
                     <thingCategories>

@@ -3,6 +3,7 @@
     <!-- True by default, so run on caseFalse -->
     <Operation Class="NewHarvestPatches.ConditionalSetting">
         <setting>HayNeedsCooling</setting>  
+        <matchDisabled>true</matchDisabled>
         <caseFalse Class="PatchOperationFindMod">
             <mods>
                 <li>VV - New Harvest</li>

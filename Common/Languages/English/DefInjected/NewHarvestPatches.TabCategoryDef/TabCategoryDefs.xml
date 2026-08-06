@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <VV_NHCP_GeneralTab.label>general</VV_NHCP_GeneralTab.label>
+    <VV_NHCP_CategoriesTab.label>categories</VV_NHCP_CategoriesTab.label>
+    <VV_NHCP_CommonalityTab.label>commonality</VV_NHCP_CommonalityTab.label>
+    <VV_NHCP_CraftingTab.label>crafting</VV_NHCP_CraftingTab.label>
+    <VV_NHCP_FloorsTab.label>floors</VV_NHCP_FloorsTab.label>
+    <VV_NHCP_FuelTab.label>fuel</VV_NHCP_FuelTab.label>
+    <VV_NHCP_VisualsTab.label>visuals</VV_NHCP_VisualsTab.label>
+    <VV_NHCP_BehaviorsTab.label>behaviors</VV_NHCP_BehaviorsTab.label>
+</LanguageData>

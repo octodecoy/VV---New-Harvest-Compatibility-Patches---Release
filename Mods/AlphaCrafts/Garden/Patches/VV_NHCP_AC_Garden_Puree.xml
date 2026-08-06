@@ -6,6 +6,7 @@
         <value>
             <li>VV_BlackBeans</li>
             <li>VV_Artichoke</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -13,6 +14,7 @@
         <value>
             <li>VV_BlackBeans</li>
             <li>VV_Artichoke</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -20,6 +22,7 @@
         <value>
             <li>VV_BlackBeans</li>
             <li>VV_Artichoke</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -32,6 +35,10 @@
             <li>
                 <key>VV_Artichoke</key>
                 <value>Artichoke dip</value>
+            </li>
+            <li>
+                <key>VV_Tomatillos</key>
+                <value>Salsa verde</value>
             </li>
         </value>
     </Operation>

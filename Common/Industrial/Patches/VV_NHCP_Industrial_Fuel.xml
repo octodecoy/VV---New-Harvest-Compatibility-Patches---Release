@@ -22,6 +22,7 @@
                         <li>VV_RawJute</li>
                         <li>VV_ReedStalks</li>
                         <li>VV_RosewoodWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </li>
                 <!-- Don't want to add these unless MO lumber chain is on -->

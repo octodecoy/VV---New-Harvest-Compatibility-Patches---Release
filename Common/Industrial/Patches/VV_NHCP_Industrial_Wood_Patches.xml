@@ -1,51 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <Operation Class="PatchOperationAdd">
+    <!-- DISALLOWED - each location (ingredients slot, fixedIngredientFilter, defaultIngredientFilter)
+         already independently disallows WoodLog wherever it applies; union xpath needs no mirroring. -->
+    <Operation Class="NewHarvestPatches.AddDefsWhereDefPresent">
         <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef/ingredients/li/filter
-            [not(categories/li="WoodTypes")]
-            /disallowedThingDefs
-            [li="WoodLog"]
-            [not(li="VV_CedarWood")]
+        <xpath>
+            /Defs/RecipeDef/ingredients/li/filter[not(categories/li="WoodTypes")]/disallowedThingDefs
+            | /Defs/RecipeDef/fixedIngredientFilter[not(categories/li="WoodTypes")]/disallowedThingDefs
+            | /Defs/RecipeDef/defaultIngredientFilter[not(categories/li="WoodTypes")]/disallowedThingDefs
         </xpath>
+        <anchor>WoodLog</anchor>
         <value>
             <li>VV_CedarWood</li>
             <li>VV_EbonyWood</li>
             <li>VV_MahoganyWood</li>
             <li>VV_RosewoodWood</li>
+            <li>VV_LacqueredWood</li>
+        </value>
+    </Operation>
+    <!-- Prevent VV_LacqueredWood recipes from using VV_LacqueredWood as an ingredient.  Seems easier to do it like this. -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef[products/VV_LacqueredWood]/fixedIngredientFilter[not(disallowedThingDefs)]</xpath>
+        <value>
+            <disallowedThingDefs />
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
         <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef/fixedIngredientFilter
-            [not(categories/li="WoodTypes")]
-            /disallowedThingDefs
-            [li="WoodLog"]
-            [not(li="VV_CedarWood")]
-        </xpath>
+        <xpath>/Defs/RecipeDef[products/VV_LacqueredWood]/fixedIngredientFilter/disallowedThingDefs</xpath>
         <value>
-            <li>VV_CedarWood</li>
-            <li>VV_EbonyWood</li>
-            <li>VV_MahoganyWood</li>
-            <li>VV_RosewoodWood</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef/defaultIngredientFilter
-            [not(categories/li="WoodTypes")]
-            /disallowedThingDefs
-            [li="WoodLog"]
-            [not(li="VV_CedarWood")]
-        </xpath>
-        <value>
-            <li>VV_CedarWood</li>
-            <li>VV_EbonyWood</li>
-            <li>VV_MahoganyWood</li>
-            <li>VV_RosewoodWood</li>
+            <li>VV_LacqueredWood</li>
         </value>
     </Operation>
     <!-- If true, MO installed and its lumber chain on. -->
@@ -53,20 +38,27 @@
         <xpath>/Defs/ThingDef/killedLeavings/DankPyon_RawWood</xpath>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
+                <!-- [li="WoodLog" and not(li="DankPyon_RawWood") or (li="WoodLog" and li="DankPyon_RawWood")] reduces
+                     to plain li="WoodLog" (and binds tighter than or) - anchor is WoodLog. Mirror flags replace
+                     the generic fixed/default-filter compensation block this file used to carry further down. -->
+                <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                     <success>Always</success>
-                    <xpath>                        
-                        /Defs/RecipeDef/ingredients/li/filter
+                    <xpath>
+                        /Defs/RecipeDef
+                        [not(products/VV_CedarWood or products/VV_EbonyWood or products/VV_MahoganyWood or products/VV_RosewoodWood or products/VV_LacqueredWood)]
+                        /ingredients/li/filter
                         [not(categories/li="WoodTypes") and not(categories/li="DankPyon_Wood") and not(categories/li="DankPyon_RawWood")]
                         /thingDefs
-                        [li="WoodLog" and not(li="DankPyon_RawWood") or (li="WoodLog" and li="DankPyon_RawWood")]
-                        [not(li="VV_CedarWood")]
                     </xpath>
+                    <anchor>WoodLog</anchor>
+                    <mirrorFixedIngredientFilter>true</mirrorFixedIngredientFilter>
+                    <mirrorDefaultIngredientFilter>true</mirrorDefaultIngredientFilter>
                     <value>
                         <li>VV_CedarWood</li>
                         <li>VV_EbonyWood</li>
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
@@ -120,20 +112,24 @@
         </match>
         <nomatch Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
+                <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                     <success>Always</success>
-                    <xpath>                        
-                        /Defs/RecipeDef/ingredients/li/filter
+                    <xpath>
+                        /Defs/RecipeDef
+                        [not(products/VV_CedarWood or products/VV_EbonyWood or products/VV_MahoganyWood or products/VV_RosewoodWood or products/VV_LacqueredWood)]
+                        /ingredients/li/filter
                         [not(categories/li="WoodTypes") and not(categories/li="DankPyon_Wood")]
                         /thingDefs
-                        [li="WoodLog"]
-                        [not(li="VV_CedarWood")]
                     </xpath>
+                    <anchor>WoodLog</anchor>
+                    <mirrorFixedIngredientFilter>true</mirrorFixedIngredientFilter>
+                    <mirrorDefaultIngredientFilter>true</mirrorDefaultIngredientFilter>
                     <value>
                         <li>VV_CedarWood</li>
                         <li>VV_EbonyWood</li>
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </li>
             </operations>
@@ -153,6 +149,7 @@
             <li>VV_EbonyWood</li>
             <li>VV_MahoganyWood</li>
             <li>VV_RosewoodWood</li>
+            <li>VV_LacqueredWood</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -169,105 +166,10 @@
             <li>VV_EbonyWood</li>
             <li>VV_MahoganyWood</li>
             <li>VV_RosewoodWood</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [not(fixedIngredientFilter)]
-            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
-        </xpath>
-        <value>
-            <fixedIngredientFilter>
-                <thingDefs />
-            </fixedIngredientFilter>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [fixedIngredientFilter and not(fixedIngredientFilter/thingDefs)]
-            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
-            /fixedIngredientFilter
-        </xpath>
-        <value>
-            <thingDefs />
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [fixedIngredientFilter/thingDefs]
-            [ingredients/li/filter/thingDefs[li="WoodLog" and li="VV_CedarWood"]]
-            /fixedIngredientFilter/thingDefs
-            [not(li="WoodLog")]
-        </xpath>
-        <value>
-            <li>WoodLog</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [fixedIngredientFilter/thingDefs]
-            [ingredients/li/filter/thingDefs/li="VV_CedarWood"]
-            /fixedIngredientFilter/thingDefs
-            [not(li="VV_CedarWood")]
-        </xpath>
-        <value>
-            <li>VV_CedarWood</li>
-            <li>VV_EbonyWood</li>
-            <li>VV_MahoganyWood</li>
-            <li>VV_RosewoodWood</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [defaultIngredientFilter and not(defaultIngredientFilter/thingDefs)]
-            [fixedIngredientFilter/thingDefs/li="VV_CedarWood"]
-            /defaultIngredientFilter
-        </xpath>
-        <value>
-            <thingDefs />
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [defaultIngredientFilter/thingDefs]
-            [fixedIngredientFilter/thingDefs[li="WoodLog" and li="VV_CedarWood"]]
-            /defaultIngredientFilter/thingDefs
-            [not(li="WoodLog")]
-        </xpath>
-        <value>
-            <li>WoodLog</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>            
-            /Defs/RecipeDef
-            [defaultIngredientFilter/thingDefs]
-            [fixedIngredientFilter/thingDefs/li="VV_CedarWood"]
-            /defaultIngredientFilter/thingDefs
-            [not(li="VV_CedarWood")]
-        </xpath>
-        <value>
-            <li>VV_CedarWood</li>
-            <li>VV_EbonyWood</li>
-            <li>VV_MahoganyWood</li>
-            <li>VV_RosewoodWood</li>
+            <li>VV_LacqueredWood</li>
         </value>
     </Operation>
     <!-- Add VV wood types to Logging Worksite table. -->
-    <!-- Doesn't reflect if the tree types are actually found at the site. -->
     <!-- Values could probably use tweaking. -->
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/SitePartDef[defName="WorkSite_Logging"]/lootTable</xpath>

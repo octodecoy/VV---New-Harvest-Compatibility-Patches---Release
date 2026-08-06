@@ -14,7 +14,8 @@
                 defName="VV_GinkgoTea" or
                 defName="VV_GinsengDecoction" or
                 defName="VV_EchinaceaDecoction" or
-                defName="VV_ValerianDecoction"]
+                defName="VV_ValerianDecoction" or
+                defName="VV_WormwoodDecoction"]
                 [not(modExtensions/li[@Class="DubsBadHygiene.WaterExt"])]
             </xpath>
             <value>

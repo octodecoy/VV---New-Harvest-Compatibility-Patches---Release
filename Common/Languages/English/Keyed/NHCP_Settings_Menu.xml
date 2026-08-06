@@ -1,108 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-    <NHCP.ModName>VV - New Harvest</NHCP.ModName>
-    <NHCP.HeaderLabel_RestartRequired>Restart game for any changes to take effect.</NHCP.HeaderLabel_RestartRequired>
-    <NHCP.Tab_AllTabs>All Tabs</NHCP.Tab_AllTabs>
-    <NHCP.Tab_General>General</NHCP.Tab_General>
-    <NHCP.Tab_Categories>Categories</NHCP.Tab_Categories>
-    <NHCP.Tab_Commonality>Commonality</NHCP.Tab_Commonality>
-    <NHCP.Tab_Crafting>Crafting</NHCP.Tab_Crafting>
-    <NHCP.Tab_Floors>Floors</NHCP.Tab_Floors>
-    <NHCP.Tab_Fuel>Fuel</NHCP.Tab_Fuel>
-    <NHCP.Tab_Visuals>Visuals</NHCP.Tab_Visuals>
-    <NHCP.Tab_Current>Current</NHCP.Tab_Current>
-    <NHCP.General_Full>Full</NHCP.General_Full>
-    <NHCP.General_Forage>Forage</NHCP.General_Forage>
-    <NHCP.General_Garden>Garden</NHCP.General_Garden>
-    <NHCP.General_Industrial>Industrial</NHCP.General_Industrial>
-    <NHCP.General_Medicinal>Medicinal</NHCP.General_Medicinal>
-    <NHCP.General_Trees>Trees</NHCP.General_Trees>
-    <NHCP.Button_Select>Select</NHCP.Button_Select>
+    <NHCP.General_ModName>VV - New Harvest</NHCP.General_ModName>
     <NHCP.General_Default>Default: {0}</NHCP.General_Default>
     <NHCP.ON>ON</NHCP.ON>
     <NHCP.OFF>OFF</NHCP.OFF>
-    <NHCP.Button_Modules>Modules</NHCP.Button_Modules>
-    <NHCP.Button_Reset>Reset</NHCP.Button_Reset>
-    <NHCP.General_Stuff>Stuff</NHCP.General_Stuff>
-    <NHCP.General_Thing>Thing</NHCP.General_Thing>
-    <NHCP.TabSubLabel_FuelDescription>Enabled things will be used as fuel.</NHCP.TabSubLabel_FuelDescription>
-    <NHCP.TabSubLabel_CommonalityDescription>Commonality values define how likely stuff is to generate from a material.\nMin: 0, Max: 100\n0 = never generates; 100 does not mean 100%-it's relative to all other materials.\nReference: Wood = 1.0; Gold = 0.02, so be careful with high values.</NHCP.TabSubLabel_CommonalityDescription>
+    <NHCP.General_InstalledModules>Installed modules:</NHCP.General_InstalledModules>
+    <NHCP.TabSubLabel_FuelDescription>Enabled things can be used as fuel.</NHCP.TabSubLabel_FuelDescription>
+    <NHCP.TabSubLabel_CommonalityDescription>Commonality is a WEIGHT, not a percentage - the game compares a material's value against every other material's before picking one, so what matters is the value relative to everything else, not the number by itself.\nVanilla reference points: Gold 0.02, Plasteel 0.05, Leather 0.10-0.24, Wood and Steel 1.0, Cloth 1.4.\n0 means never picked by any weighted choice - safe to use as a hard "off" switch. 100 (roughly 100x Wood) means picked almost every time, but never truly guaranteed - it still has to beat whatever else is competing, and the share it gets shrinks as more materials are available.\nA few generators (e.g. some default-stuff fallbacks) pick without weighting commonality at all, so even a material set to 0 can occasionally still turn up there.</NHCP.TabSubLabel_CommonalityDescription>
     <NHCP.CheckboxLabel_Logging>Logging</NHCP.CheckboxLabel_Logging>
-    <NHCP.CheckboxSubLabel_Logging>Logs some information on game start.\nYou probably don't want it on.</NHCP.CheckboxSubLabel_Logging>
+    <NHCP.CheckboxTooltip_Logging>Logs some information, mostly on game start.\nYou probably don't want it on.</NHCP.CheckboxTooltip_Logging>
     <NHCP.General_AnimalFoods>Animal Foods</NHCP.General_AnimalFoods>
     <NHCP.General_Grains>Grains</NHCP.General_Grains>
     <NHCP.General_Fruit>Fruit</NHCP.General_Fruit>
     <NHCP.General_Nuts>Nuts</NHCP.General_Nuts>
     <NHCP.General_Vegetables>Vegetables</NHCP.General_Vegetables>
-    <NHCP.CheckboxLabel_AddToCategory>Add To '{0}' Category</NHCP.CheckboxLabel_AddToCategory>
-    <NHCP.CheckboxSubLabel_AddToCategory>Attempts to place New Harvest {0} into a '{1}' category, if one can be found.\nDefault: OFF</NHCP.CheckboxSubLabel_AddToCategory>
-    <NHCP.CheckboxLabel_MergeCategory>Merge '{0}' Categories</NHCP.CheckboxLabel_MergeCategory>
-    <NHCP.CheckboxSubLabel_MergeCategory>(EXPERIMENTAL) Creates a '{0}' category and attempts to merge all '{1}' categories into the created category.\nThe button below will become active after restarting the game, and allow for moving things into desired categories.\nDefault: OFF</NHCP.CheckboxSubLabel_MergeCategory>
+    <NHCP.CheckboxLabel_MergeCategory>Merge "{0}" Categories</NHCP.CheckboxLabel_MergeCategory>
+    <NHCP.CheckboxTooltip_MergeCategory>[EXPERIMENTAL] Creates a {0} category and gathers New Harvest {1} into it, along with matching items from other mods, attempting to replace their original "{1}" categories.</NHCP.CheckboxTooltip_MergeCategory>
     <NHCP.CheckboxLabel_ResourceReadout>Show As Resource Readout Root</NHCP.CheckboxLabel_ResourceReadout>
-    <NHCP.CheckboxSubLabel_ResourceReadout>Shows the category as a primary resource on the resource readout.</NHCP.CheckboxSubLabel_ResourceReadout>
-    <NHCP.CheckboxLabel_MoveDrinksToVBECategory>Move Medicinal Drinks to VBE Category</NHCP.CheckboxLabel_MoveDrinksToVBECategory>
-    <NHCP.CheckboxSubLabel_MoveDrinksToVBECategory>Move New Harvest medicinal drinks to VBE's non-alcoholic category.</NHCP.CheckboxSubLabel_MoveDrinksToVBECategory>
+    <NHCP.CheckboxTooltip_ResourceReadout>Shows the {0} category as a primary resource on the resource readout.</NHCP.CheckboxTooltip_ResourceReadout>
+    <NHCP.CheckboxLabel_MoveDrinksToVBECategory>Move Medicinal Drinks Into Vanilla Brewing Expanded Category</NHCP.CheckboxLabel_MoveDrinksToVBECategory>
+    <NHCP.CheckboxTooltip_MoveDrinksToVBECategory>Move New Harvest medicinal drinks to Vanilla Brewing Expanded's non-alcoholic category.</NHCP.CheckboxTooltip_MoveDrinksToVBECategory>
     <NHCP.CheckboxLabel_AddAquaticReedsToBiomes>Add New Harvest Reeds To Biomes</NHCP.CheckboxLabel_AddAquaticReedsToBiomes>
-    <NHCP.CheckboxSubLabel_AddAquaticReedsToBiomes>Adds aquatic New Harvest reeds to biomes containing Odyssey reeds at 25% their frequency.</NHCP.CheckboxSubLabel_AddAquaticReedsToBiomes>
-    <NHCP.CheckboxLabel_AddMoreWoodFloors>Add More Wood Floors:</NHCP.CheckboxLabel_AddMoreWoodFloors>
-    <NHCP.CheckboxSubLabel_AddMoreWoodFloors>Add more floors using New Harvest wood.</NHCP.CheckboxSubLabel_AddMoreWoodFloors>
-    <NHCP.CheckboxLabel_NewHarvestNonWoodFloorsToDropdown>New Harvest Non-Wood Floors To Dropdown:</NHCP.CheckboxLabel_NewHarvestNonWoodFloorsToDropdown>
-    <NHCP.CheckboxSubLabel_NewHarvestNonWoodFloorsToDropdown>Group New Harvest non-wood floors (alfalfa, clover, timothy, cork, rattan, reed, rubber) in a single dropdown.</NHCP.CheckboxSubLabel_NewHarvestNonWoodFloorsToDropdown>
-    <NHCP.CheckboxLabel_NewHarvestWoodFloorsToDropdowns>New Harvest Wood Floors To Dropdowns:</NHCP.CheckboxLabel_NewHarvestWoodFloorsToDropdowns>
-    <NHCP.CheckboxSubLabel_NewHarvestWoodFloorsToDropdowns>Group New Harvest wood floors (cedar, ebony, mahogany, rosewood) into dropdowns.</NHCP.CheckboxSubLabel_NewHarvestWoodFloorsToDropdowns>
-    <NHCP.CheckboxLabel_BaseWoodFloorsToDropdowns>Base Wood Floors To Dropdowns:</NHCP.CheckboxLabel_BaseWoodFloorsToDropdowns>
-    <NHCP.CheckboxSubLabel_BaseWoodFloorsToDropdowns>Group base wood floors in a dropdown.</NHCP.CheckboxSubLabel_BaseWoodFloorsToDropdowns>
-    <NHCP.CheckboxLabel_ModWoodFloorsToDropdowns>Mod Wood Floors To Dropdowns:</NHCP.CheckboxLabel_ModWoodFloorsToDropdowns>
-    <NHCP.CheckboxSubLabel_ModWoodFloorsToDropdowns>Group mod-added wood floors in dropdowns.</NHCP.CheckboxSubLabel_ModWoodFloorsToDropdowns>
-    <NHCP.CheckboxLabel_AddWoodDryads>Add New Harvest Wood Dryads:</NHCP.CheckboxLabel_AddWoodDryads>
-    <NHCP.CheckboxSubLabel_AddWoodDryads>Add new dryad types to make cedar, ebony, mahogany or rosewood logs.</NHCP.CheckboxSubLabel_AddWoodDryads>
-    <NHCP.CheckboxLabel_AddHayConversionRecipe>Add Convert Hay Recipe:</NHCP.CheckboxLabel_AddHayConversionRecipe>
-    <NHCP.CheckboxSubLabel_AddHayConversionRecipe>Adds a Crafting Spot recipe to convert 50 New Harvest hay into base game hay.</NHCP.CheckboxSubLabel_AddHayConversionRecipe>
-    <NHCP.CheckboxLabel_AddWoodConversionRecipe>Add Convert Wood Recipe:</NHCP.CheckboxLabel_AddWoodConversionRecipe>
-    <NHCP.CheckboxSubLabel_AddWoodConversionRecipe>Adds a Stonecutter's Table recipe to convert 50 New Harvest wood into base game wood.</NHCP.CheckboxSubLabel_AddWoodConversionRecipe>
+    <NHCP.CheckboxTooltip_AddAquaticReedsToBiomes>Adds aquatic New Harvest reeds to biomes containing Odyssey reeds at 25% their frequency.</NHCP.CheckboxTooltip_AddAquaticReedsToBiomes>
+    <NHCP.CheckboxLabel_AddMoreWoodFloors>Add More Wood Floors</NHCP.CheckboxLabel_AddMoreWoodFloors>
+    <NHCP.CheckboxTooltip_AddMoreWoodFloors>Add more floors using New Harvest wood.</NHCP.CheckboxTooltip_AddMoreWoodFloors>
+    <NHCP.CheckboxLabel_NewHarvestNonWoodFloorsToDropdown>New Harvest Non-Wood Floors To Dropdown</NHCP.CheckboxLabel_NewHarvestNonWoodFloorsToDropdown>
+    <NHCP.CheckboxTooltip_NewHarvestNonWoodFloorsToDropdown>Group New Harvest non-wood floors in a single dropdown.</NHCP.CheckboxTooltip_NewHarvestNonWoodFloorsToDropdown>
+    <NHCP.CheckboxLabel_NewHarvestWoodFloorsToDropdowns>New Harvest Wood Floors To Dropdowns</NHCP.CheckboxLabel_NewHarvestWoodFloorsToDropdowns>
+    <NHCP.CheckboxTooltip_NewHarvestWoodFloorsToDropdowns>Group New Harvest wood floors into dropdowns.</NHCP.CheckboxTooltip_NewHarvestWoodFloorsToDropdowns>
+    <NHCP.CheckboxLabel_BaseWoodFloorsToDropdowns>Base Wood Floors To Dropdowns</NHCP.CheckboxLabel_BaseWoodFloorsToDropdowns>
+    <NHCP.CheckboxTooltip_BaseWoodFloorsToDropdowns>Group base wood floors in a dropdown.</NHCP.CheckboxTooltip_BaseWoodFloorsToDropdowns>
+    <NHCP.CheckboxLabel_ModWoodFloorsToDropdowns>Mod Wood Floors To Dropdowns</NHCP.CheckboxLabel_ModWoodFloorsToDropdowns>
+    <NHCP.CheckboxTooltip_ModWoodFloorsToDropdowns>Group mod-added wood floors in dropdowns.</NHCP.CheckboxTooltip_ModWoodFloorsToDropdowns>
+    <NHCP.CheckboxLabel_AddWoodDryads>Add New Harvest Wood Dryads</NHCP.CheckboxLabel_AddWoodDryads>
+    <NHCP.CheckboxTooltip_AddWoodDryads>Add new dryad types to make cedar, ebony, mahogany or rosewood logs.</NHCP.CheckboxTooltip_AddWoodDryads>
+    <NHCP.CheckboxLabel_AddHayConversionRecipe>Add Convert Hay Recipe</NHCP.CheckboxLabel_AddHayConversionRecipe>
+    <NHCP.CheckboxTooltip_AddHayConversionRecipe>Adds a Crafting Spot recipe to convert 50 New Harvest hay into base game hay.</NHCP.CheckboxTooltip_AddHayConversionRecipe>
+    <NHCP.CheckboxLabel_AddWoodConversionRecipe>Add Convert Wood Recipe</NHCP.CheckboxLabel_AddWoodConversionRecipe>
+    <NHCP.CheckboxTooltip_AddWoodConversionRecipe>Adds a Crafting Spot recipe to convert 50 New Harvest wood into base game wood.</NHCP.CheckboxTooltip_AddWoodConversionRecipe>
     <NHCP.CheckboxLabel_UseVanillaLogGraphic>Use Vanilla Log Graphics:</NHCP.CheckboxLabel_UseVanillaLogGraphic>
-    <NHCP.CheckboxSubLabel_UseVanillaLogGraphic>Makes New Harvest Logs use colored vanilla log textures.</NHCP.CheckboxSubLabel_UseVanillaLogGraphic>
-    <NHCP.RadioLabel_ApplyToBoth>Apply To Both</NHCP.RadioLabel_ApplyToBoth>
-    <NHCP.RadioLabel_ApplyToStuff>Apply To Stuff</NHCP.RadioLabel_ApplyToStuff>
-    <NHCP.RadioLabel_ApplyToThing>Apply To Thing</NHCP.RadioLabel_ApplyToThing>
+    <NHCP.CheckboxTooltip_UseVanillaLogGraphic>Makes New Harvest Logs use colored vanilla log textures.</NHCP.CheckboxTooltip_UseVanillaLogGraphic>
+    <NHCP.Button_ApplyToStuff>Apply to stuff</NHCP.Button_ApplyToStuff>
+    <NHCP.Button_ApplyToThing>Apply to thing</NHCP.Button_ApplyToThing>
     <NHCP.SliderLabel_Commonality>Commonality</NHCP.SliderLabel_Commonality>
+    <NHCP.SliderLabel_BaseCommonality>Base</NHCP.SliderLabel_BaseCommonality>
     <NHCP.SliderLabel_StructureCommonality>Structures</NHCP.SliderLabel_StructureCommonality>
     <NHCP.SliderLabel_WeaponCommonality>Weapons</NHCP.SliderLabel_WeaponCommonality>
     <NHCP.SliderLabel_ApparelCommonality>Apparel</NHCP.SliderLabel_ApparelCommonality>
+    <NHCP.SliderTooltip_Commonality>The value written directly onto this material. Every weighted pick in the game reads it - buildings, weapons, apparel, trader stock, quests. 0 turns this material off everywhere; nothing will pick it.\nRight-click to reset to this material's default.</NHCP.SliderTooltip_Commonality>
+    <NHCP.SliderTooltip_BaseCommonality>The reference point the three settings below scale from. Alone controls everything they do NOT reach: trader stock, quest and reward generation, and Vanilla Expanded Framework's own structure generator.\n0 turns this material off everywhere, including the three settings below - they have nothing to scale.\nRight-click to reset to this material's default.</NHCP.SliderTooltip_BaseCommonality>
+    <NHCP.SliderTooltip_StructureCommonality>How often this material is chosen for generated buildings and furniture - except Vanilla Expanded Framework's own structure generator, which uses Base instead.\nRight-click to reset to this material's default.</NHCP.SliderTooltip_StructureCommonality>
+    <NHCP.SliderTooltip_WeaponCommonality>How often this material is chosen for weapons carried by generated pawns. Weapons in trader stock or quest rewards use Base instead.\nRight-click to reset to this material's default.</NHCP.SliderTooltip_WeaponCommonality>
+    <NHCP.SliderTooltip_ApparelCommonality>How often this material is chosen for apparel worn by generated pawns. Apparel in trader stock or quest rewards uses Base instead.\nRight-click to reset to this material's default.</NHCP.SliderTooltip_ApparelCommonality>
+    <NHCP.SliderTooltip_CommonalityDisabledByZeroBase>Disabled because Base is 0. Raise Base above 0 to use this setting; the value kept here comes back with it.</NHCP.SliderTooltip_CommonalityDisabledByZeroBase>
     <NHCP.SectionLabel_GeneralSection>General</NHCP.SectionLabel_GeneralSection>
     <NHCP.SectionLabel_FallColorTreesSection>Fall Color Trees</NHCP.SectionLabel_FallColorTreesSection>
-    <NHCP.SectionLabel_FallColorTreesSectionSub>Choose trees that will display fall colors.\nDefault: ALL</NHCP.SectionLabel_FallColorTreesSectionSub>
+    <NHCP.SectionLabel_FallColorTreesSectionSub>Choose trees that will display fall colors.</NHCP.SectionLabel_FallColorTreesSectionSub>
     <NHCP.SectionLabel_MaterialColorsSection>Material Colors</NHCP.SectionLabel_MaterialColorsSection>
-    <NHCP.SectionLabel_MaterialColorsSectionSub>Choose RGB (0-255) color values for materials.\nKeep in mind that most things are drawn with no tint in mind (255,255,255).\nThing is the actual item, like a wood log. Stuff is made out of the item, like a wall.\nPress the 'Apply' button to set any changes.\nCannot apply separately, choose either one or both.</NHCP.SectionLabel_MaterialColorsSectionSub>
-    <NHCP.Button_Apply>Apply</NHCP.Button_Apply>
+    <NHCP.SectionLabel_MaterialColorsSectionSub>Choose RGB (0-255) color values for materials.\nKeep in mind that most things are drawn with no tint in mind (255,255,255 (white)).\nThing is the actual item, like a wood log. Stuff is made out of the item, like a wall.</NHCP.SectionLabel_MaterialColorsSectionSub>
     <NHCP.Button_AreYouSure>Are you sure?</NHCP.Button_AreYouSure>
     <NHCP.Button_CategoryResetInfo>Things that originate in this category will moved back to it, and things that do not will be moved back to their respective categories, if applicable.</NHCP.Button_CategoryResetInfo>
-    <NHCP.Button_SettingsReset>settings reset!</NHCP.Button_SettingsReset>
-    <NHCP.Button_ChangeCategoryLabel>Change Category Label</NHCP.Button_ChangeCategoryLabel>
-    <NHCP.Button_LabelChangedTo>Label successfully changed to:</NHCP.Button_LabelChangedTo>
+    <NHCP.Button_EditCategoryContents>Edit Contents...</NHCP.Button_EditCategoryContents>
+    <NHCP.Tooltip_EditCategoryContents>Choose which things belong to the {0} category.\nOnly available while merging is enabled for the category.</NHCP.Tooltip_EditCategoryContents>
+    <NHCP.Title_EditCategoryChildren>Edit {0} Contents</NHCP.Title_EditCategoryChildren>
+    <NHCP.EditCategory_OwnedBy>In: {0}</NHCP.EditCategory_OwnedBy>
+    <NHCP.EditCategory_AllEntries>all entries</NHCP.EditCategory_AllEntries>
+    <NHCP.EditCategory_RightClickHint>Right click to reset this entry.\nShift + right click to reset all entries.</NHCP.EditCategory_RightClickHint>
+    <NHCP.EditCategory_MoveHere>Remove from {0} and add here</NHCP.EditCategory_MoveHere>
+    <NHCP.EditCategory_MoveHint>Right click to remove from {0} and add here.</NHCP.EditCategory_MoveHint>
+    <NHCP.EditCategory_SearchTypes>Search by defName, label or category.</NHCP.EditCategory_SearchTypes>
+    <NHCP.Tooltip_ChangeCategoryName>Change name of "{0}" category</NHCP.Tooltip_ChangeCategoryName>
     <NHCP.CheckboxLabel_HayNeedsCooling>Hay Needs Cooling</NHCP.CheckboxLabel_HayNeedsCooling>
-    <NHCP.CheckboxSubLabel_HayNeedsCooling>If off, removes the need to refrigerate New Harvest hay.\nIt will instead just deteriorate if outdoors.</NHCP.CheckboxSubLabel_HayNeedsCooling>
+    <NHCP.CheckboxTooltip_HayNeedsCooling>If disabled, removes the need to refrigerate New Harvest hay.\nIt will instead just deteriorate if outdoors.</NHCP.CheckboxTooltip_HayNeedsCooling>
     <NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>Grains Produce Vanilla Cooking Expanded Flour</NHCP.CheckboxLabel_GrainsProduceVCEFlourSecondary>
-    <NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>New Harvest grain plants will produce Vanilla Cooking Expanded flour as a secondary output at half the amount of the grain.\n(Example: Amaranth plants will produce 10 amaranth grain and 5 flour)</NHCP.CheckboxSubLabel_GrainsProduceVCEFlourSecondary>
-	<NHCP.General_Flowers>Flowers</NHCP.General_Flowers>
-    <NHCP.General_Mushrooms>Mushrooms</NHCP.General_Mushrooms>
-    <NHCP.General_Fungus>Fungus</NHCP.General_Fungus>
-    <NHCP.Tab_Behaviors>Behaviors</NHCP.Tab_Behaviors>
+    <NHCP.CheckboxTooltip_GrainsProduceVCEFlourSecondary>New Harvest grain plants will produce Vanilla Cooking Expanded flour as a secondary output, at the percentage of their grain yield set below.\n(Example: Amaranth plants will produce {0} amaranth grain and {1} flour)</NHCP.CheckboxTooltip_GrainsProduceVCEFlourSecondary>
+    <NHCP.CheckboxTooltip_GrainsProduceVCEFlourSecondaryReplaced>New Harvest grain plants will be harvested for Vanilla Cooking Expanded flour instead of grain, at the percentage of their normal grain yield set below.\n(Example: Amaranth plants will produce {0} flour and no grain)</NHCP.CheckboxTooltip_GrainsProduceVCEFlourSecondaryReplaced>
+    <NHCP.SliderLabel_GrainFlourOutputPercent>Flour Output (% Of Normal Grain Yield)</NHCP.SliderLabel_GrainFlourOutputPercent>
+    <NHCP.SliderTooltip_GrainFlourOutputPercent>How much flour a grain plant produces, as a percentage of the grain it would normally yield.\n\n100% = one flour per grain.\n50% = half as much flour as grain.\n200% = twice as much flour as grain.</NHCP.SliderTooltip_GrainFlourOutputPercent>
+    <NHCP.CheckboxLabel_GrainsProduceVCEFlourOnly>Harvest Flour Instead Of Grain</NHCP.CheckboxLabel_GrainsProduceVCEFlourOnly>
+    <NHCP.CheckboxTooltip_GrainsProduceVCEFlourOnly>Grain plants are harvested for flour only - no grain is produced at all.\nThe percentage above still applies, measured against the plant's normal grain yield.\n(Example: Amaranth plants will produce {0} flour and no grain)\n\nWarning: the grain items themselves become unobtainable from farming. Any recipe that consumes them loses its renewable source.</NHCP.CheckboxTooltip_GrainsProduceVCEFlourOnly>
+	<NHCP.General_Fungus>Fungus</NHCP.General_Fungus>
     <NHCP.CheckboxLabel_AddTruffleDiggingBehavior>Add Truffle Digging Behavior</NHCP.CheckboxLabel_AddTruffleDiggingBehavior>
-    <NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>Allows tamed pigs and dogs to dig up truffles when on diggable natural terrain.</NHCP.CheckboxSubLabel_AddTruffleDiggingBehavior>
+    <NHCP.CheckboxTooltip_AddTruffleDiggingBehavior>Allows tamed pigs and dogs to dig up truffles when on diggable natural terrain.</NHCP.CheckboxTooltip_AddTruffleDiggingBehavior>
     <NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>Ticks Between Dig Attempts</NHCP.AdjusterLabel_TicksBetweenTruffleDigAttempts>
-    <NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>Ticks that must pass before an animal attempts to dig for truffles.\n2500 ticks = 1 game hour; 60000 ticks = 1 game day.</NHCP.AdjusterSubLabel_TicksBetweenTruffleDigAttempts>
+    <NHCP.AdjusterTooltip_TicksBetweenTruffleDigAttempts>Ticks that must pass before an animal attempts to dig for truffles.\n2500 ticks = 1 game hour; 60000 ticks = 1 game day.</NHCP.AdjusterTooltip_TicksBetweenTruffleDigAttempts>
     <NHCP.RangeLabel_TruffleDiggingChanceRange>Success Chance Range</NHCP.RangeLabel_TruffleDiggingChanceRange>
-    <NHCP.RangeSubLabel_TruffleDiggingChanceRange>Chance to successfully spawn a truffle on each dig attempt.\nThe maximum value is used first, then reduced by 'Chance Reduction Per Animal'.\nThe final chance will not fall below the minimum.</NHCP.RangeSubLabel_TruffleDiggingChanceRange>
+    <NHCP.RangeTooltip_TruffleDiggingChanceRange>Chance to successfully spawn a truffle on each dig attempt.\nThe maximum value is used first, then reduced by 'Chance Reduction Per Animal'.\nThe final chance will not fall below the minimum.</NHCP.RangeTooltip_TruffleDiggingChanceRange>
     <NHCP.SliderLabel_TruffleDiggingChanceReduction>Chance Reduction Per Animal</NHCP.SliderLabel_TruffleDiggingChanceReduction>
-    <NHCP.SliderSubLabel_TruffleDiggingChanceReduction>Amount the success chance is reduced for each animal capable of digging truffles.</NHCP.SliderSubLabel_TruffleDiggingChanceReduction>
+    <NHCP.SliderTooltip_TruffleDiggingChanceReduction>Amount the success chance is reduced for each animal capable of digging truffles.</NHCP.SliderTooltip_TruffleDiggingChanceReduction>
     <NHCP.RangeLabel_TruffleAmountRange>Truffle Amount Range</NHCP.RangeLabel_TruffleAmountRange>
-    <NHCP.RangeSubLabel_TruffleAmountRange>Range of truffles spawned when a dig attempt succeeds.</NHCP.RangeSubLabel_TruffleAmountRange>
+    <NHCP.RangeTooltip_TruffleAmountRange>Range of truffles spawned when a dig attempt succeeds.</NHCP.RangeTooltip_TruffleAmountRange>
     <NHCP.CheckboxLabel_TruffleSpawnsForbidden>Spawned Truffles Are Forbidden</NHCP.CheckboxLabel_TruffleSpawnsForbidden>
-    <NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>If enabled, truffles found by animals will spawn forbidden.</NHCP.CheckboxSubLabel_TruffleSpawnsForbidden>
+    <NHCP.CheckboxTooltip_TruffleSpawnsForbidden>If enabled, truffles found by animals will spawn forbidden.</NHCP.CheckboxTooltip_TruffleSpawnsForbidden>
     <NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>Command Toggle Requires Training</NHCP.CheckboxLabel_TruffleGizmoRequiresTraining>
-    <NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>If enabled, animals must be trained in Obedience, Dig, or Forage to receive the truffle digging command toggle. Otherwise, all tamed animals will always have the toggle.</NHCP.CheckboxSubLabel_TruffleGizmoRequiresTraining>
-
-    <NHCP.CheckboxLabel_GenesPreventFungusPoisoning>Strong Stomach Gene Prevents Fungal Poisoning</NHCP.CheckboxLabel_GenesPreventFungusPoisoning>
-    <NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>If enabled, pawns with the 'Strong Stomach' gene are immune to poisoning from New Harvest fungi.</NHCP.CheckboxSubLabel_GenesPreventFungusPoisoning>
+    <NHCP.CheckboxTooltip_TruffleGizmoRequiresTraining>If enabled, animals must be trained in Obedience, Dig, or Forage to receive the truffle digging command toggle. Otherwise, all tamed animals will always have the toggle.</NHCP.CheckboxTooltip_TruffleGizmoRequiresTraining>
+    <NHCP.CheckboxLabel_TreatFungusPoisoningLikeFoodPoisoning>Treat Mushroom Poisoning Like Food Poisoning</NHCP.CheckboxLabel_TreatFungusPoisoningLikeFoodPoisoning>
+    <NHCP.CheckboxTooltip_TreatFungusPoisoningLikeFoodPoisoning>If enabled, pawns with genes, hediffs, or traits that reduce food poisoning chance also reduce the chance of new poison effects from New Harvest mushrooms that have poison effects.</NHCP.CheckboxTooltip_TreatFungusPoisoningLikeFoodPoisoning>
+    <NHCP.CheckboxLabel_AddNourishedHediffFromAnimalFood>Nourished Animals Nuzzle More Often</NHCP.CheckboxLabel_AddNourishedHediffFromAnimalFood>
+    <NHCP.CheckboxTooltip_AddNourishedHediffFromAnimalFood>If enabled, animals that eat New Harvest's Fodder Mix or Protein Kibble will become nourished causing them to nuzzle more often for a period of time.\nThe animal must be capable of nuzzling.</NHCP.CheckboxTooltip_AddNourishedHediffFromAnimalFood>
+    <NHCP.AdjusterLabel_NourishedHediffSeverity>Time Between Attempts</NHCP.AdjusterLabel_NourishedHediffSeverity>
+    <NHCP.AdjusterTooltip_NourishedHediffSeverity>The average amount of game hours between nuzzle attempts while nourished.\nA smaller number means more attempts.</NHCP.AdjusterTooltip_NourishedHediffSeverity>
+    <NHCP.RangeLabel_NourishedHediffDuration>Duration</NHCP.RangeLabel_NourishedHediffDuration>
+    <NHCP.RangeTooltip_NourishedHediffDuration>The amount of ticks that the animal remains nourished.\nA random number within this range will be chosen when the animal becomes nourished.\n2500 ticks = 1 game hour; 60000 ticks = 1 game day.</NHCP.RangeTooltip_NourishedHediffDuration>
+    <NHCP.CheckboxLabel_ChangeAnimalFoodRecipes>Change Animal Food Recipes</NHCP.CheckboxLabel_ChangeAnimalFoodRecipes>
+    <NHCP.CheckboxTooltip_ChangeAnimalFoodRecipes>If enabled, New Harvest's Fodder Mix and Protein Kibble recipes can be crafted using a wider range of ingredients.</NHCP.CheckboxTooltip_ChangeAnimalFoodRecipes>
+    <NHCP.CheckboxLabel_AddMapleSyrupChain>Add Maple Syrup Production</NHCP.CheckboxLabel_AddMapleSyrupChain>
+    <NHCP.CheckboxTooltip_AddMapleSyrupChain>If enabled, New Harvest's Sugar Maple trees will produce Maple Sap which must be boiled into Maple Syrup, instead of Maple Syrup coming directly from the trees.\nMaple Sap can be boiled wherever meals can be cooked.</NHCP.CheckboxTooltip_AddMapleSyrupChain>
+    <NHCP.General_Information>Information</NHCP.General_Information>
+    <NHCP.General_Version>Version: {0}</NHCP.General_Version>
+    <NHCP.General_RightClickToReset>You can right click on tabs or settings to reset them.</NHCP.General_RightClickToReset>
+    <NHCP.General_RestartRequired>{0} indicates that a restart is required for the change or changes to apply.</NHCP.General_RestartRequired> 
+    <NHCP.General_Reset>Reset {0}</NHCP.General_Reset>
+    <NHCP.General_Setting>setting</NHCP.General_Setting>
+    <NHCP.General_ResetTabConfirm>Reset all "{0}" settings to their defaults?</NHCP.General_ResetTabConfirm>
+    <NHCP.Button_RevertToDefault>Revert To Default</NHCP.Button_RevertToDefault>
+    <NHCP.Label_DefaultColor>Default color</NHCP.Label_DefaultColor>
+    <NHCP.Label_ChooseMaterial>Choose a material</NHCP.Label_ChooseMaterial>
+    <NHCP.Tooltip_SwatchRGB>R: {0} G: {1} B: {2}</NHCP.Tooltip_SwatchRGB>
+    <NHCP.Tooltip_Brightness>Brightness</NHCP.Tooltip_Brightness>
+    <NHCP.General_RevertedColorToDefault>Reverted color for {0} to default.</NHCP.General_RevertedColorToDefault>
+    <NHCP.General_Enabled>Enabled</NHCP.General_Enabled>
+    <NHCP.General_ThingHasNoDefaultColor>Color is white, which means no tint at all.</NHCP.General_ThingHasNoDefaultColor>
 </LanguageData>

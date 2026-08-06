@@ -12,7 +12,8 @@
                         defName="VV_AdvancedHerbalMedicine" or
                         defName="VV_GinsengDecoction" or
                         defName="VV_EchinaceaDecoction" or
-                        defName="VV_ValerianDecoction"]
+                        defName="VV_ValerianDecoction" or
+                        defName="VV_WormwoodDecoction"]
                         /recipeMaker/recipeUsers
                     </xpath>
                     <value>
@@ -35,6 +36,7 @@
             <VV_YarrowPlant>0.001</VV_YarrowPlant>
             <VV_ChamomilePlant>0.001</VV_ChamomilePlant>
             <VV_ThymePlant>0.001</VV_ThymePlant>
+            <VV_WormwoodPlant>0.001</VV_WormwoodPlant>
         </value>
     </Operation>
 </Patch>

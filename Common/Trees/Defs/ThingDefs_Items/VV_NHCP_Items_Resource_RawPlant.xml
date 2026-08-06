@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="RoughPlantBase">
+        <defName>VV_NHCP_MapleSap</defName>
+        <label>maple sap</label>
+        <stackLimit>200</stackLimit>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <description>Slightly sweet, watery fluid that flows from a sugar maple tree, typically collected in late winter and early spring to produce maple syrup.</description>
+        <graphicData>
+            <texPath>NHCP/Things/Items/Raw/MapleSap</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.01</MarketValue>
+            <Nutrition>0.01</Nutrition>
+            <Flammability>0.8</Flammability>
+            <Mass>0.5</Mass>
+        </statBases>
+        <ingestible>
+            <preferability>NeverForNutrition</preferability>
+            <optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>25</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <thingCategories /> <!-- Added in patch if setting on. -->
+    </ThingDef>
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Adapt VV plants to MO research, removing other research if it's been added so MO takes over. 
+         Checking that A) The research def hasn't been removed and B) MO plants are actually using MO's research. -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_BasicAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_BasicAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_BlackberryBush" or defName="VV_CranberryBush"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_BasicAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_IntermediateAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_IntermediateAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>/Defs/ThingDef[defName="VV_AppleCactus"]/plant</xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_IntermediateAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ResearchProjectDef[defName="DankPyon_AdvancedAgriculture"]</xpath>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_AdvancedAgriculture"]</xpath>
+            <match Class="NewHarvestPatches.AddOrReplace">
+                <xpath>                    
+                    /Defs/ThingDef
+                    [defName="VV_BlackcurrantBush" or
+                    defName="VV_DragonFruitPlant" or
+                    defName="VV_RosehipBush"]
+                    /plant
+                </xpath>
+                <value>
+                    <sowResearchPrerequisites>
+                        <li>DankPyon_AdvancedAgriculture</li>
+                    </sowResearchPrerequisites>
+                </value>
+            </match>
+        </match>
+    </Operation>
+</Patch>

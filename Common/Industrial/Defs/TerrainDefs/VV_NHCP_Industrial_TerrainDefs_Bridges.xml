@@ -50,4 +50,12 @@
             <VV_RosewoodWood>12</VV_RosewoodWood>
         </costList>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_BridgeBase">
+        <defName>VV_NHCP_Lacquer_Bridge</defName>
+        <label>lacquered wood bridge</label>
+        <color>(106,59,43)</color>
+        <costList>
+            <VV_LacqueredWood>12</VV_LacqueredWood>
+        </costList>
+    </TerrainDef>
 </Defs>

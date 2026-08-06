@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Tulip"]/label</xpath>
+        <value>
+            <label>single early tulip</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Hydrangea"]/label</xpath>
+        <value>
+            <label>mophead hydrangea</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VV_Lilac"]/label</xpath>
+        <value>
+            <label>rouen lilac</label>
+        </value>
+    </Operation>
+</Patch>

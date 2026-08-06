@@ -66,4 +66,26 @@
             </li>
         </results>
     </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_MulberriesToVinegar</defName>
+        <label>Ferment mulberries into vinegar</label>
+        <description>Turns 100 mulberries into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 100 mulberries into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_Mulberries</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
 </Defs>

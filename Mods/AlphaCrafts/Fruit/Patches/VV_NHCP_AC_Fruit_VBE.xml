@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- VBE -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Brewing Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>AC_Fruit_Kombucha</key>
+                    <xpath>/Defs/RecipeDef[defName="AC_BrewFlavouredKombucha"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_Kombucha</cacheKey>
+                                <xpath>ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_Kombucha</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_Kombucha</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </caseTrue>
+                </li>
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>AC_Fruit_TeaSachets</key>
+                    <xpath>/Defs/RecipeDef[defName="AC_PrepareSpecialtyTeaSachets"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_TeaSachets</cacheKey>
+                                <xpath>ingredients/li[@Name="FruitIngredient"]/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_TeaSachets</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>AC_Fruit_TeaSachets</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_DragonFruits</li>
+                                    <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </caseTrue>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

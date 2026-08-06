@@ -10,7 +10,6 @@
                 <xpath>                    
                     /Defs/ThingDef
                     [defName="VV_BlackBeanPlant" or
-                    defName="VV_BlackberryBush" or
                     defName="VV_LeekPlant" or
                     defName="VV_ParsnipPlant" or
                     defName="VV_SpinachPlant" or
@@ -38,7 +37,8 @@
                     defName="VV_MilletPlant" or
                     defName="VV_QuinoaPlant" or
                     defName="VV_RedCabbagePlant" or
-                    defName="VV_TeffPlant"]
+                    defName="VV_TeffPlant" or
+                    defName="VV_TomatilloPlant"]
                     /plant
                 </xpath>
                 <value>
@@ -54,14 +54,7 @@
         <match Class="PatchOperationConditional">
             <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="DankPyon_AdvancedAgriculture"]</xpath>
             <match Class="NewHarvestPatches.AddOrReplace">
-                <xpath>                    
-                    /Defs/ThingDef
-                    [defName="VV_ArtichokePlant" or
-                    defName="VV_BlackcurrantBush" or
-                    defName="VV_DragonFruitPlant" or
-                    defName="VV_RosehipBush"]
-                    /plant
-                </xpath>
+                <xpath>/Defs/ThingDef[defName="VV_ArtichokePlant"]/plant</xpath>
                 <value>
                     <sowResearchPrerequisites>
                         <li>DankPyon_AdvancedAgriculture</li>

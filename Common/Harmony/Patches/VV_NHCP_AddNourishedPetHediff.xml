@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>AddNourishedHediffFromAnimalFood</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Forage Crops</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>/Defs/ThingDef[defName="VV_FodderMix" or defName="VV_ProteinKibble"]/ingestible[not(outcomeDoers)]</xpath>
+                        <value>
+                            <outcomeDoers />
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="VV_FodderMix" or defName="VV_ProteinKibble"]/ingestible/outcomeDoers</xpath>
+                        <value>
+                            <li Class="NewHarvestPatches.IngestionOutcomeDoer_GiveHediffConditional">
+                                <hediffDef>VV_NHCP_NourishedPet</hediffDef>
+                                <severity>0.05</severity> <!-- Lower = more nuzzling -->
+                                <pawnCharacteristics>
+                                    <li>IsNuzzlingAnimal</li>
+                                </pawnCharacteristics>
+                            </li>
+                        </value>
+                    </li>
+                    <li Class="NewHarvestPatches.SetFromModSetting">
+                        <xpath>/Defs/ThingDef[defName="VV_FodderMix" or defName="VV_ProteinKibble"]/ingestible/outcomeDoers/li[@Class="NewHarvestPatches.IngestionOutcomeDoer_GiveHediffConditional"]/severity</xpath>
+                        <setting>NourishedHediffSeverity</setting>
+                        <valueType>Float</valueType>
+                    </li>
+                    <li Class="NewHarvestPatches.SetFromModSetting">
+                        <xpath>/Defs/HediffDef[defName="VV_NHCP_NourishedPet"]/comps/li[@Class="HediffCompProperties_Disappears"]/disappearsAfterTicks</xpath>
+                        <setting>NourishedHediffDuration</setting>
+                        <valueType>IntRange</valueType>
+                    </li>
+                </operations>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

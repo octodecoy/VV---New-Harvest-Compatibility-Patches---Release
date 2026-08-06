@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThoughtDef[defName="VV_NHCP_ConsumedMapleSyrup"]</xpath>
+        <value>
+            <thoughtClass>VEF.Cooking.Thought_Hediff</thoughtClass>
+        </value>
+    </Operation>
+    <Operation Class="NewHarvestPatches.AddOrReplace">
+        <xpath>/Defs/ThoughtDef[defName="VV_NHCP_ConsumedMapleSyrup"]</xpath>
+        <value>
+            <hediff>VV_VCE_ConsumedMapleSyrup</hediff>
+        </value>
+    </Operation>
+</Patch>

@@ -13,8 +13,8 @@
                 </li>
                 <li Class="NewHarvestPatches.EditString">
                     <xpath>/Defs/ThingDef[defName="VV_ReedPlant"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; While reeds can still thrive away from water, they do so at a 25% slower rate than if there is water within 6 tiles.</replaceWith>
+                    <mode>Append</mode>
+                    <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; While reeds can still thrive away from water, they do so at a 25% slower rate than if there is water within 6 tiles.</value>
                 </li>
             </operations>
         </match>

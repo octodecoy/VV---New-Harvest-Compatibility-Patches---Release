@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_ChipsOffsets_NewHarvest_Fruit</defName>
+        <thingDef>AC_Chips</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_DragonFruits</key>
+                <value>3</value>
+            </li>
+            <li>
+                <key>VV_AppleCactusFruits</key>
+                <value>3</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

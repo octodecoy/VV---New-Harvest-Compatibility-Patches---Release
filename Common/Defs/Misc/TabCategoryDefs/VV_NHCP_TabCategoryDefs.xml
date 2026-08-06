@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_GeneralTab</defName>
+        <label>general</label>
+        <texPath>NHCP/UI/Icons/GeneralIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_CategoriesTab</defName>
+        <label>categories</label>
+        <texPath>NHCP/UI/Icons/CategoriesIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_CommonalityTab</defName>
+        <label>commonality</label>
+        <texPath>NHCP/UI/Icons/CommonalityIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_CraftingTab</defName>
+        <label>crafting</label>
+        <texPath>NHCP/UI/Icons/CraftingIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_FloorsTab</defName>
+        <label>floors</label>
+        <texPath>NHCP/UI/Icons/FloorsIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_FuelTab</defName>
+        <label>fuel</label>
+        <texPath>NHCP/UI/Icons/FuelIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_VisualsTab</defName>
+        <label>visuals</label>
+        <texPath>NHCP/UI/Icons/EyeIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_BehaviorsTab</defName>
+        <label>behaviors</label>
+        <texPath>NHCP/UI/Icons/BehaviorsIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+
+    <NewHarvestPatches.TabCategoryDef>
+        <defName>VV_NHCP_MiscTab</defName>
+        <label>miscellaneous</label>
+        <texPath>NHCP/UI/Icons/MiscIcon</texPath>
+    </NewHarvestPatches.TabCategoryDef>
+</Defs>

@@ -211,4 +211,18 @@
             <texPath>Seeds/Yarrow</texPath>
         </graphicData>
     </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Wormwood</defName>
+        <label>Wormwood seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_WormwoodPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Wormwood</texPath>
+        </graphicData>
+    </ThingDef>
 </Defs>

@@ -9,6 +9,7 @@
             <li>VV_Papayas</li>
             <li>VV_Persimmons</li>
             <li>VV_Quinces</li>
+            <li>VV_CherryPlums</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -19,6 +20,7 @@
             <li>VV_Papayas</li>
             <li>VV_Persimmons</li>
             <li>VV_Quinces</li>
+            <li>VV_CherryPlums</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -29,6 +31,7 @@
             <li>VV_Papayas</li>
             <li>VV_Persimmons</li>
             <li>VV_Quinces</li>
+            <li>VV_CherryPlums</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -53,6 +56,10 @@
             <li>
                 <key>VV_Quinces</key>
                 <value>Quince chips</value>
+            </li>
+            <li>
+                <key>VV_CherryPlums</key>
+                <value>Cherry plum chips</value>
             </li>
         </value>
     </Operation>

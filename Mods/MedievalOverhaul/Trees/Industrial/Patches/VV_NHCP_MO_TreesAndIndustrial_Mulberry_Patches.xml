@@ -57,23 +57,15 @@
         </value>
     </Operation>
     <!-- Recipes -->
-    <Operation Class="PatchOperationAdd">
+    <!-- Each location already independently lists DankPyon_RawMulberry - union xpath, no mirroring needed. -->
+    <Operation Class="NewHarvestPatches.AddDefsWhereDefPresent">
         <success>Always</success>
-        <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
-        <value>
-            <li>VV_WhiteMulberries</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/RecipeDef/fixedIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
-        <value>
-            <li>VV_WhiteMulberries</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/RecipeDef/defaultIngredientFilter/thingDefs[li="DankPyon_RawMulberry"]</xpath>
+        <xpath>
+            /Defs/RecipeDef/ingredients/li/filter/thingDefs
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs
+        </xpath>
+        <anchor>DankPyon_RawMulberry</anchor>
         <value>
             <li>VV_WhiteMulberries</li>
         </value>

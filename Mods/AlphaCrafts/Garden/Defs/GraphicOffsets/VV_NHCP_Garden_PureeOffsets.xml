@@ -12,6 +12,10 @@
 				<key>VV_Artichoke</key>
 				<value>1</value>
 			</li>
+			<li>
+				<key>VV_Tomatillos</key>
+				<value>1</value>
+			</li>
 		</ingredientsAndOffsetList>
 	</VEF.Graphics.GraphicOffsets>
 </Defs>

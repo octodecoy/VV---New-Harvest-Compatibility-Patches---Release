@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VEF.Graphics.GraphicOffsets>
+        <defName>VV_AC_YogurtOffsets_NewHarvest_Fruit</defName>
+        <thingDef>VCE_Yoghurt</thingDef>
+        <ingredientsAndOffsetList>
+            <li>
+                <key>VV_Blackcurrants</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>VV_Blackberries</key>
+                <value>4</value>
+            </li>
+            <li>
+                <key>VV_Cranberries</key>
+                <value>1</value>
+            </li>
+            <li>
+                <key>VV_AppleCactusFruits</key>
+                <value>1</value>
+            </li>
+        </ingredientsAndOffsetList>
+    </VEF.Graphics.GraphicOffsets>
+</Defs>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef>
+        <defName>VV_NHCP_MakeMapleSyrup</defName>
+        <label>make maple syrup x1</label>
+        <description>Boil the sweet sap from the sugar maple into a delicious syrup ready to be put on top of everything. \nRequires a ratio of 10 sap to 1 syrup, but it sure is worth it!</description>
+        <jobString>Boiling sap.</jobString>
+        <workAmount>450</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <workSkill>Cooking</workSkill>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_NHCP_MapleSap</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_NHCP_MapleSap</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_MapleSyrup>1</VV_MapleSyrup>
+        </products>
+        <recipeUsers /> <!-- Added in code if setting on. -->
+        <researchPrerequisites />
+    </RecipeDef>
+    <RecipeDef>
+        <defName>VV_NHCP_MakeMapleSyrupBulk</defName>
+        <label>make maple syrup x20</label>
+        <description>Boil the sweet sap from the sugar maple into a delicious syrup ready to be put on top of everything. \nRequires a ratio of 10 sap to 1 syrup, but it sure is worth it!</description>
+        <jobString>Boiling sap.</jobString>
+        <workAmount>2250</workAmount>
+        <workSpeedStat>CookSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <workSkill>Cooking</workSkill>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_NHCP_MapleSap</li>
+                    </thingDefs>
+                </filter>
+                <count>200</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_NHCP_MapleSap</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_MapleSyrup>20</VV_MapleSyrup>
+        </products>
+        <recipeUsers /> <!-- Added in code if setting on. -->
+        <researchPrerequisites />
+    </RecipeDef>
+</Defs>

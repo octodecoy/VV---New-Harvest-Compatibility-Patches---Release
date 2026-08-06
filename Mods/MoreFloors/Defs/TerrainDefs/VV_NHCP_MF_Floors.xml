@@ -42,6 +42,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Rustic">
+        <defName>VV_NHCP_FloorWoodRustic_Lacquer</defName>
+        <label>lacquered wood floorboards</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- WIDE -->
     <TerrainDef Name="VV_NHCP_FloorBase_MF_Wide" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Wide, plain-looking floorboards for that minimalistic feel. Easy to build.</description>
@@ -83,6 +91,14 @@
             <VV_RosewoodWood>2</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Wide">
+        <defName>VV_NHCP_FloorWoodWide_Lacquer</defName>
+        <label>wide lacquered wood floorboards</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
     <!-- LIGHT -->
     <TerrainDef Name="VV_NHCP_FloorBase_MF_Light" ParentName="VV_NHCP_FloorBase" Abstract="True">
@@ -126,6 +142,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Light">
+        <defName>VV_NHCP_FloorWoodLight_Lacquer</defName>
+        <label>light lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- MOSAIC -->
     <TerrainDef Name="VV_NHCP_FloorBase_MF_Mosaic" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>A wooden floor with planks laid in a mosaic-like pattern - beautiful, but needs a lot of wood and is time-consuming to build.</description>
@@ -168,6 +192,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Mosaic">
+        <defName>VV_NHCP_FloorWoodMosaic_Lacquer</defName>
+        <label>mosaic lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- VERTICAL -->
     <TerrainDef Name="VV_NHCP_FloorBase_MF_Vertical" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Wooden floorboards.</description>
@@ -209,6 +241,14 @@
             <VV_RosewoodWood>3</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Vertical">
+        <defName>VV_NHCP_FloorWoodVertical_Lacquer</defName>
+        <label>vertical lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
     <!-- BARN -->
     <TerrainDef Name="VV_NHCP_FloorBase_MF_Barn" ParentName="VV_NHCP_FloorBase" Abstract="True">
@@ -253,5 +293,13 @@
             <VV_RosewoodWood>2</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MF_Barn">
+        <defName>VV_NHCP_FloorWoodBarn_Lacquer</defName>
+        <label>lacquered wood board floor</label>
+        <costList>
+            <VV_LacqueredWood>6</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
 </Defs>

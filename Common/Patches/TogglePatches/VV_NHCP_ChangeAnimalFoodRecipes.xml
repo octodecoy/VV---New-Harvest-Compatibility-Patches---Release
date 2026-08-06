@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="NewHarvestPatches.ConditionalSetting">
+        <setting>ChangeAnimalFoodRecipes</setting>
+        <caseTrue Class="PatchOperationFindMod">
+            <mods>
+                <li>VV - New Harvest</li>
+                <li>VV - New Harvest: Forage Crops</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <!-- Fodder Mix -->
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]</xpath>
+                        <value>
+                            <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+                        </value>
+                    </li>
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]</xpath>
+                        <value>
+                            <allowMixingIngredients>true</allowMixingIngredients>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/ingredients/li[1]/filter</xpath>
+                        <value>
+                            <filter>
+                                <thingDefs>
+                                    <li>Hay</li>
+                                    <li>VV_AlfalfaHay</li>
+                                    <li>VV_CloverHay</li>
+                                    <li>VV_TimothyHay</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Straw</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawFlax</li>
+                                </thingDefs>
+                                <customSummary>forage ingredients (hay)</customSummary>
+                            </filter>
+                        </value>
+                    </li> 
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]</xpath>
+                        <value>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>Hay</li>
+                                    <li>VV_AlfalfaHay</li>
+                                    <li>VV_CloverHay</li>
+                                    <li>VV_TimothyHay</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Straw</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawFlax</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                        </value>
+                    </li>   
+                    <!-- <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/fixedIngredientFilter</xpath>
+                        <value>
+                            <categories />
+                        </value>
+                    </li>    -->
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]</xpath>
+                        <value>
+                            <defaultIngredientFilter>
+                                <thingDefs>
+                                    <li>Hay</li>
+                                    <li>VV_AlfalfaHay</li>
+                                    <li>VV_CloverHay</li>
+                                    <li>VV_TimothyHay</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_Straw</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">DankPyon_RawFlax</li>
+                                </thingDefs>
+                            </defaultIngredientFilter>
+                        </value>
+                    </li>    
+                    <!-- <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/defaultIngredientFilter</xpath>
+                        <value>
+                            <categories />
+                        </value>
+                    </li>        -->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix"]/ingredients/li[1]/count</xpath>
+                        <value>
+                            <count>0.5</count>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMixBulk"]/ingredients/li[1]/count</xpath>
+                        <value>
+                            <count>2.0</count>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/ingredients/li[2]/filter</xpath>
+                        <value>
+                            <filter>
+                                <thingDefs>
+                                    <li>VV_FeedWheat</li>
+                                    <li>VV_FeedCorn</li>
+                                    <li>VV_FeedBeet</li>
+                                    <li>VV_BeetPulp</li>
+                                </thingDefs>
+                                <categories>
+                                    <li>PlantFoodRaw</li>
+                                    <li>VV_NHCP_DummyCategory_Grains</li>
+                                </categories>
+                                <customSummary>vegetarian ingredients</customSummary>
+                            </filter>
+                        </value>
+                    </li> 
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/ingredients/li[2]/count</xpath>
+                        <value>
+                            <count>0.5</count>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMixBulk"]/ingredients/li[2]/count</xpath>
+                        <value>
+                            <count>2.0</count>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/fixedIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_FeedWheat</li>
+                            <li>VV_FeedCorn</li>
+                            <li>VV_FeedBeet</li>
+                            <li>VV_BeetPulp</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/fixedIngredientFilter</xpath>
+                        <value>
+                            <categories>
+                                <li>PlantFoodRaw</li>
+                                <li>VV_NHCP_DummyCategory_Grains</li>
+                            </categories>
+                        </value>
+                    </li>   
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/defaultIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_FeedWheat</li>
+                            <li>VV_FeedCorn</li>
+                            <li>VV_FeedBeet</li>
+                            <li>VV_BeetPulp</li>
+                        </value>
+                    </li>  
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeFodderMix" or defName="VV_MakeFodderMixBulk"]/defaultIngredientFilter</xpath>
+                        <value>
+                            <categories>
+                                <li>VV_NHCP_DummyCategory_Grains</li>
+                            </categories>
+                        </value>
+                    </li>  
+                    <!-- Protein Kibble -->
+                    <li Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/ingredients/li[2]/filter</xpath>
+                        <value>
+                            <customSummary>vegetarian ingredients</customSummary>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/ingredients/li[2]/filter/thingDefs</xpath>
+                        <value>
+                            <li>VV_FeedCorn</li>
+                            <li>VV_FeedBeet</li>
+                            <li>VV_BeetPulp</li>
+                            <li>VV_FodderMix</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/fixedIngredientFilter[not(thingDefs)]</xpath>
+                        <value>
+                            <thingDefs />
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/fixedIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_FeedWheat</li>
+                            <li>VV_FeedCorn</li>
+                            <li>VV_FeedBeet</li>
+                            <li>VV_BeetPulp</li>
+                            <li>VV_FodderMix</li> 
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/defaultIngredientFilter/disallowedThingDefs</xpath>
+                        <value>
+                            <li>VV_FeedCorn</li>
+                            <li>VV_FeedBeet</li>
+                            <li>VV_BeetPulp</li>
+                            <li>VV_FodderMix</li> 
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/ingredients/li[2]/filter[not(categories)]</xpath>
+                        <value>
+                            <categories />
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/ingredients/li[2]/filter/categories</xpath>
+                        <value>
+                            <li>PlantFoodRaw</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/fixedIngredientFilter/categories</xpath>
+                        <value>
+                            <li>PlantFoodRaw</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/defaultIngredientFilter/disallowedCategories</xpath>
+                        <value>
+                            <li>PlantFoodRaw</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <success>Always</success>
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/defaultIngredientFilter[not(thingDefs)]</xpath>
+                        <value>
+                            <thingDefs />
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/RecipeDef[defName="VV_MakeProteinKibble" or defName="VV_MakeProteinKibbleBulk"]/defaultIngredientFilter/thingDefs</xpath>
+                        <value>
+                            <li>VV_FeedWheat</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </caseTrue>
+    </Operation>
+</Patch>

@@ -4,9 +4,6 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="AC_VinegarCask"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]/processes</xpath>
         <value>
-            <li>VV_AC_BlackberriesToVinegar</li>
-            <li>VV_AC_BlackcurrantsToVinegar</li>
-            <li>VV_AC_MulberriesToVinegar</li>
             <li>VV_AC_RedCabbageIntoSauerkraut</li>
         </value>
     </Operation>

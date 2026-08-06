@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <!-- Growth boost while raining -->
-    <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[defName="VV_Clover"][not(thingClass)]</xpath>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VV_Clover"]</xpath>
-                    <value>
-                        <thingClass>VanillaPlantsExpanded.Plant_RainAffected</thingClass>
-                    </value>
-                </li>
-                <li Class="NewHarvestPatches.EditString">
-                    <xpath>/Defs/ThingDef[defName="VV_Clover"]/description</xpath>
-                    <mode>AppendWhole</mode>
-                    <replaceWith>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Clover will receive a huge 50% growth boost if it is raining.</replaceWith>
-                </li>
-            </operations>
-        </match>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Crops Grow Faster in Rain</li>
+        </mods>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="VV_Clover"][not(thingClass)]</xpath>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="VV_Clover"]</xpath>
+                        <value>
+                            <thingClass>VanillaPlantsExpanded.Plant_RainAffected</thingClass>
+                        </value>
+                    </li>
+                    <li Class="NewHarvestPatches.EditString">
+                        <xpath>/Defs/ThingDef[defName="VV_Clover"]/description</xpath>
+                        <mode>Append</mode>
+                        <value>\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Clover will receive a huge 50% growth boost if it is raining.</value>
+                    </li>
+                </operations>
+            </match>
+        </nomatch>
     </Operation>
 </Patch>

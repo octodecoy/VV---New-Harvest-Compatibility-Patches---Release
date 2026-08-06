@@ -7,26 +7,20 @@
         <description>Maple syrup is a sweet, amber-colored syrup made by boiling down the sap of sugar maple trees. It has a rich, caramel-like flavor with hints of vanilla and toffee.</description>
         <tendable>false</tendable>
         <isBad>false</isBad>
-        <defaultLabelColor>(92,62,198)</defaultLabelColor>
+        <defaultLabelColor>(204,122,35)</defaultLabelColor>
         <hediffClass>HediffWithComps</hediffClass>
         <initialSeverity>1.0</initialSeverity>
         <maxSeverity>1.0</maxSeverity>
         <comps>
             <li Class="VEF.Cooking.HediffCompProperties_WhileHavingThoughts">
                 <thoughtDefs>
-                    <li>VV_VCE_ConsumedMapleSyrup</li>
+                    <li>VV_NHCP_ConsumedMapleSyrup</li>
                 </thoughtDefs>
             </li>
         </comps>
         <stages>
-            <li>
-                <capMods>
-                    <li>
-                        <capacity>Manipulation</capacity>
-                        <offset>0.01</offset>
-                    </li>
-                </capMods>
-            </li>
+            <li />
+            <!-- Must have empty stages/li for hediff/thought to be applied -->
         </stages>
     </HediffDef>
 </Defs>

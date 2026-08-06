@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/AlphaMemes.TeaDefs[defName="AM_TeaDefs"]/specialtyTeas</xpath>
+            <value>
+                <li>VV_LindenTea</li>
+                <li>VV_ChamomileTea</li>
+                <li>VV_ThymeTea</li>
+                <li>VV_GinkgoTea</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

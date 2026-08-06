@@ -23,6 +23,7 @@
                     <li>VV_MahoganyWood</li>
                     <li>VV_RosewoodWood</li>
                     <li>VV_CedarWood</li>
+                    <li>VV_LacqueredWood</li>
                 </value>
             </nomatch>
             <match Class="PatchOperationConditional">
@@ -57,6 +58,7 @@
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
                         <li>VV_CedarWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </nomatch>
             </match>            

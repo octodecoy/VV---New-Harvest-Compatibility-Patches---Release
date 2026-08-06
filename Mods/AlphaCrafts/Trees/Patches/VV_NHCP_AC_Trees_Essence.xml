@@ -16,6 +16,7 @@
             <li>VV_Pomegranates</li>
             <li>VV_Quinces</li>
             <li>VV_SourCherrys</li>
+            <li>VV_CherryPlums</li>
             <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
         </value>
     </Operation>
@@ -34,6 +35,7 @@
             <li>VV_Pomegranates</li>
             <li>VV_Quinces</li>
             <li>VV_SourCherrys</li>
+            <li>VV_CherryPlums</li>
             <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
         </value>
     </Operation>
@@ -52,6 +54,7 @@
             <li>VV_Pomegranates</li>
             <li>VV_Quinces</li>
             <li>VV_SourCherrys</li>
+            <li>VV_CherryPlums</li>
             <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
         </value>
     </Operation>

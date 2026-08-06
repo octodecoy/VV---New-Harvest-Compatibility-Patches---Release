@@ -24,7 +24,8 @@
                         defName="VV_Dymondia" or
                         defName="VV_Lilac" or
                         defName="VV_Hydrangea" or
-                        defName="VV_Wisteria"]
+                        defName="VV_Wisteria" or
+                        defName="VV_Monstera"]
                         /plant/sowTags
                     </xpath>
                     <value>

@@ -16,6 +16,10 @@
                 <key>VV_JabuticabaBerries</key>
                 <value>1</value>
             </li>
+            <li>
+                <key>VV_Mulberries</key>
+                <value>1</value>
+            </li>
         </ingredientsAndOffsetList>
     </VEF.Graphics.GraphicOffsets>
 </Defs>

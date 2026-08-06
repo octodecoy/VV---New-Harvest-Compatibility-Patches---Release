@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- RECIPES -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- SPECIFIC CORE RECIPES -->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/RecipeDef[defName="Make_Kibble"]/ingredients/li/filter/thingDefs[li="Hay"]</xpath>
+                <value>
+                    <li>VV_FeedCorn</li>
+                    <li>VV_FeedWheat</li>
+                    <li>VV_FeedBeet</li>
+                    <li>VV_BeetPulp</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/RecipeDef[defName="Make_Kibble"]/fixedIngredientFilter/thingDefs[li="Hay"]</xpath>
+                <value>
+                    <li>VV_FeedCorn</li>
+                    <li>VV_FeedWheat</li>
+                    <li>VV_FeedBeet</li>
+                    <li>VV_BeetPulp</li>
+                </value>
+            </li>
+            <!-- DISALLOWED -->
+            <!-- AddDefsWhereDefPresent also mirrors into fixedIngredientFilter/disallowedThingDefs and
+                 defaultIngredientFilter/disallowedThingDefs (creating either when the widened ingredients
+                 filter warrants it), replacing what used to be 3 separate ops. -->
+            <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
+                <success>Always</success>
+                <xpath>/Defs/RecipeDef/ingredients/li/filter/disallowedThingDefs</xpath>
+                <anchor>Hay</anchor>
+                <mirrorFixedIngredientFilter>true</mirrorFixedIngredientFilter>
+                <mirrorDefaultIngredientFilter>true</mirrorDefaultIngredientFilter>
+                <value>
+                    <li>VV_AlfalfaHay</li>
+                    <li>VV_CloverHay</li>
+                    <li>VV_TimothyHay</li>
+                </value>
+            </li>
+            <!-- ALLOWED -->
+            <!-- AddDefsWhereDefPresent also mirrors into fixedIngredientFilter/thingDefs and
+                 defaultIngredientFilter/thingDefs, creating either filter (and its thingDefs child) when
+                 absent, and backfilling "Hay" itself into both - widening this list flips
+                 IngredientCount.IsFixedIngredient from true to false, so the recipe's own
+                 fixedIngredientFilter (previously bypassed while the slot was fixed) and its
+                 defaultIngredientFilter (previously null and inert) both start being consulted; without the
+                 backfill, either one being freshly created empty would silently reject "Hay" even though it
+                 is still listed in ingredients/li/filter/thingDefs. Replaces what used to be 9 separate ops. -->
+            <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
+                <success>Always</success>
+                <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs</xpath>
+                <anchor>Hay</anchor>
+                <mirrorFixedIngredientFilter>true</mirrorFixedIngredientFilter>
+                <mirrorDefaultIngredientFilter>true</mirrorDefaultIngredientFilter>
+                <value>
+                    <li>VV_AlfalfaHay</li>
+                    <li>VV_CloverHay</li>
+                    <li>VV_TimothyHay</li>
+                </value>
+            </li>
+            <!-- Animal Foods Extended's Grazing Feedstock recipe doesn't work when added to because of its CookMealBase parent,
+                 more specifically CookMealBase's specialFiltersToDisallow=AllowPlantFood. -->
+            <li Class="PatchOperationFindMod">
+                <mods>
+                    <li>Animal Foods Extended</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef
+                                [defName="CookFeedstockGrazing" or defName="CookFeedstockGrazingBulk"]
+                                /fixedIngredientFilter
+                                [thingDefs/li="VV_AlfalfaHay"]
+                            </xpath>
+                            <value>
+                                <specialFiltersToDisallow Inherit="False" />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <success>Always</success>
+                            <xpath>
+                                /Defs/RecipeDef[
+                                defName="CookFeedstockGrazing" or
+                                defName="CookFeedstockGrazingBulk"]
+                                /ingredients/li[filter/categories="PlantFoodRaw"]
+                                /filter[not(thingDefs)]
+                            </xpath>
+                            <value>
+                                <thingDefs />
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef[
+                                defName="CookFeedstockGrazing" or
+                                defName="CookFeedstockGrazingBulk"]
+                                /ingredients/li[filter/categories="PlantFoodRaw"]
+                                /filter/thingDefs
+                            </xpath>
+                            <value>
+                                <li>VV_FeedCorn</li>
+                                <li>VV_FeedWheat</li>
+                                <li>VV_FeedBeet</li>
+                                <li>VV_BeetPulp</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef[
+                                defName="CookFeedstockGrazing" or
+                                defName="CookFeedstockGrazingBulk"]
+                                /fixedIngredientFilter/thingDefs
+                            </xpath>
+                            <value>
+                                <li>VV_FeedCorn</li>
+                                <li>VV_FeedWheat</li>
+                                <li>VV_FeedBeet</li>
+                                <li>VV_BeetPulp</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>
+                                /Defs/RecipeDef[
+                                defName="CookFeedstockGrazing" or
+                                defName="CookFeedstockGrazingBulk"]
+                                /defaultIngredientFilter/thingDefs
+                            </xpath>
+                            <value>
+                                <li>VV_FeedCorn</li>
+                                <li>VV_FeedWheat</li>
+                                <li>VV_FeedBeet</li>
+                                <li>VV_BeetPulp</li>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </li>
+            <!-- STORAGES -->
+            <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
+                <success>Always</success>
+                <xpath>/Defs/ThingDef/building/fixedStorageSettings/filter/thingDefs</xpath>
+                <anchor>Hay</anchor>
+                <value>
+                    <li>VV_AlfalfaHay</li>
+                    <li>VV_CloverHay</li>
+                    <li>VV_TimothyHay</li>
+                </value>
+            </li>
+            <!-- Not RecipeDef mirroring - a plain sync of the newly-allowed hays from fixedStorageSettings
+                 (the hard ceiling) into defaultStorageSettings (the building's starting checked state), so
+                 they show up selected out of the box. No IsFixedIngredient-style trap here: this predicate
+                 only fires once the op above has already widened fixedStorageSettings, and both storage
+                 settings elements are assumed present already (defaultStorageSettings is base-game-declared
+                 on every storage building that has one, never absent-by-omission the way a recipe's
+                 fixedIngredientFilter/defaultIngredientFilter can be). -->
+            <li Class="PatchOperationAdd">
+                <success>Always</success>
+                <xpath>
+                    /Defs/ThingDef/building
+                    [defaultStorageSettings]
+                    [fixedStorageSettings/filter/thingDefs/li="VV_AlfalfaHay"]
+                    /defaultStorageSettings/filter/thingDefs
+                    [not(li="VV_AlfalfaHay")]
+                </xpath>
+                <value>
+                    <li>VV_AlfalfaHay</li>
+                    <li>VV_CloverHay</li>
+                    <li>VV_TimothyHay</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

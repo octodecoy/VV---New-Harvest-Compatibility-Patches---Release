@@ -36,7 +36,7 @@
         </costList>
         <color>(92,31,31)</color>
     </TerrainDef>
-    <TerrainDef Name="VV_NHCP_FloorBase_Cedar_Rosewood_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+    <TerrainDef Name="VV_NHCP_FloorBase_Rosewood_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
         <statBases>
             <WorkToBuild>85</WorkToBuild>
@@ -47,6 +47,18 @@
             <VV_RosewoodWood>3</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef Name="VV_NHCP_FloorBase_Lacquer_Outland" ParentName="VV_NHCP_FloorBase" Abstract="True">
+        <description>Wood flooring for that warm, homey feeling. While it is quick to lay, it is also very flammable.</description>
+        <statBases>
+            <WorkToBuild>85</WorkToBuild>
+            <Flammability>0.22</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <costList>
+            <VV_LacqueredWood>3</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
     <!-- WoodBoards -->
     <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Outland">
@@ -64,9 +76,14 @@
         <label>mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoards_Rosewood</defName>
         <label>rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoards_Lacquer</defName>
+        <label>lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards1</texturePath>
     </TerrainDef>
     <!-- WoodBoards_Ruined -->
@@ -85,9 +102,14 @@
         <label>mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsRuined_Rosewood</defName>
         <label>rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsRuined_Lacquer</defName>
+        <label>lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards1Ruined</texturePath>
     </TerrainDef>
     <!-- WoodBoardsNeat -->
@@ -106,9 +128,14 @@
         <label>neat mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsNeat_Rosewood</defName>
         <label>neat rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeat_Lacquer</defName>
+        <label>neat lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards2</texturePath>
     </TerrainDef>
     <!-- WoodBoardsNeat_Ruined -->
@@ -127,9 +154,14 @@
         <label>neat mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Rosewood</defName>
         <label>neat rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsNeatRuined_Lacquer</defName>
+        <label>neat lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards2Ruined</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodBoards -->
@@ -148,9 +180,14 @@
         <label>horizontal mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodBoards_Rosewood</defName>
         <label>horizontal rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoards_Lacquer</defName>
+        <label>horizontal lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards1</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodBoards_Ruined -->
@@ -169,9 +206,14 @@
         <label>horizontal mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Rosewood</defName>
         <label>horizontal rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsRuined_Lacquer</defName>
+        <label>horizontal lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards1Ruined</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodBoardsNeat -->
@@ -190,9 +232,14 @@
         <label>horizontal neat mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Rosewood</defName>
         <label>horizontal neat rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeat_Lacquer</defName>
+        <label>horizontal neat lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards2</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodBoardsNeat_Ruined -->
@@ -211,9 +258,14 @@
         <label>horizontal neat mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Rosewood</defName>
         <label>horizontal neat rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodBoardsNeatRuined_Lacquer</defName>
+        <label>horizontal neat lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodBoards2Ruined</texturePath>
     </TerrainDef>
     <!-- WoodBoardsStaggered -->
@@ -232,9 +284,14 @@
         <label>staggered mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsStaggered_Rosewood</defName>
         <label>staggered rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggered_Lacquer</defName>
+        <label>staggered lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards3</texturePath>
     </TerrainDef>
     <!-- WoodBoardsStaggered_Ruined -->
@@ -253,9 +310,14 @@
         <label>staggered mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Rosewood</defName>
         <label>staggered rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsStaggeredRuined_Lacquer</defName>
+        <label>staggered lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards3Ruined</texturePath>
     </TerrainDef>
     <!-- WoodBoardsDiamond -->
@@ -274,9 +336,14 @@
         <label>diamond mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsDiamond_Rosewood</defName>
         <label>diamond rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamond_Lacquer</defName>
+        <label>diamond lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards4</texturePath>
     </TerrainDef>
     <!-- WoodBoardsDiamond_Ruined -->
@@ -295,9 +362,14 @@
         <label>diamond mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Rosewood</defName>
         <label>diamond rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiamondRuined_Lacquer</defName>
+        <label>diamond lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards4Ruined</texturePath>
     </TerrainDef>
     <!-- WoodBoardsCheckered -->
@@ -316,9 +388,14 @@
         <label>checkered mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsCheckered_Rosewood</defName>
         <label>checkered rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckered_Lacquer</defName>
+        <label>checkered lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards5</texturePath>
     </TerrainDef>
     <!-- WoodBoardsCheckered_Ruined -->
@@ -337,9 +414,14 @@
         <label>checkered mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Rosewood</defName>
         <label>checkered rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsCheckeredRuined_Lacquer</defName>
+        <label>checkered lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards5Ruined</texturePath>
     </TerrainDef>
     <!-- WoodBoardsDiagonal -->
@@ -358,9 +440,14 @@
         <label>diagonal mahogany boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Rosewood</defName>
         <label>diagonal rosewood boards</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonal_Lacquer</defName>
+        <label>diagonal lacquered wood boards</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards6</texturePath>
     </TerrainDef>
     <!-- WoodBoardsDiagonal_Ruined -->
@@ -379,9 +466,14 @@
         <label>diagonal mahogany boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Rosewood</defName>
         <label>diagonal rosewood boards ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodBoardsDiagonalRuined_Lacquer</defName>
+        <label>diagonal lacquered wood boards ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodBoards6Ruined</texturePath>
     </TerrainDef>
     <!-- WoodFloor -->
@@ -400,9 +492,14 @@
         <label>mahogany floor</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodFloor_Rosewood</defName>
         <label>rosewood floor</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodFloor_Lacquer</defName>
+        <label>lacquered wood floor</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloor</texturePath>
     </TerrainDef>
     <!-- WoodFloorAlt -->
@@ -421,9 +518,14 @@
         <label>mahogany floor alt</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodFloorAlt_Rosewood</defName>
         <label>rosewood floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorAlt_Lacquer</defName>
+        <label>lacquered wood floor alt</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorAlt</texturePath>
     </TerrainDef>
     <!-- WoodFloorRuined -->
@@ -442,9 +544,14 @@
         <label>mahogany floor ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodFloorRuined_Rosewood</defName>
         <label>rosewood floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuined_Lacquer</defName>
+        <label>lacquered wood floor ruined</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorRuined</texturePath>
     </TerrainDef>
     <!-- WoodFloorRuinedAlt -->
@@ -463,9 +570,14 @@
         <label>mahogany floor ruined alt</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Rosewood</defName>
         <label>rosewood floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorRuinedAlt_Lacquer</defName>
+        <label>lacquered wood floor ruined alt</label>
         <texturePath>Outland/MoreFloors/Woody/WoodFloorAltRuined</texturePath>
     </TerrainDef>
     <!-- WoodFloorWarped -->
@@ -484,9 +596,14 @@
         <label>mahogany floor warped</label>
         <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_WoodFloorWarped_Rosewood</defName>
         <label>rosewood floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_WoodFloorWarped_Lacquer</defName>
+        <label>lacquered wood floor warped</label>
         <texturePath>Outland/MoreFloors/Woody/WarpedWoodFloor</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodFloor -->
@@ -505,9 +622,14 @@
         <label>horizontal mahogany floor</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodFloor_Rosewood</defName>
         <label>horizontal rosewood floor</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloor_Lacquer</defName>
+        <label>horizontal lacquered wood floor</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloor</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodFloorAlt -->
@@ -526,9 +648,14 @@
         <label>horizontal mahogany floor alt</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Rosewood</defName>
         <label>horizontal rosewood floor alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorAlt_Lacquer</defName>
+        <label>horizontal lacquered wood floor alt</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorAlt</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodFloorRuined -->
@@ -547,9 +674,14 @@
         <label>horizontal mahogany floor ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Rosewood</defName>
         <label>horizontal rosewood floor ruined</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuined_Lacquer</defName>
+        <label>horizontal lacquered wood floor ruined</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorRuined</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodFloorRuinedAlt -->
@@ -568,9 +700,14 @@
         <label>horizontal mahogany floor ruined alt</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Rosewood</defName>
         <label>horizontal rosewood floor ruined alt</label>
+        <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorRuinedAlt_Lacquer</defName>
+        <label>horizontal lacquered wood floor ruined alt</label>
         <texturePath>Outland/MoreFloors/Woody/HWoodFloorAltRuined</texturePath>
     </TerrainDef>
     <!-- HorizontalWoodFloorWarped -->
@@ -589,9 +726,14 @@
         <label>horizontal mahogany floor warped</label>
         <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
     </TerrainDef>
-    <TerrainDef ParentName="VV_NHCP_FloorBase_Cedar_Rosewood_Outland">
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Rosewood_Outland">
         <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Rosewood</defName>
         <label>horizontal rosewood floor warped</label>
+        <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer_Outland">
+        <defName>VV_NHCP_Outland_HorizontalWoodFloorWarped_Lacquer</defName>
+        <label>horizontal lacquered wood floor warped</label>
         <texturePath>Outland/MoreFloors/Woody/HWarpedWoodFloor</texturePath>
     </TerrainDef>
 </Defs>

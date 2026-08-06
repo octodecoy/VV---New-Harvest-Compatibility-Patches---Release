@@ -43,4 +43,46 @@
             <texPath>Seeds/TimothyGrass</texPath>
         </graphicData>
     </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_FeedCorn</defName>
+        <label>Feed corn seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_FeedCornPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/FeedCorn</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_FeedWheat</defName>
+        <label>Feed wheat seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_FeedWheatPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/FeedWheat</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_FeedBeet</defName>
+        <label>Feed beet seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_FeedBeetPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/FeedBeet</texPath>
+        </graphicData>
+    </ThingDef>
 </Defs>

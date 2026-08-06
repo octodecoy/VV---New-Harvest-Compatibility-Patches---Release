@@ -48,6 +48,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Mosaic">
+        <defName>VV_NHCP_WDMosaicFloor_Lacquer</defName>
+        <label>mosaic lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>20</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- PARQUET -->
     <TerrainDef Name="VV_NHCP_FloorBase_EF_Parquet" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Floor made of fine smooth wood planks. Makes any room better, but expensive and hard to build.</description>
@@ -95,6 +103,14 @@
             <VV_RosewoodWood>20</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Parquet">
+        <defName>VV_NHCP_WDParquetFloor_Lacquer</defName>
+        <label>lacquered wood parquet</label>
+        <costList>
+            <VV_LacqueredWood>20</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
     <!-- CHECKERED -->
     <TerrainDef Name="VV_NHCP_FloorBase_EF_Check" ParentName="VV_NHCP_FloorBase" Abstract="True">
@@ -144,6 +160,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Check">
+        <defName>VV_NHCP_WDCheckWoodenFloor_Lacquer</defName>
+        <label>check lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>20</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- WIDE PLANK -->
     <TerrainDef Name="VV_NHCP_FloorBase_EF_WidePlank" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Floor made of smooth wide wood planks. Simple and nice.</description>
@@ -188,6 +212,14 @@
         </costList>
         <color>(119,13,60)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_WidePlank">
+        <defName>VV_NHCP_WDWidePlanksFloor_Lacquer</defName>
+        <label>lacquered wood plank floor</label>
+        <costList>
+            <VV_LacqueredWood>3</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
     <!-- PLYWOOD -->
     <TerrainDef Name="VV_NHCP_FloorBase_EF_Plywood" ParentName="VV_NHCP_FloorBase" Abstract="True">
         <description>Plywood floor. Looks pretty bad, but cheap and fast to build. Perfect to cover big areas fast, but flammable.</description>
@@ -231,5 +263,13 @@
             <VV_RosewoodWood>1</VV_RosewoodWood>
         </costList>
         <color>(119,13,60)</color>
+    </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_EF_Plywood">
+        <defName>VV_NHCP_WDPlywoodFloor_Lacquer</defName>
+        <label>lacquered wood plywood floor</label>
+        <costList>
+            <VV_LacqueredWood>1</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
     </TerrainDef>
 </Defs>

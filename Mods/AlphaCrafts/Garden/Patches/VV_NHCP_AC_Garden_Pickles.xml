@@ -16,6 +16,7 @@
             <li>VV_BroccoliFlorets</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -27,6 +28,7 @@
             <li>VV_BroccoliFlorets</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
@@ -38,6 +40,7 @@
             <li>VV_BroccoliFlorets</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
+            <li>VV_Tomatillos</li>
         </value>
     </Operation>
 </Patch>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Patch>    
-    <!-- Add the original category plus the dummy category to begin with so when/if we add the dummy category to 
-         recipes and etc. where mod categories reside, our things will be included too.
-         If merge setting is on, we replace the original category so that only the dummy category is left, 
-         and add a parent to the dummy category so that its children will now be visible, and the
-         dummy category will now be a real category.  -->
-    <Operation Class="NewHarvestPatches.AddOrReplace">
-        <xpath>/Defs/ThingDef[defName="VV_AlfalfaHay" or defName="VV_CloverHay" or defName="VV_TimothyHay"]</xpath>
-        <value>
-            <thingCategories Inherit="False">
-                <li>Foods</li>
-                <li>VV_NHCP_DummyCategory_AnimalFoods</li>
-            </thingCategories>
-        </value>
-    </Operation>
-    <!-- Check if there are supposed mod added categories, and if so, add our dummy category to recipes/storages/traders containing them. -->
+<Patch>
+    <!-- Detect mod-added categories of this type, then do two things to every filter referencing one:
+         add our dummy category (what makes the filter work while this kind's merge setting is ON) and
+         name our own produce outright (what makes it work while merge is OFF). The category test is
+         shared C# (SharedConstants.Category), so no category name is written in this file. The dummy
+         category's defName is derived from categoryType in C# (GetCategoryName), and an already-listed
+         dummy is recognised there too, so neither appears here as a literal. The ProcessorFramework arm
+         needs no PatchOperationFindMod guard: without that mod the document holds no
+         ProcessorFramework.ProcessDef nodes and the arm simply matches nothing.
+         AnimalFoods is the one kind that CANNOT take its def list from the shared seed map: that entry
+         also holds crafted feeds (VV_BeetPulp, VV_FodderMix, VV_ProteinKibble) which must never become
+         ingredients, and the hays need the plant-food split below. Hence the explicit <value> lists,
+         and hence the def-injection half stays split across several xpaths while the category half is
+         one union.
+         Everything per-def and setting-dependent (def membership, merging, category parenting,
+         resource readout, trader stock) is applied live in C# by CategoryApplier/CategoryClassifier. -->
     <Operation Class="NewHarvestPatches.TestCategory">
         <xpath>/Defs/ThingCategoryDef[parent="Foods" or parent="FoodRaw" or parent="PlantFoodRaw"]</xpath>
         <categoryType>AnimalFoods</categoryType>
@@ -22,112 +22,77 @@
             <operations>
                 <li Class="NewHarvestPatches.AddCategoryToFilter">
                     <success>Always</success>
-                    <xpath>/Defs/RecipeDef/ingredients/li/filter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
                     <categoryType>AnimalFoods</categoryType>
+                    <xpath>
+                        /Defs/RecipeDef/ingredients/li/filter/categories
+                        | /Defs/RecipeDef/fixedIngredientFilter/categories
+                        | /Defs/RecipeDef/defaultIngredientFilter/categories
+                        | /Defs/ThingDef/building/fixedStorageSettings/filter/categories
+                        | /Defs/ThingDef/building/defaultStorageSettings/filter/categories
+                        | /Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories
+                    </xpath>
                 </li>
-                <li Class="NewHarvestPatches.AddCategoryToFilter">
+
+                <!-- Slots a recipe author left open (the bill's own filter and its default): all six raw
+                     feeds, hays included. -->
+                <li Class="NewHarvestPatches.AddOwnDefsToCategoryFilters">
                     <success>Always</success>
-                    <xpath>/Defs/RecipeDef/fixedIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
                     <categoryType>AnimalFoods</categoryType>
-                </li>
-                <li Class="NewHarvestPatches.AddCategoryToFilter">
-                    <success>Always</success>
-                    <xpath>/Defs/RecipeDef/defaultIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
-                    <categoryType>AnimalFoods</categoryType>
-                </li>
-                <li Class="NewHarvestPatches.AddCategoryToFilter">
-                    <success>Always</success>
-                    <xpath>/Defs/ThingDef/building/fixedStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
-                    <categoryType>AnimalFoods</categoryType>
-                </li>
-                <li Class="NewHarvestPatches.AddCategoryToFilter">
-                    <success>Always</success>
-                    <xpath>/Defs/ThingDef/building/defaultStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
-                    <categoryType>AnimalFoods</categoryType>
-                </li>
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>[SYR] Processor Framework</li>
-                    </mods>
-                    <match Class="NewHarvestPatches.AddCategoryToFilter">
-                        <success>Always</success>
-                        <xpath>/Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories[not(li="VV_NHCP_DummyCategory_AnimalFoods")]</xpath>
-                        <categoryType>AnimalFoods</categoryType>
-                    </match>
-                </li>
-                <li Class="NewHarvestPatches.ConditionalSetting">
-                    <setting>MergeAnimalFoodsCategory</setting>
-                    <caseTrue Class="NewHarvestPatches.CloneStockWithNewCategory">
-                        <success>Always</success>
-                        <xpath>/Defs/TraderKindDef/stockGenerators[not(li[@Class="StockGenerator_Category"]/categoryDef="VV_NHCP_DummyCategory_AnimalFoods")]/li[@Class="StockGenerator_Category"]</xpath>
-                        <categoryType>AnimalFoods</categoryType>
-                        <zeroOutOriginal>true</zeroOutOriginal>                      
-                    </caseTrue>        
-                </li>
-            </operations>
-        </caseTrue>
-    </Operation>
-    <!-- Make category visible to UI -->
-    <Operation Class="NewHarvestPatches.ConditionalSetting">
-        <setting>MergeAnimalFoodsCategory</setting>
-        <caseTrue Class="PatchOperationSequence">
-            <operations>
-                <li Class="NewHarvestPatches.AddOrReplace">
-                    <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_AnimalFoods"]</xpath>
+                    <xpath>
+                        /Defs/RecipeDef/ingredients/li/filter/categories
+                        | /Defs/RecipeDef/defaultIngredientFilter/categories
+                        | /Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories
+                    </xpath>
                     <value>
-                        <parent>Foods</parent>
+                        <li>VV_AlfalfaHay</li>
+                        <li>VV_CloverHay</li>
+                        <li>VV_TimothyHay</li>
+                        <li>VV_FeedCorn</li>
+                        <li>VV_FeedWheat</li>
+                        <li>VV_FeedBeet</li>
                     </value>
                 </li>
-                <li Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                    <xpath>
-                        /Defs/ThingDef
-                        [defName="VV_AlfalfaHay" or 
-                        defName="VV_CloverHay" or 
-                        defName="VV_TimothyHay" or
-                        defName="Hay" or
-                        defName="Kibble"]
-                    </xpath>
-                    <categoryType>AnimalFoods</categoryType>
-                </li>
-                <li Class="NewHarvestPatches.HasModAddedCategoryOfType">
+
+                <!-- fixedIngredientFilter is the hard boundary of what a recipe can ever accept, so the
+                     two halves are split: the feed crops are plain plant food and always fit, while the
+                     hays must not be forced into a recipe that deliberately disallows plant food. -->
+                <li Class="NewHarvestPatches.AddOwnDefsToCategoryFilters">
                     <success>Always</success>
                     <categoryType>AnimalFoods</categoryType>
-                    <caseTrue Class="NewHarvestPatches.TryReplaceCategoryChildrenWithCategoryOfType">
-                        <categoryType>AnimalFoods</categoryType>
-                    </caseTrue>
-                </li> 
-                <!-- This can only be true if Merge setting is true --> 
-                <li Class="NewHarvestPatches.ConditionalSetting">
-                    <setting>AnimalFoodsCategoryResourceReadout</setting>
-                    <caseTrue Class="NewHarvestPatches.AddOrReplace">
-                        <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_AnimalFoods"]</xpath>
-                        <value>
-                            <resourceReadoutRoot>true</resourceReadoutRoot>
-                        </value>
-                    </caseTrue>
+                    <xpath>/Defs/RecipeDef/fixedIngredientFilter/categories</xpath>
+                    <value>
+                        <li>VV_FeedCorn</li>
+                        <li>VV_FeedWheat</li>
+                        <li>VV_FeedBeet</li>
+                    </value>
                 </li>
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>VGP Vegetable Garden</li>
-                    </mods>
-                    <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                        <xpath>/Defs/ThingDef[defName="Silage"]</xpath>
-                        <categoryType>AnimalFoods</categoryType>
-                    </match>
+                <li Class="NewHarvestPatches.AddOwnDefsToCategoryFilters">
+                    <success>Always</success>
+                    <categoryType>AnimalFoods</categoryType>
+                    <xpath>/Defs/RecipeDef/fixedIngredientFilter[not(specialFiltersToDisallow/li="AllowPlantFood")]/categories</xpath>
+                    <value>
+                        <li>VV_AlfalfaHay</li>
+                        <li>VV_CloverHay</li>
+                        <li>VV_TimothyHay</li>
+                    </value>
                 </li>
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Animal Foods Extended</li>
-                    </mods>
-                    <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                        <xpath>
-                            /Defs/ThingDef
-                            [defName="PetFood" or 
-                            defName="GrazingFeedstock" or 
-                            defName="RenderedMeat"]
-                        </xpath>
-                        <categoryType>AnimalFoods</categoryType>
-                    </match>
+
+                <!-- Storage has no plant-food distinction to respect. -->
+                <li Class="NewHarvestPatches.AddOwnDefsToCategoryFilters">
+                    <success>Always</success>
+                    <categoryType>AnimalFoods</categoryType>
+                    <xpath>
+                        /Defs/ThingDef/building/fixedStorageSettings/filter/categories
+                        | /Defs/ThingDef/building/defaultStorageSettings/filter/categories
+                    </xpath>
+                    <value>
+                        <li>VV_AlfalfaHay</li>
+                        <li>VV_CloverHay</li>
+                        <li>VV_TimothyHay</li>
+                        <li>VV_FeedCorn</li>
+                        <li>VV_FeedWheat</li>
+                        <li>VV_FeedBeet</li>
+                    </value>
                 </li>
             </operations>
         </caseTrue>

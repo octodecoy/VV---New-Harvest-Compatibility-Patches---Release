@@ -10,7 +10,8 @@
                 defName="VV_AdvancedHerbalMedicine" or
                 defName="VV_GinsengDecoction" or
                 defName="VV_EchinaceaDecoction" or
-                defName="VV_ValerianDecoction"]
+                defName="VV_ValerianDecoction" or
+                defName="VV_WormwoodDecoction"]
                 /recipeMaker/recipeUsers
             </xpath>
             <value>
@@ -34,7 +35,8 @@
                             defName="VV_AdvancedHerbalMedicine" or
                             defName="VV_GinsengDecoction" or
                             defName="VV_EchinaceaDecoction" or
-                            defName="VV_ValerianDecoction"]
+                            defName="VV_ValerianDecoction" or
+                            defName="VV_WormwoodDecoction"]
                             /recipeMaker/recipeUsers
                         </xpath>
                         <value>
@@ -52,7 +54,8 @@
                             defName="VV_AdvancedHerbalMedicine" or
                             defName="VV_GinsengDecoction" or
                             defName="VV_EchinaceaDecoction" or
-                            defName="VV_ValerianDecoction"]
+                            defName="VV_ValerianDecoction" or
+                            defName="VV_WormwoodDecoction"]
                             /recipeMaker/recipeUsers
                         </xpath>
                         <value>
@@ -70,7 +73,8 @@
                             defName="VV_AdvancedHerbalMedicine" or
                             defName="VV_GinsengDecoction" or
                             defName="VV_EchinaceaDecoction" or
-                            defName="VV_ValerianDecoction"]
+                            defName="VV_ValerianDecoction" or
+                            defName="VV_WormwoodDecoction"]
                             /recipeMaker/recipeUsers
                         </xpath>
                         <value>

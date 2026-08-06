@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- When RC2/VGP is installed with VPE, VPE renames its peaches to apricots, creating a duplicate with our Apricots. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Vegetable Garden</li>
+            <li>RimCuisine 2 Core (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_ApricotTree"]/label</xpath>
+                    <value>
+                        <label>goldrich apricot tree</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VV_Apricots"]/label</xpath>
+                    <value>
+                        <label>goldrich apricots</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>SeedsPlease: Lite Adjusted</li>
+                        <li>SeedsPlease: Lite Redux</li>
+                    </mods>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="VV_Seed_Apricot"]/label</xpath>
+                        <value>
+                            <label>goldrich apricot tree seeds</label>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

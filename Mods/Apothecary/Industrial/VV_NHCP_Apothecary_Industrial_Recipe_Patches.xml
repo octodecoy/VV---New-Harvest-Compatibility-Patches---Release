@@ -11,6 +11,7 @@
                         <li>VV_EbonyWood</li>
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
@@ -20,6 +21,7 @@
                         <li>VV_EbonyWood</li>
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
+                        <li>VV_LacqueredWood</li>
                     </value>
                 </li>
             </operations>

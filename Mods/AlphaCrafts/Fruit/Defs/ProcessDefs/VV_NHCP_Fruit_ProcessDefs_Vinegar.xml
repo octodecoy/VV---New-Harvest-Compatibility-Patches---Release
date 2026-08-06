@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_BlackberriesToVinegar</defName>
+        <label>Ferment blackberries into vinegar</label>
+        <description>Turns 100 blackberries into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 100 blackberries into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_Blackberries</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+    <PipeSystem.ProcessDef>
+        <defName>VV_AC_BlackcurrantsToVinegar</defName>
+        <label>Ferment blackcurrants into vinegar</label>
+        <description>Turns 100 blackcurrants into 25 vinegar.</description>
+        <useIngredients>true</useIngredients>
+        <labelOverride>Ferment 100 blackcurrants into 25 vinegar</labelOverride>
+        <spawnOnInteractionCell>true</spawnOnInteractionCell>
+        <ingredients>
+            <li>
+                <thing>VV_Blackcurrants</thing>
+                <countNeeded>100</countNeeded>
+            </li>
+        </ingredients>
+        <ticks>600000</ticks>
+        <priorityInBillList>10</priorityInBillList>
+        <results>
+            <li>
+                <thing>AC_Vinegar</thing>
+                <count>25</count>
+            </li>
+        </results>
+    </PipeSystem.ProcessDef>
+</Defs>

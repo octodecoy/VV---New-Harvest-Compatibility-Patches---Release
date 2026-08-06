@@ -44,6 +44,10 @@
                 <key>VV_Persimmons</key>
                 <value>3</value>
             </li>
+            <li>
+                <key>VV_CherryPlums</key>
+                <value>3</value>
+            </li>
         </ingredientsAndOffsetList>
     </VEF.Graphics.GraphicOffsets>
 </Defs>

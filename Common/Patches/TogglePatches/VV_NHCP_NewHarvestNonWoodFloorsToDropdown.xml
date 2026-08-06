@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <Operation Class="NewHarvestPatches.ConditionalSetting">
-        <setting>NewHarvestNonWoodFloorsToDropdown</setting>  
-        <caseTrue Class="PatchOperationFindMod">
-            <mods>
-                <li>Floor Menu</li>
-            </mods>
-            <nomatch Class="PatchOperationSequence">
-                <operations>
-                    <li Class="PatchOperationFindMod">
-                        <mods>
-                            <li>VV - New Harvest</li>
-                            <li>VV - New Harvest: Forage Crops</li>
-                        </mods>
-                        <match Class="NewHarvestPatches.AddOrReplace">
-                            <xpath>/Defs/TerrainDef[defName="VV_AlfalfaMatting" or defName="VV_CloverMatting" or defName="VV_TimothyGrassMatting"]</xpath>
-                            <value>
-                                <designatorDropdown>VV_NHCP_NewHarvestFloors</designatorDropdown>
-                            </value>
-                        </match>
-                    </li>
-                    <li Class="PatchOperationFindMod">
-                        <mods>
-                            <li>VV - New Harvest</li>
-                            <li>VV - New Harvest: Industrial Crops</li>
-                        </mods>   
-                        <match Class="NewHarvestPatches.AddOrReplace">
-                            <xpath>/Defs/TerrainDef[defName="VV_CorkFloor" or defName="VV_RattanFloor" or defName="VV_ReedFloor" or defName="VV_RubberFloor"]</xpath>
-                            <value>
-                                <designatorDropdown>VV_NHCP_NewHarvestFloors</designatorDropdown>
-                            </value>
-                        </match>                    
-                    </li>
-                </operations>
-            </nomatch>
+        <setting>NewHarvestNonWoodFloorsToDropdown</setting>
+        <!-- No mod check for Ferny's Floor Menu/Better Architect Menu here: the setting carries
+             ModRequirement.NoFernyFloorMenu, so it is never enabled while either is active. -->
+        <caseTrue Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>VV - New Harvest</li>
+                        <li>VV - New Harvest: Forage Crops</li>
+                    </mods>
+                    <match Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/TerrainDef[defName="VV_AlfalfaMatting" or defName="VV_CloverMatting" or defName="VV_TimothyGrassMatting"]</xpath>
+                        <value>
+                            <designatorDropdown>VV_NHCP_NewHarvestFloors</designatorDropdown>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>VV - New Harvest</li>
+                        <li>VV - New Harvest: Industrial Crops</li>
+                    </mods>
+                    <match Class="NewHarvestPatches.AddOrReplace">
+                        <xpath>/Defs/TerrainDef[defName="VV_CorkFloor" or defName="VV_RattanFloor" or defName="VV_ReedFloor" or defName="VV_RubberFloor"]</xpath>
+                        <value>
+                            <designatorDropdown>VV_NHCP_NewHarvestFloors</designatorDropdown>
+                        </value>
+                    </match>
+                </li>
+            </operations>
         </caseTrue>
     </Operation>
 </Patch>

@@ -42,4 +42,12 @@
         </costList>
         <color>(201,151,112)</color>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_MO">
+        <defName>VV_NHCP_DankPyon_Floor_RusticWoodFloor_Lacquer</defName>
+        <label>rustic lacquered wood floor</label>
+        <costList>
+            <VV_LacqueredWood>3</VV_LacqueredWood>
+        </costList>
+        <color>(106,59,43)</color>
+    </TerrainDef>
 </Defs>

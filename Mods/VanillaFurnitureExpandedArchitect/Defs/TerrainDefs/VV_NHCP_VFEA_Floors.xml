@@ -69,4 +69,21 @@
         <renderPrecedence>228</renderPrecedence>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer">
+        <defName>VV_NHCP_VFEArch_WoodenParquetLacquer</defName>
+        <label>lacquered wood laminate wooden parquet</label>
+        <description>Beautifully laid down wooden flooring for that posh, fancy feeling. Whilst beautiful, it takes a long time to lay down and is also very flammable.</description>
+        <texturePath>Terrains/Parquet</texturePath>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <Beauty>2</Beauty>
+            <Flammability>0.22</Flammability>
+        </statBases>
+        <costList>
+            <VV_LacqueredWood>12</VV_LacqueredWood>
+        </costList>
+        <isPaintable>true</isPaintable>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
 </Defs>

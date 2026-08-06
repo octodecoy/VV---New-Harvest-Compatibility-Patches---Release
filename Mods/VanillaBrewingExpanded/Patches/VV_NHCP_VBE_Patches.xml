@@ -3,13 +3,14 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Garden Crops</li>
+            <li>VV - New Harvest: Fruit Plants</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationConditional">
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>VBE_MixJuiceBase_FP</key>
                     <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
-                    <match Class="PatchOperationSequence">
+                    <caseTrue Class="PatchOperationSequence">
                         <operations>
                             <li Class="PatchOperationAdd">
                                 <xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/ingredients/li/filter/thingDefs</xpath>
@@ -18,76 +19,128 @@
                                     <li>VV_Blackcurrants</li>
                                     <li>VV_DragonFruits</li>
                                     <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"]/fixedIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MixJuiceBase_FP</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Blackberries</li>
                                     <li>VV_Blackcurrants</li>
                                     <li>VV_DragonFruits</li>
                                     <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"]/defaultIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MixJuiceBase_FP</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Blackberries</li>
                                     <li>VV_Blackcurrants</li>
                                     <li>VV_DragonFruits</li>
                                     <li>VV_Rosehips</li>
+                                    <li>VV_Cranberries</li>
+                                    <li>VV_AppleCactusFruits</li>
                                 </value>
                             </li>
                         </operations>
-                    </match>
+                    </caseTrue>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/ingredients/li/filter/thingDefs</xpath>
-                    <value>
-                        <li>VV_Blackberries</li>
-                        <li>VV_Blackcurrants</li>
-                        <li>VV_JabuticabaBerries</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/fixedIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_Blackberries</li>
-                        <li>VV_Blackcurrants</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/defaultIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_Blackberries</li>
-                        <li>VV_Blackcurrants</li>
-                    </value>
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>VBE_MakeGinMush_FP</key>
+                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]</xpath>
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_FP</cacheKey>
+                                <xpath>ingredients/li/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_Cranberries</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_FP</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_Cranberries</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_FP</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_Blackberries</li>
+                                    <li>VV_Blackcurrants</li>
+                                    <li>VV_Cranberries</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </caseTrue>
                 </li>
                 <li Class="PatchOperationFindMod">
                     <mods>
                         <li>Vanilla Plants Expanded</li>
                     </mods>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/ingredients/li/filter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_DragonFruits</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/fixedIngredientFilter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_DragonFruits</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/defaultIngredientFilter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_DragonFruits</li>
-                                </value>
-                            </li>
-                        </operations>
+                    <match Class="NewHarvestPatches.CacheNodes">
+                        <key>VBE_MakeUnfermentedCider_FP</key>
+                        <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]</xpath>
+                        <caseTrue Class="PatchOperationSequence">
+                            <operations>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_FP</cacheKey>
+                                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_DragonFruits</li>
+                                    </value>
+                                </li>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_FP</cacheKey>
+                                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_DragonFruits</li>
+                                    </value>
+                                </li>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_FP</cacheKey>
+                                    <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_DragonFruits</li>
+                                    </value>
+                                </li>
+                            </operations>
+                        </caseTrue>
                     </match>
                 </li>
             </operations>
@@ -100,9 +153,10 @@
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationConditional">
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>VBE_MixJuiceBase_Trees</key>
                     <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"][not(fixedIngredientFilter/categories/li[text()="VV_NHCP_DummyCategory_Fruit"])]</xpath>
-                    <match Class="PatchOperationSequence">
+                    <caseTrue Class="PatchOperationSequence">
                         <operations>
                             <li Class="PatchOperationAdd">
                                 <xpath>/Defs/RecipeDef[defName="VBE_MixJuice"]/ingredients/li/filter/thingDefs</xpath>
@@ -119,11 +173,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"]/fixedIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MixJuiceBase_Trees</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -137,11 +196,16 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[@Name="VBE_MixJuiceBase"]/defaultIngredientFilter/thingDefs</xpath>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MixJuiceBase_Trees</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
                                 <value>
                                     <li>VV_Apricots</li>
                                     <li>VV_Durians</li>
@@ -155,91 +219,159 @@
                                     <li>VV_Pomegranates</li>
                                     <li>VV_Quinces</li>
                                     <li>VV_SourCherrys</li>
+                                    <li>VV_CherryPlums</li>
                                     <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
                                 </value>
                             </li>
                         </operations>
-                    </match>
+                    </caseTrue>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/ingredients/li/filter/thingDefs</xpath>
-                    <value>
-                        <li>VV_JabuticabaBerries</li>
-                        <li>VV_Mulberries</li>
-                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/fixedIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_JabuticabaBerries</li>
-                        <li>VV_Mulberries</li>
-                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]/defaultIngredientFilter/thingDefs</xpath>
-                    <value>
-                        <li>VV_JabuticabaBerries</li>
-                        <li>VV_Mulberries</li>
-                        <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
-                    </value>
+                <li Class="NewHarvestPatches.CacheNodes">
+                    <key>VBE_MakeGinMush_Trees</key>
+                    <xpath>/Defs/RecipeDef[defName="VBE_MakeGinMush"]</xpath>
+                    <caseTrue Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_Trees</cacheKey>
+                                <xpath>ingredients/li/filter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Mulberries</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_Trees</cacheKey>
+                                <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Mulberries</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                            <li Class="NewHarvestPatches.AddOrReplace">
+                                <success>Always</success>
+                                <cacheKey>VBE_MakeGinMush_Trees</cacheKey>
+                                <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                <compare>InnerText</compare>
+                                <addOnly>true</addOnly>
+                                <value>
+                                    <li>VV_JabuticabaBerries</li>
+                                    <li>VV_Mulberries</li>
+                                    <li MayRequire="dankpyon.medieval.overhaul">VV_WhiteMulberries</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </caseTrue>
                 </li>
                 <li Class="PatchOperationFindMod">
                     <mods>
                         <li>Vanilla Plants Expanded</li>
                     </mods>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/ingredients/li/filter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_SourCherrys</li>
-                                    <li>VV_Apricots</li>
-                                    <li>VV_Quinces</li>
-                                    <li>VV_Medlars</li>
-                                    <li>VV_Papayas</li>
-                                    <li>VV_Grapefruits</li>
-                                    <li>VV_Pomegranates</li>
-                                    <li>VV_Durians</li>
-                                    <li>VV_Limes</li>
-                                    <li>VV_Persimmons</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/fixedIngredientFilter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_SourCherrys</li>
-                                    <li>VV_Apricots</li>
-                                    <li>VV_Quinces</li>
-                                    <li>VV_Medlars</li>
-                                    <li>VV_Papayas</li>
-                                    <li>VV_Grapefruits</li>
-                                    <li>VV_Pomegranates</li>
-                                    <li>VV_Durians</li>
-                                    <li>VV_Limes</li>
-                                    <li>VV_Persimmons</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]/defaultIngredientFilter/thingDefs</xpath>
-                                <value>
-                                    <li>VV_SourCherrys</li>
-                                    <li>VV_Apricots</li>
-                                    <li>VV_Quinces</li>
-                                    <li>VV_Medlars</li>
-                                    <li>VV_Papayas</li>
-                                    <li>VV_Grapefruits</li>
-                                    <li>VV_Pomegranates</li>
-                                    <li>VV_Durians</li>
-                                    <li>VV_Limes</li>
-                                    <li>VV_Persimmons</li>
-                                </value>
-                            </li>
-                        </operations>
+                    <match Class="NewHarvestPatches.CacheNodes">
+                        <key>VBE_MakeUnfermentedCider_Trees</key>
+                        <xpath>/Defs/RecipeDef[defName="VBE_MakeUnfermentedCider"]</xpath>
+                        <caseTrue Class="PatchOperationSequence">
+                            <operations>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_Trees</cacheKey>
+                                    <xpath>ingredients/li/filter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_SourCherrys</li>
+                                        <li>VV_Apricots</li>
+                                        <li>VV_Quinces</li>
+                                        <li>VV_Medlars</li>
+                                        <li>VV_Papayas</li>
+                                        <li>VV_Grapefruits</li>
+                                        <li>VV_Pomegranates</li>
+                                        <li>VV_Durians</li>
+                                        <li>VV_Limes</li>
+                                        <li>VV_Persimmons</li>
+                                        <li>VV_CherryPlums</li>
+                                    </value>
+                                </li>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_Trees</cacheKey>
+                                    <xpath>fixedIngredientFilter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_SourCherrys</li>
+                                        <li>VV_Apricots</li>
+                                        <li>VV_Quinces</li>
+                                        <li>VV_Medlars</li>
+                                        <li>VV_Papayas</li>
+                                        <li>VV_Grapefruits</li>
+                                        <li>VV_Pomegranates</li>
+                                        <li>VV_Durians</li>
+                                        <li>VV_Limes</li>
+                                        <li>VV_Persimmons</li>
+                                        <li>VV_CherryPlums</li>
+                                    </value>
+                                </li>
+                                <li Class="NewHarvestPatches.AddOrReplace">
+                                    <success>Always</success>
+                                    <cacheKey>VBE_MakeUnfermentedCider_Trees</cacheKey>
+                                    <xpath>defaultIngredientFilter/thingDefs</xpath>
+                                    <compare>InnerText</compare>
+                                    <addOnly>true</addOnly>
+                                    <value>
+                                        <li>VV_SourCherrys</li>
+                                        <li>VV_Apricots</li>
+                                        <li>VV_Quinces</li>
+                                        <li>VV_Medlars</li>
+                                        <li>VV_Papayas</li>
+                                        <li>VV_Grapefruits</li>
+                                        <li>VV_Pomegranates</li>
+                                        <li>VV_Durians</li>
+                                        <li>VV_Limes</li>
+                                        <li>VV_Persimmons</li>
+                                        <li>VV_CherryPlums</li>
+                                    </value>
+                                </li>
+                            </operations>
+                        </caseTrue>
                     </match>
                 </li>
             </operations>
         </match>
+    </Operation>
+    <Operation Class="NewHarvestPatches.FindMod">
+        <modGroupOne>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </modGroupOne>
+        <modGroupTwo>
+            <li>Vanilla Brewing Expanded - Coffees and Teas</li>
+        </modGroupTwo>
+        <logicBetweenGroups>And</logicBetweenGroups>
+        <caseTrue Class="PatchOperationAdd">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef[
+                defName="VV_LindenTea" or
+                defName="VV_ChamomileTea" or
+                defName="VV_ThymeTea" or
+                defName="VV_GinkgoTea" or
+                defName="VV_GinsengDecoction" or
+                defName="VV_EchinaceaDecoction" or
+                defName="VV_ValerianDecoction" or
+                defName="VV_WormwoodDecoction"]
+                /recipeMaker/recipeUsers
+                [not(li="VBE_EspressoMachineBuilding")]
+            </xpath>
+            <value>
+                <li>VBE_EspressoMachineBuilding</li>
+            </value>
+        </caseTrue>
     </Operation>
 </Patch>

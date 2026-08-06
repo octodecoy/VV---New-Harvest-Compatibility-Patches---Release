@@ -18,6 +18,7 @@
                         <li>VV_MahoganyWood</li>
                         <li>VV_RosewoodWood</li>
                         <li>VV_CedarWood</li>
+                        <li>VV_LacqueredWood</li>
                     </thingDefs>
                 </filter>
                 <count>50</count>
@@ -29,6 +30,7 @@
                 <li>VV_MahoganyWood</li>
                 <li>VV_RosewoodWood</li>
                 <li>VV_CedarWood</li>
+                <li>VV_LacqueredWood</li>
             </thingDefs>
         </fixedIngredientFilter>
         <defaultIngredientFilter>
@@ -37,6 +39,7 @@
                 <li>VV_MahoganyWood</li>
                 <li>VV_RosewoodWood</li>
                 <li>VV_CedarWood</li>
+                <li>VV_LacqueredWood</li>
             </thingDefs>
         </defaultIngredientFilter>
         <products>

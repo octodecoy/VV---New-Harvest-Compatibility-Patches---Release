@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Fruit -->
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Blackberry</defName>
+        <label>Blackberry bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BlackberryBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Blackberry</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Blackcurrant</defName>
+        <label>Blackcurrant bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_BlackcurrantBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Blackcurrant</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_DragonFruit</defName>
+        <label>Dragonfruit seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_DragonFruitPlant</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Dragonfruit</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Rosehip</defName>
+        <label>Rosehip bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_RosehipBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Rosehip</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_Cranberry</defName>
+        <label>Cranberry bush seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_CranberryBush</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/Cranberry</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="SeedBase">
+        <defName>VV_Seed_AppleCactus</defName>
+        <label>Apple cactus seeds</label>
+        <modExtensions>
+            <li Class="SeedsPleaseLite.Seed">
+                <sources>
+                    <li>VV_AppleCactus</li>
+                </sources>
+            </li>
+        </modExtensions>
+        <graphicData>
+            <texPath>Seeds/AppleCactus</texPath>
+        </graphicData>
+    </ThingDef>
+</Defs>

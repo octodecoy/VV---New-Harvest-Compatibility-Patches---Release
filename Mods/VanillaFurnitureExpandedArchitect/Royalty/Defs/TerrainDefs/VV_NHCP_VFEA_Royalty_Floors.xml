@@ -77,4 +77,23 @@
         <renderPrecedence>228</renderPrecedence>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     </TerrainDef>
+    <TerrainDef ParentName="VV_NHCP_FloorBase_Lacquer">
+        <defName>VV_NHCP_VFEArch_FineWoodenFloorLacquer</defName>
+        <label>lacquered wood vinyl fine wooden floor</label>
+        <description>Beautiful wooden parquet, made with no compromises, for expressing economic status. Slow to construct.</description>
+        <texturePath>Terrains/FineWoodenFloor</texturePath>
+        <statBases>
+            <WorkToBuild>5000</WorkToBuild>
+            <Beauty>3</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <VV_LacqueredWood>20</VV_LacqueredWood>
+        </costList>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <renderPrecedence>228</renderPrecedence>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </TerrainDef>
 </Defs>

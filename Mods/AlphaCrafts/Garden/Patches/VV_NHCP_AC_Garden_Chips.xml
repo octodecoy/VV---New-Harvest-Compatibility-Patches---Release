@@ -4,7 +4,6 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/ingredients/li/filter/thingDefs</xpath>
         <value>
-            <li>VV_DragonFruits</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
         </value>
@@ -12,7 +11,6 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/fixedIngredientFilter/thingDefs</xpath>
         <value>
-            <li>VV_DragonFruits</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
         </value>
@@ -20,7 +18,6 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="AC_GrindIntoChips"]/defaultIngredientFilter/thingDefs</xpath>
         <value>
-            <li>VV_DragonFruits</li>
             <li>VV_Parsnips</li>
             <li>VV_WhiteTurnips</li>
         </value>
@@ -28,10 +25,6 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="AC_Chips"]/comps/li[@Class="AlphaCrafts.CompProperties_LabelByIngredients"]/overrides</xpath>
         <value>
-            <li>
-                <key>VV_DragonFruits</key>
-                <value>Dragon fruit chips</value>
-            </li>
             <li>
                 <key>VV_Parsnips</key>
                 <value>Parsnip chips</value>

@@ -3,16 +3,27 @@
     <v1.6>
         <li>/</li>
         <!-- Common -->
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Biomes</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops">Common/Categories/AnimalFoods</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees">Common/Categories/Fruit</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops">Common/Categories/Grains</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvesttrees">Common/Categories/Nuts</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestmedicinalplants">Common/Categories/Vegetables</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Biomes</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/AnimalFoods</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/Fruit</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/Grains</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/Nuts</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/Vegetables</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops,vvenchov.vvnewharvestgardencrops,vvenchov.vvnewharvestfruitplants,vvenchov.vvnewharvestindustrialcrops,vvenchov.vvnewharvestmedicinalplants,vvenchov.vvnewharvesttrees,vvenchov.vvnewharvestflowers,vvenchov.vvnewharvestmushrooms">Common/Categories/Fungus</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestforagecrops">Common/Forage</li>
-        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestmushrooms">Common/Categories/Fungus</li>
         <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvestindustrialcrops">Common/Industrial</li>
+        <li IfModActive="vvenchov.vvnewharvest,vvenchov.vvnewharvesttrees">Common/Trees</li>
+        <!-- Harmony -->
+        <li IfModActiveAll="vvenchov.vvnewharvest,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestforagecrops,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestgardencrops,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestfruitplants,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestindustrialcrops,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestmedicinalplants,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvesttrees,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestflowers,brrainz.harmony">Common/Harmony</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestmushrooms,brrainz.harmony">Common/Harmony</li>
         <!-- DLC -->
         <li IfModActiveAll="ludeon.rimworld.ideology,vvenchov.vvnewharvest">Mods/Ideology</li>
         <li IfModActiveAll="ludeon.rimworld.ideology,vvenchov.vvnewharvestindustrialcrops">Mods/Ideology</li>
@@ -28,6 +39,8 @@
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestforagecrops">Mods/MedievalOverhaul/Forage</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Garden</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestgardencrops">Mods/MedievalOverhaul/Garden</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Fruit</li>
+        <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvestfruitplants">Mods/MedievalOverhaul/Fruit</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Trees</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/MedievalOverhaul/Trees</li>
         <li IfModActiveAll="dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/MedievalOverhaul/Trees/Industrial</li>
@@ -42,6 +55,8 @@
         <li IfModActiveAll="mlie.simplechainslumber,vvenchov.vvnewharvestindustrialcrops">Mods/SimpleChainsLumber</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Garden</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestgardencrops">Mods/AlphaCrafts/Garden</li>
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Fruit</li>
+        <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestfruitplants">Mods/AlphaCrafts/Fruit</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Medicinal</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvestmedicinalplants">Mods/AlphaCrafts/Medicinal</li>
         <li IfModActiveAll="sarg.alphacrafts,vvenchov.vvnewharvest">Mods/AlphaCrafts/Trees</li>
@@ -64,6 +79,10 @@
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvestgardencrops">Mods/SeedsPlease/Garden</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Garden</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvestgardencrops">Mods/SeedsPlease/Garden</li>
+        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvest">Mods/SeedsPlease/Fruit</li>
+        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvestfruitplants">Mods/SeedsPlease/Fruit</li>
+        <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Fruit</li>
+        <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvestfruitplants">Mods/SeedsPlease/Fruit</li>
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvest">Mods/SeedsPlease/Industrial</li>
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvestindustrialcrops">Mods/SeedsPlease/Industrial</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Industrial</li>
@@ -80,16 +99,7 @@
         <li IfModActiveAll="evyatar108.seedspleaseliteredux,vvenchov.vvnewharvestmushrooms">Mods/SeedsPlease/Mushrooms</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvest">Mods/SeedsPlease/Mushrooms</li>
         <li IfModActiveAll="owlchemist.seedspleaselite,vvenchov.vvnewharvestmushrooms">Mods/SeedsPlease/Mushrooms</li>
-        <li IfModActiveAll="evyatar108.seedspleaseliteredux,dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
-        <li IfModActiveAll="evyatar108.seedspleaseliteredux,dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
-        <li IfModActiveAll="owlchemist.seedspleaselite,dankpyon.medieval.overhaul,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
-        <li IfModActiveAll="owlchemist.seedspleaselite,dankpyon.medieval.overhaul,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/MedievalOverhaul</li>
-        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/VPE_And_VGP</li>
-        <li IfModActiveAll="evyatar108.seedspleaseliteredux,vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/VPE_And_VGP</li>
-        <li IfModActiveAll="owlchemist.seedspleaselite,vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvest">Mods/SeedsPlease/Trees/VPE_And_VGP</li>
-        <li IfModActiveAll="owlchemist.seedspleaselite,vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/SeedsPlease/Trees/VPE_And_VGP</li>
-        <li IfModActiveAll="oskarpotocki.vfe.medieval2,vvenchov.vvnewharvest">Mods/VanillaFactionsExpandedMedieval2</li>
-        <li IfModActiveAll="oskarpotocki.vfe.medieval2,vvenchov.vvnewharvestmedicinalplants">Mods/VanillaFactionsExpandedMedieval2</li>
+        <li IfModActive="oskarpotocki.vfe.medieval2">Mods/VanillaFactionsExpandedMedieval2</li>
         <li IfModActive="oskarpotocki.vfe.tribals">Mods/VanillaFactionsExpandedTribals</li>
         <li IfModActive="vanillaexpanded.vbrewe">Mods/VanillaBrewingExpanded</li>
         <li IfModActive="vanillaexpanded.outposts">Mods/VanillaOutpostsExpanded</li>
@@ -101,12 +111,12 @@
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvestmedicinalplants">Mods/VanillaPlantsExpanded/Medicinal</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvest">Mods/VanillaPlantsExpanded/Trees</li>
         <li IfModActiveAll="vanillaexpanded.vplantse,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees</li>
-        <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvest">Mods/VanillaPlantsExpanded/Trees/VGP</li>
-        <li IfModActiveAll="vanillaexpanded.vplantse,dismarzero.vgp.vgpvegetablegarden,vvenchov.vvnewharvesttrees">Mods/VanillaPlantsExpanded/Trees/VGP</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvest">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="vanillaexpanded.vcooke,vvenchov.vvnewharvesttrees">Mods/VanillaCookingExpanded</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Garden</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvestgardencrops">Mods/VanillaExpandedFramework/Garden</li>
+        <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Fruit</li>
+        <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvestfruitplants">Mods/VanillaExpandedFramework/Fruit</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Industrial</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvestindustrialcrops">Mods/VanillaExpandedFramework/Industrial</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Medicinal</li>
@@ -114,8 +124,8 @@
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvest">Mods/VanillaExpandedFramework/Trees</li>
         <li IfModActiveAll="oskarpotocki.vanillafactionsexpanded.core,vvenchov.vvnewharvesttrees">Mods/VanillaExpandedFramework/Trees</li>
         <li IfModActive="dismarzero.vgp.vgpvegetablegarden">Mods/VGPVegetableGarden</li>
-        <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvest">Mods/VGPDrinks/Garden</li>
-        <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvestgardencrops">Mods/VGPDrinks/Garden</li>
+        <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvest">Mods/VGPDrinks/Fruit</li>
+        <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvestfruitplants">Mods/VGPDrinks/Fruit</li>
         <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvest">Mods/VGPDrinks/Trees</li>
         <li IfModActiveAll="dismarzero.vgp.vgpgardendrinks,vvenchov.vvnewharvesttrees">Mods/VGPDrinks/Trees</li>
         <li IfModActive="dismarzero.vgp.vgpgardenfabrics,dismarzero.vgp.vgpgardenfabricssimplified">Mods/VGPFabrics</li>
@@ -157,7 +167,12 @@
         <li IfModActive="chaoticenrico.bettertrees">Mods/BetterTrees</li>
 
         <!-- Added 4/19/26 -->
-        <li IfModActiveAll="kasa.mushroombeer,vvenchov.vvnewharvest">Mods/MushroomBeer</li>
-        <li IfModActiveAll="kasa.mushroombeer,vvenchov.vvnewharvestmushrooms">Mods/MushroomBeer</li>
+        <li IfModActive="kasa.mushroombeer">Mods/MushroomBeer</li>
+
+        <!-- Added 6/5/26 -->
+        <li IfModActive="vanillaexpanded.vplantsemushrooms">Mods/VanillaPlantsExpandedMushrooms</li>
+        <li IfModActive="sarg.alphamemes">Mods/AlphaMemes</li>
+        <li IfModActiveAll="vvenchov.vvnewharvest,vanillaexpanded.vpeflowers">Mods/VanillaPlantsExpandedFlowers</li>
+        <li IfModActiveAll="vvenchov.vvnewharvestflowers,vanillaexpanded.vpeflowers">Mods/VanillaPlantsExpandedFlowers</li>
     </v1.6>
 </loadFolders>

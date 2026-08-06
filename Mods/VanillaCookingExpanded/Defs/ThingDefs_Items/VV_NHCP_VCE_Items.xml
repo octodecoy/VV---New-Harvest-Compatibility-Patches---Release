@@ -24,7 +24,7 @@
         </thingCategories>
         <ingestible>
             <preferability>NeverForNutrition</preferability>
-            <specialThoughtAsIngredient>VV_VCE_ConsumedMapleSyrup</specialThoughtAsIngredient>
+            <specialThoughtAsIngredient>VV_NHCP_ConsumedMapleSyrup</specialThoughtAsIngredient>
             <optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
             <foodType>Processed</foodType>
         </ingestible>

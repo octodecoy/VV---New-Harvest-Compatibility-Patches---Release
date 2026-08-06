@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <NewHarvestPatches_Harmony.IngestionAffectedHediffsDef>
+        <defName>NHCP_IngestionAffectedHediffsDefList</defName>
+        <label>HediffDefs that count as food poisoning.</label>
+        <hediffDefs />
+    </NewHarvestPatches_Harmony.IngestionAffectedHediffsDef>
+</Defs>

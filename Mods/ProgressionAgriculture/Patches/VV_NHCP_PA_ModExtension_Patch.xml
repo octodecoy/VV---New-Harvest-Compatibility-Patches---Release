@@ -40,7 +40,8 @@
                 defName="VV_LimeTree" or
                 defName="VV_PersimmonTree" or
                 defName="VV_PecanTree" or
-                defName="VV_SugarMapleTree"]
+                defName="VV_SugarMapleTree" or
+                defName="VV_CherryPlumTree"]
             </xpath>
             <value>
                 <li Class="ProgressionAgriculture.IncludeToAgriculture" />

@@ -29,7 +29,8 @@
                     defName="VV_StonePineTree" or
                     defName="VV_SugarMapleTree" or
                     defName="VV_WalnutTree" or
-                    defName="VV_WhiteMulberryTree"]
+                    defName="VV_WhiteMulberryTree" or
+                    defName="VV_CherryPlumTree"]
                     /plant
                 </xpath>
                 <value>

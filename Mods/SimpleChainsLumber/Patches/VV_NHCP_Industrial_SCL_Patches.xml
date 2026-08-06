@@ -18,4 +18,38 @@
             <li>VV_RosewoodWood</li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/recipeUsers</xpath>
+        <value>
+            <li>Owl_CarpentersTrestle</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
+        <value>
+            <li>Owl_WoodLog</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"][not(fixedIngredientFilter)]</xpath>
+        <value>
+            <fixedIngredientFilter />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/fixedIngredientFilter[not(thingDefs)]</xpath>
+        <value>
+            <thingDefs />
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/fixedIngredientFilter/thingDefs</xpath>
+        <value>
+            <li>Owl_WoodLog</li>
+        </value>
+    </Operation>
 </Patch>

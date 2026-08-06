@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\..\Paths.props" />
+
+    <PropertyGroup Label="Mod">
+        <ModName>NewHarvestPatches</ModName>
+        <ModOutputPath>..\..\Assemblies\</ModOutputPath>
+        <AssemblyName>$(ModName)</AssemblyName>
+        <RootNamespace>$(ModName)</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Output">
+        <OutputType>Library</OutputType>
+        <OutputPath>$(ModOutputPath)</OutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <CopyLocal>false</CopyLocal>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <CopyLockedFiles>true</CopyLockedFiles>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Compiler">
+        <LangVersion>latest</LangVersion>
+        <TargetFramework>net48</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Platform">
+        <PlatformTarget>x64</PlatformTarget>
+        <Platforms>AnyCPU</Platforms>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Build - Global">
+        <DebugType>none</DebugType> <!-- portable & DebugSymbols=true for .pdb -->
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Build - Debug" Condition="'$(Configuration)' == 'Debug'">
+        <DefineConstants>DEBUG;TRACE;PROFILE</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Label="Build - Release" Condition="'$(Configuration)' == 'Release'">
+        <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Label="Reference - Core">
+        <Reference Include="Assembly-CSharp">
+            <HintPath>$(RimWorldManagedDir)\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>$(RimWorldDir)\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(RimWorldManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+            <HintPath>$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath>$(RimWorldManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <!-- <Reference Include="UnityEngine.InputLegacyModule">
+            <HintPath>$(RimWorldManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference> -->
+    </ItemGroup>
+
+    <ItemGroup Label="Reference - Harmony">
+        <Reference Include="0Harmony">
+            <HintPath>$(CurrentHarmonyAssembliesDir)\0Harmony.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup Label="Reference - VEF">
+        <Reference Include="VEF">
+            <HintPath>$(CurrentVEFAssembliesDir)\VEF.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <!-- <ItemGroup>
+        <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+        <Publicize Include="Assembly-CSharp:RimWorld.Pawn_TrainingTracker.learned" />
+    </ItemGroup> -->
+</Project>

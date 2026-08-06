@@ -21,6 +21,20 @@
                         </match>
                     </match>
                 </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Cultivation"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Cultivation"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>/Defs/ThingDef[defName="VV_FeedCornPlant" or defName="VV_FeedWheatPlant" or defName="VV_FeedBeetPlant"]/plant</xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Cultivation</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -66,13 +80,44 @@
                         <match Class="NewHarvestPatches.AddOrReplace">
                             <xpath>
                                 /Defs/ThingDef[
-                                defName="VV_BlackberryBush" or
                                 defName="VV_BroccoliPlant" or 
                                 defName="VV_AsparagusPlant" or 
                                 defName="VV_ArtichokePlant" or
+                                defName="VV_TomatilloPlant"]
+                                /plant
+                            </xpath>
+                            <value>
+                                <sowResearchPrerequisites>
+                                    <li>VFET_Cultivation</li>
+                                </sowResearchPrerequisites>
+                            </value>
+                        </match>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Fruit Plants</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Cultivation"]</xpath>
+                    <match Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="VFET_Cultivation"]</xpath>
+                        <match Class="NewHarvestPatches.AddOrReplace">
+                            <xpath>
+                                /Defs/ThingDef[
+                                defName="VV_BlackberryBush" or
                                 defName="VV_BlackcurrantBush" or
                                 defName="VV_RosehipBush" or
-                                defName="VV_DragonFruitPlant"]
+                                defName="VV_DragonFruitPlant" or
+                                defName="VV_CranberryBush" or
+                                defName="VV_AppleCactus"]
                                 /plant
                             </xpath>
                             <value>

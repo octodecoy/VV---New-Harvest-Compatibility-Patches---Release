@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_BlackberrySoda</defName>
+        <label>blackberry soda</label>
+        <description>A subtly sweet soda made from blackberries.</description>
+        <graphicData>
+            <texPath>Things/Item/GrapeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_BlackcurrantSoda</defName>
+        <label>blackcurrant soda</label>
+        <description>A tangy soda made from blackcurrants.</description>
+        <graphicData>
+            <texPath>Things/Item/GrapeSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_DragonfruitSoda</defName>
+        <label>dragonfruit soda</label>
+        <description>A subtly sweet soda made from dragonfruit.</description>
+        <graphicData>
+            <texPath>Things/Item/CoconutSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_RosehipSoda</defName>
+        <label>rosehip soda</label>
+        <description>A strangely satisfying soda made from rosehips.</description>
+        <graphicData>
+            <texPath>Things/Item/WatermelonSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_CranberrySoda</defName>
+        <label>cranberry soda</label>
+        <description>A sweet and tart soda made from cranberries.</description>
+        <graphicData>
+            <texPath>Things/Item/WatermelonSoda</texPath>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="VdaSoda">
+        <defName>VV_VGD_CactusAppleSoda</defName>
+        <label>cactus apple soda</label>
+        <description>A strangely satisfying soda made from cactus apples.</description>
+        <graphicData>
+            <texPath>Things/Item/WatermelonSoda</texPath>
+        </graphicData>
+    </ThingDef>
+</Defs>

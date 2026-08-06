@@ -1,299 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Patch> 
-    <!-- Add the original category plus the dummy category to begin with so when/if we add the dummy category to 
-         recipes and etc. where mod categories reside, our things will be included too.
-         If merge setting is on, we replace the original category so that only the dummy category is left, 
-         and add a parent to the dummy category so that its children will now be visible, and the
-         dummy category will now be a real category.  -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Garden Crops</li>
-        </mods>   
-        <match Class="NewHarvestPatches.AddOrReplace">
-            <xpath>            
-                /Defs/ThingDef
-                [defName="VV_Artichoke" or
-                defName="VV_Asparagus" or
-                defName="VV_BlackBeans" or
-                defName="VV_BroccoliFlorets" or
-                defName="VV_Leeks" or
-                defName="VV_Parsnips" or
-                defName="VV_RedCabbages" or
-                defName="VV_SpinachLeaves" or
-                defName="VV_WhiteTurnips"]
-            </xpath>      
-            <value>
-                <thingCategories Inherit="False">
-                    <li>PlantFoodRaw</li>
-                    <li>VV_NHCP_DummyCategory_Vegetables</li>
-                </thingCategories>
-            </value>
-        </match>     
-    </Operation>
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Medicinal Plants</li>
-        </mods>   
-        <match Class="NewHarvestPatches.AddOrReplace">
-            <xpath>/Defs/ThingDef[defName="VV_NettleLeaves"]</xpath>
-            <value>
-                <thingCategories Inherit="False">
-                    <li>PlantFoodRaw</li>
-                    <li>VV_NHCP_DummyCategory_Vegetables</li>
-                </thingCategories>                
-            </value>
-        </match>       
-    </Operation>
-    <!-- Check if there are supposed mod added categories, and if so, add our dummy category to recipes/storages/traders containing them. -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>VV - New Harvest</li>
-            <li>VV - New Harvest: Garden Crops</li>
-            <li>VV - New Harvest: Medicinal Plants</li>
-        </mods>  
-        <match Class="PatchOperationSequence">
+<Patch>
+    <!-- Detect mod-added categories of this type, then do two things to every filter referencing one:
+         add our dummy category (what makes the filter work while this kind's merge setting is ON) and
+         name our own produce outright (what makes it work while merge is OFF). Both operations share
+         one C# test and one C# def list in SharedConstants.Category, which is why no category name
+         and no defName is written in this file. Everything per-def and setting-dependent (def
+         membership, merging, category parenting, resource readout, trader stock) is applied live in
+         C# by CategoryApplier/CategoryClassifier.
+         Both operations also share one union xpath over every filter location we care about. The
+         dummy category's defName is derived from categoryType in C# (GetCategoryName), and an
+         already-listed dummy is recognised there too, so neither has to appear here as a literal.
+         The ProcessorFramework arm needs no PatchOperationFindMod guard: without that mod the
+         document holds no ProcessorFramework.ProcessDef nodes and the arm simply matches nothing. -->
+    <Operation Class="NewHarvestPatches.TestCategory">
+        <xpath>/Defs/ThingCategoryDef[parent="Foods" or parent="FoodRaw" or parent="PlantFoodRaw"]</xpath>
+        <categoryType>Vegetables</categoryType>
+        <caseTrue Class="PatchOperationSequence">
             <operations>
-                <li Class="NewHarvestPatches.TestCategory">
-                    <xpath>/Defs/ThingCategoryDef[parent="Foods" or parent="FoodRaw" or parent="PlantFoodRaw"]</xpath>
-                    <categoryType>Vegetables</categoryType>  
-                    <caseTrue Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="NewHarvestPatches.AddCategoryToFilter">
-                                <success>Always</success>
-                                <xpath>/Defs/RecipeDef/ingredients/li/filter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                <categoryType>Vegetables</categoryType>                    
-                            </li>
-                            <li Class="NewHarvestPatches.AddCategoryToFilter">
-                                <success>Always</success>
-                                <xpath>/Defs/RecipeDef/fixedIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                <categoryType>Vegetables</categoryType>
-                            </li>
-                            <li Class="NewHarvestPatches.AddCategoryToFilter">
-                                <success>Always</success>
-                                <xpath>/Defs/RecipeDef/defaultIngredientFilter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                <categoryType>Vegetables</categoryType>
-                            </li>
-                            <li Class="NewHarvestPatches.AddCategoryToFilter">
-                                <success>Always</success>
-                                <xpath>/Defs/ThingDef/building/fixedStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                <categoryType>Vegetables</categoryType>
-                            </li>
-                            <li Class="NewHarvestPatches.AddCategoryToFilter">
-                                <success>Always</success>
-                                <xpath>/Defs/ThingDef/building/defaultStorageSettings/filter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                <categoryType>Vegetables</categoryType>
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>[SYR] Processor Framework</li>
-                                </mods>
-                                <match Class="NewHarvestPatches.AddCategoryToFilter">
-                                    <success>Always</success>
-                                    <xpath>/Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories[not(li="VV_NHCP_DummyCategory_Vegetables")]</xpath>
-                                    <categoryType>Vegetables</categoryType>
-                                </match>
-                            </li>
-                            <li Class="NewHarvestPatches.ConditionalSetting">
-                                <setting>MergeVegetablesCategory</setting>
-                                <caseTrue Class="NewHarvestPatches.CloneStockWithNewCategory">
-                                    <success>Always</success>
-                                    <xpath>/Defs/TraderKindDef/stockGenerators[not(li[@Class="StockGenerator_Category"]/categoryDef="VV_NHCP_DummyCategory_Vegetables")]/li[@Class="StockGenerator_Category"]</xpath>
-                                    <categoryType>Vegetables</categoryType>
-                                    <zeroOutOriginal>true</zeroOutOriginal>                      
-                                </caseTrue>
-                            </li>                        
-                        </operations>
-                    </caseTrue>
+                <li Class="NewHarvestPatches.AddCategoryToFilter">
+                    <success>Always</success>
+                    <categoryType>Vegetables</categoryType>
+                    <xpath>
+                        /Defs/RecipeDef/ingredients/li/filter/categories
+                        | /Defs/RecipeDef/fixedIngredientFilter/categories
+                        | /Defs/RecipeDef/defaultIngredientFilter/categories
+                        | /Defs/ThingDef/building/fixedStorageSettings/filter/categories
+                        | /Defs/ThingDef/building/defaultStorageSettings/filter/categories
+                        | /Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories
+                    </xpath>
                 </li>
-                <li Class="NewHarvestPatches.ConditionalSetting">
-                    <setting>MergeVegetablesCategory</setting>
-                    <caseTrue Class="PatchOperationSequence">
-                        <operations>
-                            <!-- Make category visible to UI -->
-                            <li Class="NewHarvestPatches.AddOrReplace">
-                                <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_Vegetables"]</xpath>
-                                <value>
-                                    <parent>PlantFoodRaw</parent>
-                                </value>
-                            </li>   
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>VV - New Harvest</li>
-                                    <li>VV - New Harvest: Garden Crops</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>            
-                                        /Defs/ThingDef
-                                        [defName="VV_Artichoke" or
-                                        defName="VV_Asparagus" or
-                                        defName="VV_BlackBeans" or
-                                        defName="VV_BroccoliFlorets" or
-                                        defName="VV_Leeks" or
-                                        defName="VV_Parsnips" or
-                                        defName="VV_RedCabbages" or
-                                        defName="VV_SpinachLeaves" or
-                                        defName="VV_WhiteTurnips"]
-                                    </xpath>  
-                                    <categoryType>Vegetables</categoryType>                       
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>VV - New Harvest</li>
-                                    <li>VV - New Harvest: Medicinal Plants</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>/Defs/ThingDef[defName="VV_NettleLeaves"]</xpath>  
-                                    <categoryType>Vegetables</categoryType>                        
-                                </match>   
-                            </li>
-                            <li Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                <xpath>/Defs/ThingDef[defName="RawPotatoes" or defName="RawToxipotato"]</xpath>  
-                                <categoryType>Vegetables</categoryType>                        
-                            </li> 
-                            <li Class="NewHarvestPatches.HasModAddedCategoryOfType">
-                                <success>Always</success>
-                                <categoryType>Vegetables</categoryType>
-                                <caseTrue Class="NewHarvestPatches.TryReplaceCategoryChildrenWithCategoryOfType">
-                                    <categoryType>Vegetables</categoryType>
-                                </caseTrue>
-                            </li> 
-                            <!-- This can only be true if Merge setting is true -->
-                            <li Class="NewHarvestPatches.ConditionalSetting">
-                                <setting>VegetablesCategoryResourceReadout</setting>
-                                <caseTrue Class="NewHarvestPatches.AddOrReplace">
-                                    <xpath>/Defs/ThingCategoryDef[defName="VV_NHCP_DummyCategory_Vegetables"]</xpath>
-                                    <value>
-                                        <resourceReadoutRoot>true</resourceReadoutRoot>
-                                    </value>
-                                </caseTrue>
-                            </li>  
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>Vanilla Plants Expanded - More Plants</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>
-                                        /Defs/ThingDef
-                                        [defName="VCE_RawCelery" or
-                                        defName="VCE_RawLettuce" or
-                                        defName="VCE_RawRadish" or
-                                        defName="VCE_RawOkra" or
-                                        defName="VCE_RawGarlic" or
-                                        defName="VCE_RawCarrot" or
-                                        defName="VCE_RawBrusselsSprouts" or
-                                        defName="VCE_RawOlives" or
-                                        defName="VCE_RawSweetPotatoes" or
-                                        defName="VCE_RawCassava" or
-                                        defName="VCE_RawBeans" or
-                                        defName="VCE_RawBellPeppers" or
-                                        defName="VCE_RawYellowBellPeppers" or
-                                        defName="VCE_RawChickpeas" or
-                                        defName="VCE_RawTaro" or
-                                        defName="VCE_RawWatercress" or
-                                        defName="VCE_RawWaterChestnut" or
-                                        defName="VCE_RawCucumber" or
-                                        defName="VCE_RawButternutSquash" or
-                                        defName="VCE_RawMoss"]
-                                    </xpath>
-                                    <categoryType>Vegetables</categoryType>                       
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>Vanilla Plants Expanded</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>
-                                        /Defs/ThingDef
-                                        [defName="VCE_RawOnion" or
-                                        defName="VCE_RawPumpkin" or 
-                                        defName="VCE_RawPepper" or
-                                        defName="VCE_RawPeas" or
-                                        defName="VCE_RawEggplant" or
-                                        defName="VCE_RawCabbage" or
-                                        defName="VCE_RawBeets" or
-                                        defName="VCE_RawTomatoes"]
-                                    </xpath>
-                                    <categoryType>Vegetables</categoryType>                      
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>VGP Vegetable Garden</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>/Defs/ThingDef[defName="Rawsnowbeet" or defName="Rawbean" or defName="RawOlive"]</xpath>
-                                    <categoryType>Vegetables</categoryType>                        
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>VGP More Veggies</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>
-                                        /Defs/ThingDef
-                                        [defName="Raweggplant" or 
-                                        defName="Rawpumpkin" or
-                                        defName="Rawsquash" or
-                                        defName="RawTomatoes" or
-                                        defName="RawCarrots"]
-                                    </xpath>
-                                    <categoryType>Vegetables</categoryType>                         
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>VGP Three Sisters Plants</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>/Defs/ThingDef[defName="Rawpumpkin" or defName="Rawsquash" or defName="Rawbean" or defName="RawTomatoes"]</xpath>
-                                    <categoryType>Vegetables</categoryType>                        
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>RimCuisine 2 Core (Continued)</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>/Defs/ThingDef[defName="RC2_PickleBrine"]</xpath>
-                                    <categoryType>Vegetables</categoryType>                       
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>Medieval Overhaul</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>
-                                        /Defs/ThingDef
-                                        [defName="DankPyon_RawTomatoes" or 
-                                        defName="DankPyon_RawCabbages" or 
-                                        defName="DankPyon_RawCarrots" or
-                                        defName="DankPyon_RawGarlic" or
-                                        defName="DankPyon_RawOnions" or
-                                        defName="DankPyon_RawPumpkins" or
-                                        defName="DankPyon_RawLentils"]
-                                    </xpath>
-                                    <categoryType>Vegetables</categoryType>                        
-                                </match>   
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>Rimstro Farming Expansion</li>
-                                </mods>    
-                                <match Class="NewHarvestPatches.TryReplaceCategoriesWithCategoryOfType">
-                                    <xpath>/Defs/ThingDef[defName="RFE_RawBeet" or defName="RFE_RawTomato"]</xpath>
-                                    <categoryType>Vegetables</categoryType>                        
-                                </match>   
-                            </li>
-                        </operations>
-                    </caseTrue>
+
+                <!-- Second half: name our own produce outright in those same filters. The dummy category
+                     added above only reaches our defs while this kind's merge setting is ON; with it off
+                     the dummy is empty and unparented, and this is what keeps a third-party bench working. -->
+                <li Class="NewHarvestPatches.AddOwnDefsToCategoryFilters">
+                    <success>Always</success>
+                    <categoryType>Vegetables</categoryType>
+                    <xpath>
+                        /Defs/RecipeDef/ingredients/li/filter/categories
+                        | /Defs/RecipeDef/fixedIngredientFilter/categories
+                        | /Defs/RecipeDef/defaultIngredientFilter/categories
+                        | /Defs/ThingDef/building/fixedStorageSettings/filter/categories
+                        | /Defs/ThingDef/building/defaultStorageSettings/filter/categories
+                        | /Defs/ProcessorFramework.ProcessDef/ingredientFilter/categories
+                    </xpath>
                 </li>
             </operations>
-        </match>        
-    </Operation>  
+        </caseTrue>
+    </Operation>
 </Patch>

@@ -326,4 +326,29 @@
             <VV_VGD_LemonLimeSoda>10</VV_VGD_LemonLimeSoda>
         </products>
     </RecipeDef>  
+
+    <RecipeDef ParentName="SweetSodaBase">
+        <defName>VV_VGD_CherryPlumSoda</defName>
+        <label>brew cherry plum soda</label>
+        <description>Brew cherry plums and syrup into a sweet-tart soda.\n\nMakes 10.</description>
+        <jobString>Brewing cherry plum soda</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>VV_CherryPlums</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>VV_CherryPlums</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <VV_VGD_CherryPlumSoda>10</VV_VGD_CherryPlumSoda>
+        </products>
+    </RecipeDef>  
 </Defs>

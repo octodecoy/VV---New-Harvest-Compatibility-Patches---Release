@@ -1,59 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[defName="VFEM2_AlchemicalWorkbench"]</xpath>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Medicinal Plants</li>
+        </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>
-                        /Defs/ThingDef
-                        [defName="VV_SoothingHerbalOintment" or 
-                        defName="VV_RestorativeHerbalOintment" or 
-                        defName="VV_AdvancedHerbalMedicine" or
-                        defName="VV_GinsengDecoction" or
-                        defName="VV_EchinaceaDecoction" or
-                        defName="VV_ValerianDecoction"]
-                        /recipeMaker/recipeUsers
-                    </xpath>
-                    <value>
-                        <li>VFEM2_AlchemicalWorkbench</li>
-                    </value>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="VFEM2_AlchemicalWorkbench"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>
+                                    /Defs/ThingDef
+                                    [defName="VV_SoothingHerbalOintment" or 
+                                    defName="VV_RestorativeHerbalOintment" or 
+                                    defName="VV_AdvancedHerbalMedicine" or
+                                    defName="VV_GinsengDecoction" or
+                                    defName="VV_EchinaceaDecoction" or
+                                    defName="VV_ValerianDecoction" or
+                                    defName="VV_WormwoodDecoction"]
+                                    /recipeMaker/recipeUsers
+                                </xpath>
+                                <value>
+                                    <li>VFEM2_AlchemicalWorkbench</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                                <value>
+                                    <li>VFEM2_AlchemicalWorkbench</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
-                    <value>
-                        <li>VFEM2_AlchemicalWorkbench</li>
-                    </value>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="VFEM2_AlchemicalWorkbench_Electric"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>
+                                    /Defs/ThingDef
+                                    [defName="VV_SoothingHerbalOintment" or 
+                                    defName="VV_RestorativeHerbalOintment" or 
+                                    defName="VV_AdvancedHerbalMedicine" or
+                                    defName="VV_GinsengDecoction" or
+                                    defName="VV_EchinaceaDecoction" or
+                                    defName="VV_ValerianDecoction" or
+                                    defName="VV_WormwoodDecoction"]
+                                    /recipeMaker/recipeUsers
+                                </xpath>
+                                <value>
+                                    <li>VFEM2_AlchemicalWorkbench_Electric</li>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
+                                <value>
+                                    <li>VFEM2_AlchemicalWorkbench_Electric</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
                 </li>
             </operations>
         </match>
     </Operation>
-    <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/ThingDef[defName="VFEM2_AlchemicalWorkbench_Electric"]</xpath>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>
-                        /Defs/ThingDef
-                        [defName="VV_SoothingHerbalOintment" or 
-                        defName="VV_RestorativeHerbalOintment" or 
-                        defName="VV_AdvancedHerbalMedicine" or
-                        defName="VV_GinsengDecoction" or
-                        defName="VV_EchinaceaDecoction" or
-                        defName="VV_ValerianDecoction"]
-                        /recipeMaker/recipeUsers
-                    </xpath>
-                    <value>
-                        <li>VFEM2_AlchemicalWorkbench_Electric</li>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/WorkGiverDef[defName="VV_NHCP_DoBillsAlchemyCooking"]/fixedBillGiverDefs</xpath>
-                    <value>
-                        <li>VFEM2_AlchemicalWorkbench_Electric</li>
-                    </value>
-                </li>
-            </operations>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Fruit Plants</li>
+        </mods>  
+        <match Class="PatchOperationAddModExtension">
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_BlackberryBush" or
+                defName="VV_BlackcurrantBush" or
+                defName="VV_CranberryBush"]
+            </xpath>
+            <value>
+                <li Class="VFEMedieval.ApiaryFlowerExtension" />
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Trees</li>
+        </mods>  
+        <match Class="PatchOperationAddModExtension">
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_SourCherryTree" or
+                defName="VV_ApricotTree" or
+                defName="VV_ChestnutTree" or
+                defName="VV_SugarMapleTree" or
+                defName="VV_GrapefruitTree" or
+                defName="VV_LimeTree" or
+                defName="VV_CherryPlumTree"]
+            </xpath>
+            <value>
+                <li Class="VFEMedieval.ApiaryFlowerExtension" />
+            </value>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VV - New Harvest</li>
+            <li>VV - New Harvest: Flowers</li>
+        </mods>
+        <match Class="PatchOperationAddModExtension">
+            <xpath>
+                /Defs/ThingDef[
+                defName="VV_Aubrieta" or
+                defName="VV_Begonia" or
+                defName="VV_CallaLily" or
+                defName="VV_Dymondia" or
+                defName="VV_Gerbera" or
+                defName="VV_Hydrangea" or
+                defName="VV_Lilac" or
+                defName="VV_Orchid" or
+                defName="VV_Petunia" or
+                defName="VV_Primrose" or
+                defName="VV_Tulip" or
+                defName="VV_Wisteria"]
+            </xpath>
+            <value>
+                <li Class="VFEMedieval.ApiaryFlowerExtension" />
+            </value>
         </match>
     </Operation>
 </Patch>
