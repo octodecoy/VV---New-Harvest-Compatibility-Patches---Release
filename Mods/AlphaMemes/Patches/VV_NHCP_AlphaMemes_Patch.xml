@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <Operation Class="PatchOperationFindMod">
-        <mods>
+    <Operation Class="NewHarvestPatches.FindMod">
+        <modGroupOne>
+            <li>Vanilla Brewing Expanded</li>
+        </modGroupOne>
+        <modGroupTwo>
             <li>VV - New Harvest</li>
             <li>VV - New Harvest: Medicinal Plants</li>
-        </mods>
-        <match Class="PatchOperationAdd">
+        </modGroupTwo>
+        <logicBetweenGroups>And</logicBetweenGroups>
+        <caseTrue Class="PatchOperationAdd">
             <xpath>/Defs/AlphaMemes.TeaDefs[defName="AM_TeaDefs"]/specialtyTeas</xpath>
             <value>
                 <li>VV_LindenTea</li>
@@ -13,6 +17,6 @@
                 <li>VV_ThymeTea</li>
                 <li>VV_GinkgoTea</li>
             </value>
-        </match>
+        </caseTrue>
     </Operation>
 </Patch>
