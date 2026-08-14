@@ -41,6 +41,16 @@ public partial class NewHarvestPatchesModSettings : ModSettings
     public static HashSet<string> ThingDefNamesInDocument;
 
     /// <summary>
+    /// Every ABSTRACT RecipeDef in the unified patch document, mapped by its <c>Name</c> attribute, so a
+    /// patch operation can walk a recipe's <c>ParentName</c> chain and ask what the merged def will end up
+    /// declaring. Needed because patches run BEFORE <see cref="XmlInheritance"/> resolves anything, so a
+    /// node inherited from an abstract parent is simply not there yet to be found on the child.
+    /// See <see cref="PatchOperationPathedExtended.DeclaresElementInAncestry"/>. Same lifetime and same
+    /// soundness argument as <see cref="CategoryParentByDefName"/>.
+    /// </summary>
+    public static Dictionary<string, XmlNode> AbstractRecipeDefsByName;
+
+    /// <summary>
     /// Drops every cache the settings layer owns. Called once from <see cref="Bootstrap.Initialize"/>
     /// after boot actions finish - by then the XML-phase data is dead and the menu has never opened, so
     /// all three tiers can go at once. Everything here rebuilds lazily; nothing is load-bearing.
@@ -65,6 +75,7 @@ public partial class NewHarvestPatchesModSettings : ModSettings
         XmlNodeCache = null;
         CategoryParentByDefName = null;
         ThingDefNamesInDocument = null;
+        AbstractRecipeDefsByName = null; // Holds live XmlNodes - would pin the patched document.
         CategoryAssignments.Invalidate(); // Free the lookup index built during XML patching.
     }
 

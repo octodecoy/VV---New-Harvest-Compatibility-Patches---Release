@@ -24,8 +24,11 @@
             </li>
             <!-- DISALLOWED -->
             <!-- AddDefsWhereDefPresent also mirrors into fixedIngredientFilter/disallowedThingDefs and
-                 defaultIngredientFilter/disallowedThingDefs (creating either when the widened ingredients
-                 filter warrants it), replacing what used to be 3 separate ops. -->
+                 defaultIngredientFilter/disallowedThingDefs, replacing what used to be 3 separate ops.
+                 It creates the former when absent; the latter it only backfills where the recipe or an
+                 ancestor already declares one, since RecipeDef.ResolveReferences fills a null
+                 defaultIngredientFilter with a copy of the whole fixedIngredientFilter and writing the node
+                 takes that away. The anchor is never written into a disallow list. -->
             <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                 <success>Always</success>
                 <xpath>/Defs/RecipeDef/ingredients/li/filter/disallowedThingDefs</xpath>
@@ -39,14 +42,14 @@
                 </value>
             </li>
             <!-- ALLOWED -->
-            <!-- AddDefsWhereDefPresent also mirrors into fixedIngredientFilter/thingDefs and
-                 defaultIngredientFilter/thingDefs, creating either filter (and its thingDefs child) when
-                 absent, and backfilling "Hay" itself into both - widening this list flips
-                 IngredientCount.IsFixedIngredient from true to false, so the recipe's own
-                 fixedIngredientFilter (previously bypassed while the slot was fixed) and its
-                 defaultIngredientFilter (previously null and inert) both start being consulted; without the
-                 backfill, either one being freshly created empty would silently reject "Hay" even though it
-                 is still listed in ingredients/li/filter/thingDefs. Replaces what used to be 9 separate ops. -->
+            <!-- Widening this list flips IngredientCount.IsFixedIngredient from true to false, so the
+                 recipe's fixedIngredientFilter - bypassed entirely while the slot was fixed - starts being
+                 consulted and would reject "Hay" itself. AddDefsWhereDefPresent compensates for that on its
+                 own now, flag or no flag: any ingredients/li/filter/thingDefs it widens gets the hays AND
+                 "Hay" written into fixedIngredientFilter, which it creates when absent. The
+                 mirrorDefaultIngredientFilter below is intent only, and backfills a defaultIngredientFilter
+                 solely where one is already declared - where none is, vanilla copies the (now compensated)
+                 fixedIngredientFilter into it. Replaces what used to be 9 separate ops. -->
             <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                 <success>Always</success>
                 <xpath>/Defs/RecipeDef/ingredients/li/filter/thingDefs</xpath>

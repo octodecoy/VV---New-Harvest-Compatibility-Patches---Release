@@ -18,58 +18,66 @@ internal class SetFromModSetting : PatchOperationPathedExtended
     /// </summary>
     protected override bool ApplyWorker(XmlDocument xml)
     {
-        if (string.IsNullOrWhiteSpace(setting))
+        try
         {
-            LogMessage(() => $"'setting' is null or whitespace.", LogMessageType.Error);
-            return false;
-        }
-
-        FieldInfo field = GetCachedSettingFieldInfo(setting);
-        if (field == null)
-        {
-            LogMessage(() => $"Setting '{setting}' not found.", LogMessageType.Error);
-            return false;
-        }
-
-        // Required mod(s) missing - keep the stored value but never write it into defs.
-        if (!IsSettingAvailable(setting))
-        {
-            LogMessage(() => $"Skipping setting [{setting}] - required mod(s) not active.");
-            return true;
-        }
-
-        object fieldValue = field.GetValue(Settings);
-
-        if (!ConvertToValueFromObject(fieldValue, valueType, out string newValue) || newValue == null)
-        {
-            LogMessage(() => $"Type [{valueType}] for setting [{setting}] is incorrect.", LogMessageType.Error);
-            return false;
-        }
-
-        if (!PreCheck(xpath, xml))
-            return false;
-
-        foreach (XmlNode node in nodes)
-        {
-            if (node.NodeType != XmlNodeType.Element)
-                continue;
-
-            if (!TryParseToString(node.InnerText, valueType, out var currentValue))
+            if (string.IsNullOrWhiteSpace(setting))
             {
-                LogMessage(() => $"Node value for setting [{setting}] is not valid for type [{valueType}].", LogMessageType.Error);
+                LogMessage(() => $"'setting' is null or whitespace.", LogMessageType.Error);
                 return false;
             }
 
-            if (newValue == currentValue)
-                continue;
+            FieldInfo field = GetCachedSettingFieldInfo(setting);
+            if (field == null)
+            {
+                LogMessage(() => $"Setting '{setting}' not found.", LogMessageType.Error);
+                return false;
+            }
 
-            node.InnerText = newValue;
+            // Required mod(s) missing - keep the stored value but never write it into defs.
+            if (!IsSettingAvailable(setting))
+            {
+                LogMessage(() => $"Skipping setting [{setting}] - required mod(s) not active.");
+                return true;
+            }
 
-            var parentNode = node.ParentNode;
-            string fullPath = Settings.Logging ? GetFullPathWithDefName(parentNode) : "";
-            LogMessage(() => $"Set value to [{newValue}] from [{currentValue}] for [{fullPath}].");
+            object fieldValue = field.GetValue(Settings);
+
+            if (!ConvertToValueFromObject(fieldValue, valueType, out string newValue) || newValue == null)
+            {
+                LogMessage(() => $"Type [{valueType}] for setting [{setting}] is incorrect.", LogMessageType.Error);
+                return false;
+            }
+
+            if (!PreCheck(xpath, xml))
+                return false;
+
+            foreach (XmlNode node in nodes)
+            {
+                if (node.NodeType != XmlNodeType.Element)
+                    continue;
+
+                if (!TryParseToString(node.InnerText, valueType, out var currentValue))
+                {
+                    LogMessage(() => $"Node value for setting [{setting}] is not valid for type [{valueType}].", LogMessageType.Error);
+                    return false;
+                }
+
+                if (newValue == currentValue)
+                    continue;
+
+                node.InnerText = newValue;
+
+                var parentNode = node.ParentNode;
+                string fullPath = Settings.Logging ? GetFullPathWithDefName(parentNode) : "";
+                LogMessage(() => $"Set value to [{newValue}] from [{currentValue}] for [{fullPath}].");
+            }
+
+            return true;
         }
-
-        return true;
+        catch (Exception ex)
+        {
+            LogException(ex, ex.TargetSite, optMsg: $"{xpath}");
+            return false;
+        }
     }
 }

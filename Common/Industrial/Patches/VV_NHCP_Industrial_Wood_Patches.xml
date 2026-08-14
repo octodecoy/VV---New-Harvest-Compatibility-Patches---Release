@@ -39,8 +39,14 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <!-- [li="WoodLog" and not(li="DankPyon_RawWood") or (li="WoodLog" and li="DankPyon_RawWood")] reduces
-                     to plain li="WoodLog" (and binds tighter than or) - anchor is WoodLog. Mirror flags replace
-                     the generic fixed/default-filter compensation block this file used to carry further down. -->
+                     to plain li="WoodLog" (and binds tighter than or) - anchor is WoodLog. The generic
+                     fixed/default-filter compensation block this file used to carry further down is now the
+                     operation's own doing: widening an ingredient slot always writes the woods and WoodLog
+                     into fixedIngredientFilter. The two flags below only state intent - in particular
+                     mirrorDefaultIngredientFilter backfills a defaultIngredientFilter where one is declared
+                     and creates none where it is not, because creating it suppresses vanilla's copy of the
+                     fixedIngredientFilter and strips every other ingredient (e.g. the medicine half of the
+                     peg-leg surgery) out of the bill. -->
                 <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                     <success>Always</success>
                     <xpath>

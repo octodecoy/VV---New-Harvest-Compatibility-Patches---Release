@@ -40,54 +40,80 @@ internal class EditString : PatchOperationPathedExtended
     /// </summary>
     protected override bool ApplyWorker(XmlDocument xml)
     {
-        if (string.IsNullOrEmpty(value))
+        try
         {
-            LogMessage(() => $"A 'value' is required for {mode}", LogMessageType.Error);
-            return false;
-        }
-
-        if (!PreCheck(xpath, xml))
-            return false;
-
-        Regex regex = null;
-
-        bool requiresTarget = mode is StringEditMode.PrependSubstring or StringEditMode.AppendSubstring or StringEditMode.ReplaceSubstring;
-        if (requiresTarget)
-        {
-            if (string.IsNullOrEmpty(target))
+            if (string.IsNullOrEmpty(value))
             {
-                LogMessage(() => $"A 'target' is required for {mode}", LogMessageType.Error);
+                LogMessage(() => $"A 'value' is required for {mode}", LogMessageType.Error);
                 return false;
             }
 
-            var options = ignoreTargetCase ? RegexOptions.IgnoreCase : RegexOptions.None;
+            if (!PreCheck(xpath, xml))
+                return false;
 
-            regex = new Regex(treatTargetAsRegex ? target : Regex.Escape(target), options);
-        }
+            Regex regex = null;
 
-        var occurrenceSet = targetOccurrences?.ToHashSet();
-
-        foreach (XmlNode node in nodes)
-        {
-            if (node.NodeType != XmlNodeType.Element)
-                continue;
-
-            int matchIndex = 0;
-
-            switch (mode)
+            bool requiresTarget = mode is StringEditMode.PrependSubstring or StringEditMode.AppendSubstring or StringEditMode.ReplaceSubstring;
+            if (requiresTarget)
             {
-                case StringEditMode.Append:
-                    node.InnerText += value;
-                    break;
+                if (string.IsNullOrEmpty(target))
+                {
+                    LogMessage(() => $"A 'target' is required for {mode}", LogMessageType.Error);
+                    return false;
+                }
 
-                case StringEditMode.Prepend:
-                default:
-                    node.InnerText = value + node.InnerText;
-                    break;
+                var options = ignoreTargetCase ? RegexOptions.IgnoreCase : RegexOptions.None;
 
-                case StringEditMode.ReplaceSubstring:
-                    if (regex?.IsMatch(node.InnerText) == true)
+                regex = new Regex(treatTargetAsRegex ? target : Regex.Escape(target), options);
+            }
+
+            var occurrenceSet = targetOccurrences?.ToHashSet();
+
+            foreach (XmlNode node in nodes)
+            {
+                if (node.NodeType != XmlNodeType.Element)
+                    continue;
+
+                int matchIndex = 0;
+
+                switch (mode)
+                {
+                    case StringEditMode.Append:
+                        node.InnerText += value;
+                        break;
+
+                    case StringEditMode.Prepend:
+                    default:
+                        node.InnerText = value + node.InnerText;
+                        break;
+
+                    case StringEditMode.ReplaceSubstring:
+                        if (regex?.IsMatch(node.InnerText) == true)
+                        {
+                            node.InnerText = regex.Replace(node.InnerText, m =>
+                            {
+                                matchIndex++;
+
+                                bool apply = occurrenceSet == null || occurrenceSet.Contains(matchIndex);
+
+                                if (!apply)
+                                    return m.Value;
+
+                                return treatValueAsRegex
+                                    ? m.Result(value)
+                                    : value;
+                            });
+                        }
+                        break;
+
+                    case StringEditMode.PrependSubstring:
+                    case StringEditMode.AppendSubstring:
                     {
+                        if (regex?.IsMatch(node.InnerText) != true)
+                            break;
+
+                        bool isPrepend = mode == StringEditMode.PrependSubstring;
+
                         node.InnerText = regex.Replace(node.InnerText, m =>
                         {
                             matchIndex++;
@@ -97,47 +123,29 @@ internal class EditString : PatchOperationPathedExtended
                             if (!apply)
                                 return m.Value;
 
-                            return treatValueAsRegex
+                            string injected = treatValueAsRegex
                                 ? m.Result(value)
                                 : value;
+
+                            return isPrepend
+                                ? injected + m.Value
+                                : m.Value + injected;
                         });
-                    }
-                    break;
 
-                case StringEditMode.PrependSubstring:
-                case StringEditMode.AppendSubstring:
-                {
-                    if (regex?.IsMatch(node.InnerText) != true)
                         break;
-
-                    bool isPrepend = mode == StringEditMode.PrependSubstring;
-
-                    node.InnerText = regex.Replace(node.InnerText, m =>
-                    {
-                        matchIndex++;
-
-                        bool apply = occurrenceSet == null || occurrenceSet.Contains(matchIndex);
-
-                        if (!apply)
-                            return m.Value;
-
-                        string injected = treatValueAsRegex
-                            ? m.Result(value)
-                            : value;
-
-                        return isPrepend
-                            ? injected + m.Value
-                            : m.Value + injected;
-                    });
-
-                    break;
+                    }
                 }
+
+                if (!string.IsNullOrEmpty(node.InnerText))
+                    node.InnerText = node.InnerText.TrimStart();
             }
 
-            if (!string.IsNullOrEmpty(node.InnerText))
-                node.InnerText = node.InnerText.TrimStart();
+            return true;
         }
-
-        return true;
+        catch (Exception ex)
+        {
+            LogException(ex, ex.TargetSite, optMsg: $"{xpath}");
+            return false;
+        }
     }
 }

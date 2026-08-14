@@ -7,8 +7,11 @@ namespace NewHarvestPatches;
 /// Two things govern everything in here. First, these run during the XML PATCH PHASE: no DefDatabase
 /// exists yet, so every "does this category exist / what is its parent" question has to be answered by
 /// querying the raw XmlDocument, which is why so many helpers take an <c>XmlDocument</c> and re-select
-/// nodes by xpath. The two document indexes (<see cref="GetCategoryParentIndex"/>,
-/// <see cref="GetThingDefNameIndex"/>) exist so the hot ones are answered from a dictionary instead.
+/// nodes by xpath. The three document indexes (<see cref="GetCategoryParentIndex"/>,
+/// <see cref="GetThingDefNameIndex"/>, <see cref="GetAbstractRecipeDefIndex"/>) exist so the hot ones are
+/// answered from a dictionary instead. Inheritance has not been resolved at this point either, so a def's
+/// inherited elements have to be found by walking <c>ParentName</c> yourself -
+/// <see cref="DeclaresElementInAncestry"/>.
 /// Second, every field below is populated by RimWorld's XML loader through reflection -
 /// they look permanently stuck at their initializers to a C# reader, but each is really an optional
 /// element on the patch's XML node.
@@ -525,6 +528,69 @@ internal abstract class PatchOperationPathedExtended : PatchOperationPathed
         LogMessage(() => $"Indexed [{names.Count}] ThingDef names for the patch phase.");
         return ThingDefNamesInDocument = names;
     }
+
+    /// <summary>
+    /// Abstract RecipeDefs by their <c>Name</c> attribute, built once per patch run. First declaration wins;
+    /// RimWorld's own <c>XmlInheritance.GetBestParentFor</c> resolves a duplicated Name by load order
+    /// instead, so a name declared twice can in principle index the wrong one - it only ever costs this
+    /// index a wrong answer about which optional element an ancestor declares, never a written node.
+    /// See <see cref="NewHarvestPatchesModSettings.AbstractRecipeDefsByName"/>.
+    /// </summary>
+    protected static Dictionary<string, XmlNode> GetAbstractRecipeDefIndex(XmlDocument xml)
+    {
+        if (AbstractRecipeDefsByName != null)
+            return AbstractRecipeDefsByName;
+
+        Dictionary<string, XmlNode> index = [];
+        foreach (XmlNode recipeDefNode in xml.SelectNodes("/Defs/RecipeDef[@Name]")?.Cast<XmlNode>() ?? [])
+        {
+            string name = recipeDefNode.Attributes?["Name"]?.Value;
+            if (string.IsNullOrWhiteSpace(name) || index.ContainsKey(name))
+                continue;
+
+            index[name] = recipeDefNode;
+        }
+
+        LogMessage(() => $"Indexed [{index.Count}] abstract RecipeDefs for the patch phase.");
+        return AbstractRecipeDefsByName = index;
+    }
+
+    /// <summary>
+    /// Whether <paramref name="defNode"/> or anything in its <c>ParentName</c> chain declares a
+    /// &lt;<paramref name="elementName"/>&gt; child. The question only has to be asked of elements whose
+    /// ABSENCE means something to the game - <c>RecipeDef.defaultIngredientFilter</c> is the case this
+    /// exists for, since <c>RecipeDef.ResolveReferences</c> substitutes a copy of the fixedIngredientFilter
+    /// only while the field is still null, and writing the node at all takes that fallback away.
+    /// <para>
+    /// The depth guard is for cyclic inheritance: RimWorld reports and drops a cycle later, but this runs
+    /// first and must not spin on one.
+    /// </para>
+    /// </summary>
+    protected static bool DeclaresElementInAncestry(XmlDocument xml, XmlNode defNode, string elementName)
+    {
+        if (defNode == null)
+            return false;
+
+        Dictionary<string, XmlNode> abstractDefs = GetAbstractRecipeDefIndex(xml);
+
+        XmlNode current = defNode;
+        for (int depth = 0; current != null && depth < MaxInheritanceDepth; depth++)
+        {
+            if (current[elementName] != null)
+                return true;
+
+            string parentName = current.Attributes?["ParentName"]?.Value;
+            if (string.IsNullOrWhiteSpace(parentName) || !abstractDefs.TryGetValue(parentName, out XmlNode parentNode))
+                return false;
+
+            current = parentNode;
+        }
+
+        return false;
+    }
+
+    /// <summary>Cycle backstop for <see cref="DeclaresElementInAncestry"/>; no real def chain is this deep.</summary>
+    private const int MaxInheritanceDepth = 16;
 
     // --- Diagnostics. Only for log text; never branch on these. Callers guard the calls behind
     // Settings.Logging because walking the tree per node is not free.

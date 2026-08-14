@@ -305,8 +305,11 @@
                     </value>
                 </li>
                 <!-- RECIPES - DISALLOWED -->
-                <!-- mirrorFixedIngredientFilter creates fixedIngredientFilter/disallowedThingDefs when absent
-                     too, closing a gap the old two-op version had (it required that filter to pre-exist). -->
+                <!-- mirrorFixedIngredientFilter states intent - propagate the same disallow into
+                     fixedIngredientFilter/disallowedThingDefs, creating that filter when absent, which the
+                     old two-op version could not do (it required the filter to pre-exist). Creating
+                     fixedIngredientFilter is always safe: RecipeDef field-initializes it to an empty
+                     ThingFilter and nothing keys off its absence. -->
                 <li Class="NewHarvestPatches.AddDefsWhereDefPresent">
                     <success>Always</success>
                     <xpath>/Defs/RecipeDef/ingredients/li/filter/disallowedThingDefs</xpath>
