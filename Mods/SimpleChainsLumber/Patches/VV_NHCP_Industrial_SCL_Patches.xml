@@ -25,29 +25,16 @@
             <li>Owl_CarpentersTrestle</li>
         </value>
     </Operation>
-    <Operation Class="PatchOperationAdd">
+    <!-- Widening the wood slot past one def flips IsFixedIngredient false and makes the recipe consult its
+         fixedIngredientFilter, so the widen has to be compensated there or the recipe silently stops being
+         craftable. AddDefsWhereDefPresent does that itself for any ingredients/li/filter/thingDefs it
+         touches - the added defs plus the anchor go into fixedIngredientFilter, which it creates when the
+         recipe has none - so the three hand-written create/backfill operations this replaced are no longer
+         needed, and the anchor (WoodLog) now reaches that filter too, which they never did. -->
+    <Operation Class="NewHarvestPatches.AddDefsWhereDefPresent">
+        <success>Always</success>
         <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/ingredients/li[1]/filter/thingDefs</xpath>
-        <value>
-            <li>Owl_WoodLog</li>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"][not(fixedIngredientFilter)]</xpath>
-        <value>
-            <fixedIngredientFilter />
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/fixedIngredientFilter[not(thingDefs)]</xpath>
-        <value>
-            <thingDefs />
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>/Defs/RecipeDef[defName="VV_MakeLacqueredWood" or defName="VV_MakeLacqueredWoodBulk"]/fixedIngredientFilter/thingDefs</xpath>
+        <anchor>WoodLog</anchor>
         <value>
             <li>Owl_WoodLog</li>
         </value>

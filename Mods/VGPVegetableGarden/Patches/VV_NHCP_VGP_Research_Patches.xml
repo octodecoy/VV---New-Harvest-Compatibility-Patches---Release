@@ -131,7 +131,7 @@
                         <xpath>/Defs/ThingDef/plant/sowResearchPrerequisites[li="agriculture"]</xpath>
                         <match Class="PatchOperationAdd">
                             <success>Always</success>
-                            <xpath>/Defs/ThingDef[defName="VV_BlackberryBush" or defName="VV_CranberryBush]/plant[not(sowResearchPrerequisites)]</xpath>
+                            <xpath>/Defs/ThingDef[defName="VV_BlackberryBush" or defName="VV_CranberryBush"]/plant[not(sowResearchPrerequisites)]</xpath>
                             <value>
                                 <sowResearchPrerequisites>
                                     <li>agriculture</li>

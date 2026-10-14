@@ -1,0 +1,121 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\Paths.props" />
+
+    <!-- One build per game version: net48 = RimWorld 1.6 (Mono), net10.0 = RimWorld 1.7 (CoreCLR) -->
+    <PropertyGroup Label="Game Version - 1.6" Condition="'$(TargetFramework)' == 'net48'">
+        <GameVersion>1.6</GameVersion>
+        <GameDefine>RW_1_6</GameDefine>
+        <HarmonyAssembliesDir>$(Harmony16AssembliesDir)</HarmonyAssembliesDir>
+    </PropertyGroup>
+    <PropertyGroup Label="Game Version - 1.7" Condition="'$(TargetFramework)' == 'net10.0'">
+        <GameVersion>1.7</GameVersion>
+        <GameDefine>RW_1_7</GameDefine>
+        <HarmonyAssembliesDir>$(Harmony17AssembliesDir)</HarmonyAssembliesDir>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Mod">
+        <ModName>NewHarvestPatches_Harmony</ModName>
+        <ModOutputPath>..\..\$(GameVersion)\Harmony\Assemblies\</ModOutputPath>
+        <AssemblyName>$(ModName)</AssemblyName>
+        <RootNamespace>$(ModName)</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Output">
+        <OutputType>Library</OutputType>
+        <OutputPath>$(ModOutputPath)</OutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <!-- The flag above also drops the TFM from obj\, so both TFMs would share (and overwrite) one intermediate folder -->
+        <IntermediateOutputPath>obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <CopyLocal>false</CopyLocal>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <CopyLockedFiles>true</CopyLockedFiles>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Compiler">
+        <LangVersion>latest</LangVersion>
+        <TargetFrameworks>net48;net10.0</TargetFrameworks>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Platform">
+        <PlatformTarget>x64</PlatformTarget>
+        <Platforms>AnyCPU</Platforms>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Build - Global">
+        <DebugType>none</DebugType> <!-- portable & DebugSymbols=true for .pdb -->
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Build - Debug" Condition="'$(Configuration)' == 'Debug'">
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Label="Build - Release" Condition="'$(Configuration)' == 'Release'">
+        <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+    <!-- Must follow the Debug/Release groups, which overwrite DefineConstants -->
+    <PropertyGroup Label="Build - Game Version">
+        <DefineConstants>$(DefineConstants);$(GameDefine)</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup Label="Reference - Core 1.6" Condition="'$(TargetFramework)' == 'net48'">
+        <Reference Include="Assembly-CSharp">
+            <HintPath>$(RimWorld16ManagedDir)\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>$(RimWorld16ManagedDir)\UnityEngine.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(RimWorld16ManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+            <HintPath>$(RimWorld16ManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup Label="Reference - Core 1.7" Condition="'$(TargetFramework)' == 'net10.0'">
+        <Reference Include="Assembly-CSharp">
+            <HintPath>$(RimWorld17Dir)\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="RimWorld">
+            <HintPath>$(RimWorld17Dir)\RimWorld.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityStubs">
+            <HintPath>$(RimWorld17Dir)\UnityStubs.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Waylith">
+            <HintPath>$(RimWorld17Dir)\Waylith.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup Label="Reference - Harmony">
+        <Reference Include="0Harmony">
+            <HintPath>$(HarmonyAssembliesDir)\0Harmony.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <!-- Builds per target framework; each inner build references the matching NewHarvestPatches build -->
+    <ItemGroup Label="Reference - Parent Project">
+        <ProjectReference Include="..\NewHarvestPatches\NewHarvestPatches.csproj">
+            <Private>false</Private>
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </ProjectReference>
+    </ItemGroup>
+</Project>
